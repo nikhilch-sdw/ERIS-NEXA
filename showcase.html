@@ -553,13 +553,24 @@
   <!-- Media Lightbox Modal (For Videos & Photos) -->
   <dialog id="mediaLightbox" closedby="any" aria-labelledby="lightboxTitle">
     <div class="modal-card">
-      <button type="button" class="modal-close-btn" aria-label="Close media preview">✕</button>
-      <h4 id="lightboxTitle"
-        style="margin-bottom: 1rem; color: var(--gold); font-family: var(--font-heading); font-size: 1rem;">
-        Installation Showcase
-      </h4>
+      <div class="lightbox-header">
+        <div class="lightbox-title-wrap">
+          <span class="lightbox-live-badge"><span class="badge-dot"></span> LIVE 4K HD</span>
+          <h4 id="lightboxTitle">Installation Showcase</h4>
+        </div>
+        <button type="button" class="modal-close-btn lightbox-close-btn" aria-label="Close media preview">✕</button>
+      </div>
       <div id="lightboxContainer">
         <!-- Dynamically injected video or high-res photo -->
+      </div>
+      <div class="lightbox-footer">
+        <span class="lightbox-footer-tag">ERIS-NEXA Vertical Transportation &bull; Certified On-Site Commissioning</span>
+        <a href="tel:+919557761198" class="lightbox-call-btn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>Consult Project Engineer</span>
+        </a>
       </div>
     </div>
   </dialog>

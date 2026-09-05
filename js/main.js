@@ -378,7 +378,7 @@ function initMediaLightbox() {
       const title = card.dataset.videoTitle || 'ERIS-NEXA Elevator in Motion';
 
       lightboxContainer.innerHTML = `
-        <video src="${src}" controls autoplay playsinline style="max-width: 100%; max-height: 70vh; border-radius: 8px;">
+        <video src="${src}" controls autoplay playsinline style="width: 100%; height: 100%; object-fit: contain; display: block; background: #000000;">
           Your browser does not support HTML5 video.
         </video>
       `;
@@ -394,7 +394,7 @@ function initMediaLightbox() {
       const title = item.dataset.galleryTitle || 'Installation Showcase';
 
       lightboxContainer.innerHTML = `
-        <img src="${src}" alt="${title}" style="max-width: 100%; max-height: 70vh; border-radius: 8px; object-fit: contain;">
+        <img src="${src}" alt="${title}" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block;">
       `;
       if (lightboxTitle) lightboxTitle.textContent = title;
       lightboxDialog.showModal();

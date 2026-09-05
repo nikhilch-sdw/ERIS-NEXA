@@ -109,130 +109,231 @@
 
   <main>
     <!-- Page Hero Banner -->
-    <section class="page-hero-section">
+    <section class="page-hero-section" style="padding: 2rem 0 1.35rem 0;">
       <div class="container">
         <nav class="breadcrumbs" aria-label="Breadcrumbs">
           <a href="index.html">Home</a>
           <span>/</span>
-          <span>AMC &amp; Engineering Services</span>
+          <span>AMC &amp; Services</span>
         </nav>
-        <h1 class="page-hero-title">
-          Zero-Downtime Assurance &mdash; <span class="gold-text">Comprehensive AMC &amp; Support</span>
+        <h1 class="page-hero-title" style="font-size: clamp(1.75rem, 3.2vw, 2.3rem); margin-bottom: 0.35rem;">
+          Zero-Downtime Assurance &mdash; <span class="gold-text">Elevator AMC Services</span>
         </h1>
-        <p class="page-hero-desc">
-          Guaranteed elevator reliability with 24/7 dedicated breakdown dispatch teams, under 30-minute rapid arrival across Gurgaon, genuine OEM spare parts, and certified maintenance protocols.
+        <p class="page-hero-desc" style="font-size: 0.86rem; max-width: 660px; margin: 0 auto; line-height: 1.4;">
+          24/7 emergency dispatch in &lt;30 minutes across Gurgaon &amp; NCR, 99.98% fleet uptime, and genuine OEM spares.
         </p>
       </div>
     </section>
 
-    <!-- Key Metrics Ribbon -->
-    <section style="background: #F8FAFC; border-bottom: 1px solid rgba(15,23,42,0.08); padding: 1.5rem 0;">
+    <!-- Key Metrics Ribbon (Compact) -->
+    <section class="services-metrics-strip">
       <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; text-align: center;">
+        <div class="services-metrics-grid">
           <div>
-            <div style="font-size: 2rem; font-weight: 800; color: var(--gold); font-family: var(--font-heading);">&lt; 30 Mins</div>
-            <div style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">NCR Emergency Arrival</div>
+            <div class="services-metric-val">&lt; 30 Mins</div>
+            <div class="services-metric-lbl">Emergency Arrival</div>
           </div>
           <div>
-            <div style="font-size: 2rem; font-weight: 800; color: var(--gold); font-family: var(--font-heading);">99.98%</div>
-            <div style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">Fleet Operational Uptime</div>
+            <div class="services-metric-val">99.98%</div>
+            <div class="services-metric-lbl">Fleet Uptime</div>
           </div>
           <div>
-            <div style="font-size: 2rem; font-weight: 800; color: var(--gold); font-family: var(--font-heading);">500+</div>
-            <div style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">Elevators Under Care</div>
+            <div class="services-metric-val">500+</div>
+            <div class="services-metric-lbl">Elevators Under AMC</div>
           </div>
           <div>
-            <div style="font-size: 2rem; font-weight: 800; color: var(--gold); font-family: var(--font-heading);">100% OEM</div>
-            <div style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">Genuine Tested Spares</div>
+            <div class="services-metric-val">100% OEM</div>
+            <div class="services-metric-lbl">Genuine Spares</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- AMC Packages Section -->
-    <section class="section">
+    <!-- Services in Image Card Form -->
+    <section class="section" id="services-cards" style="padding: 2.2rem 0;">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">ANNUAL MAINTENANCE CONTRACTS</span>
-          <h2 class="section-title">Engineered AMC Service Tiers</h2>
-          <p class="section-subtitle">
-            Tailored maintenance solutions designed for private villas, residential housing societies, corporate headquarters, and healthcare facilities.
+        <div class="section-header text-center" style="margin-bottom: 1.35rem;">
+          <span class="section-tag" style="padding: 0.2rem 0.65rem; font-size: 0.68rem; margin-bottom: 0.35rem;">ENGINEERING SERVICES</span>
+          <h2 class="section-title" style="font-size: 1.85rem; margin-bottom: 0.25rem;">Specialized Elevator Services</h2>
+          <p class="section-desc" style="font-size: 0.86rem; max-width: 640px; margin: 0 auto; line-height: 1.4;">
+            From proactive annual maintenance and rapid breakdown response to hoistway modernization and safety compliance.
           </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-          
-          <!-- Bronze Essential -->
-          <div style="background: #FFFFFF; border-radius: 12px; border: 1px solid rgba(15,23,42,0.1); padding: 2rem; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
-            <div style="display: inline-block; background: rgba(15,23,42,0.06); color: var(--text-primary); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; width: fit-content; text-transform: uppercase; margin-bottom: 1rem;">
-              Bronze Essential
+        <div class="services-image-grid">
+
+          <!-- Row 1 - Card 1: AMC Maintenance -->
+          <div class="service-img-card">
+            <div class="service-card-media">
+              <span class="service-card-badge">Annual Contracts</span>
+              <img src="assets/images/service-amc-maintenance.jpg" alt="Elevator AMC Maintenance Engineer inspecting PMSM Motor" loading="lazy">
             </div>
-            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.5rem;">Preventive Care Plan</h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.5;">
-              Designed for low-traffic private duplexes and low-rise residences seeking periodic safety certification and reliable inspections.
-            </p>
-            <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0; font-size: 0.85rem; color: var(--text-primary); line-height: 2;">
-              <li>✓ <strong>4 Scheduled Service Audits</strong> per calendar year</li>
-              <li>✓ Safety gear, governor &amp; brake testing</li>
-              <li>✓ Guide rail lubrication &amp; door track cleaning</li>
-              <li>✓ 24/7 Breakdown callouts (standard dispatch)</li>
-              <li>✓ Comprehensive safety certificate issued annually</li>
-              <li>✕ Spare parts &amp; major overhauls billed separately</li>
-            </ul>
-            <div style="margin-top: auto;">
-              <button class="btn btn-outline" style="width: 100%;" data-open-modal="quote" data-service="Bronze AMC Plan">
-                Request Bronze Proposal
+            <div class="service-card-body">
+              <h3 class="service-card-title">Preventive AMC Maintenance</h3>
+              <p class="service-card-desc">
+                Scheduled 12-visit comprehensive care, sensor leveling, and multi-point preventive safety audits.
+              </p>
+              <div class="service-card-tags">
+                <span class="service-card-tag">12 Audits</span>
+                <span class="service-card-tag">99.4% Uptime</span>
+                <span class="service-card-tag">OEM Parts</span>
+              </div>
+              <button class="btn btn-primary btn-sm" style="width: 100%; padding: 0.42rem 0.85rem; font-size: 0.76rem;" data-open-modal="quote" data-service="Annual Maintenance Contract (AMC)">
+                Request AMC Proposal &nearr;
               </button>
             </div>
           </div>
 
-          <!-- Silver Semi-Comprehensive (Recommended) -->
-          <div style="background: #FFFFFF; border-radius: 12px; border: 2px solid var(--gold); padding: 2rem; box-shadow: var(--shadow-md); display: flex; flex-direction: column; position: relative;">
-            <div style="position: absolute; top: -12px; right: 24px; background: var(--gold); color: #FFFFFF; font-size: 0.7rem; font-weight: 800; padding: 4px 12px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em;">
-              Most Popular
+          <!-- Row 1 - Card 2: 24/7 Emergency Dispatch -->
+          <div class="service-img-card">
+            <div class="service-card-media">
+              <span class="service-card-badge" style="background: linear-gradient(135deg, #FD6803 0%, #E05500 100%); color: #FFFFFF; border: none; box-shadow: 0 2px 8px rgba(253,104,3,0.45); font-weight: 800;">&lt;30 Min Arrival</span>
+              <img src="assets/images/service-emergency-dispatch.jpg" alt="24/7 Rapid Emergency Response Van and Technicians" loading="lazy">
             </div>
-            <div style="display: inline-block; background: rgba(4,104,174,0.1); color: var(--gold); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; width: fit-content; text-transform: uppercase; margin-bottom: 1rem;">
-              Silver Semi-Comprehensive
+            <div class="service-card-body">
+              <h3 class="service-card-title">24/7 Emergency Breakdown</h3>
+              <p class="service-card-desc">
+                Dedicated GPS patrol vans across Gurgaon &amp; NCR for swift passenger rescue and fault clearance.
+              </p>
+              <div class="service-card-tags">
+                <span class="service-card-tag">&lt;30 Min</span>
+                <span class="service-card-tag">NCR Van</span>
+                <span class="service-card-tag">Safe Rescue</span>
+              </div>
+              <a href="tel:+919557761198" class="btn btn-accent btn-sm" style="width: 100%; padding: 0.42rem 0.85rem; font-size: 0.76rem; text-decoration: none; display: flex; align-items: center; justify-content: center;">
+                Call Hotline &nearr;
+              </a>
             </div>
-            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.5rem;">Routine &amp; Priority Plan</h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.5;">
-              Ideal for multi-story luxury residences, boutique offices, and commercial establishments requiring monthly upkeep.
-            </p>
-            <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0; font-size: 0.85rem; color: var(--text-primary); line-height: 2;">
-              <li>✓ <strong>12 Monthly Scheduled Visits</strong> (Every 30 days)</li>
-              <li>✓ Priority Breakdown Response (&lt;30 mins in Gurgaon)</li>
-              <li>✓ Includes minor electrical consumables &amp; fuses</li>
-              <li>✓ Sensor re-calibration, leveling tuning &amp; door maintenance</li>
-              <li>✓ Quarterly ride-quality vibration audit</li>
-              <li>✓ 15% Discount on major OEM mechanical components</li>
-            </ul>
-            <div style="margin-top: auto;">
-              <button class="btn btn-primary" style="width: 100%;" data-open-modal="quote" data-service="Silver AMC Plan">
-                Request Silver Proposal
+          </div>
+
+          <!-- Row 1 - Card 3: Modernization & Upgrades -->
+          <div class="service-img-card">
+            <div class="service-card-media">
+              <span class="service-card-badge">Hoistway Upgrade</span>
+              <img src="assets/images/service-modernization.jpg" alt="Luxury Modernized Elevator Cabin Interior" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Modernization &amp; Retrofit</h3>
+              <p class="service-card-desc">
+                Energy-efficient PMSM gearless motors, 32-bit VVVF controllers, and aesthetic upgrades.
+              </p>
+              <div class="service-card-tags">
+                <span class="service-card-tag">40% Power Cut</span>
+                <span class="service-card-tag">Smooth VVVF</span>
+                <span class="service-card-tag">Luxury Car</span>
+              </div>
+              <button class="btn btn-primary btn-sm" style="width: 100%; padding: 0.42rem 0.85rem; font-size: 0.76rem;" data-open-modal="quote" data-service="Modernization & Upgrades">
+                Book Hoistway Audit &nearr;
               </button>
             </div>
           </div>
 
-          <!-- Gold Comprehensive -->
-          <div style="background: #FFFFFF; border-radius: 12px; border: 1px solid rgba(15,23,42,0.1); padding: 2rem; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
-            <div style="display: inline-block; background: rgba(15,23,42,0.06); color: var(--text-primary); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; width: fit-content; text-transform: uppercase; margin-bottom: 1rem;">
-              Gold Comprehensive
+          <!-- Row 1 - Card 4: Safety Audit & Inspection -->
+          <div class="service-img-card">
+            <div class="service-card-media">
+              <span class="service-card-badge">IS 14665 Code</span>
+              <img src="assets/images/service-safety-audit.jpg" alt="Elevator Inspector performing Safety Audit" loading="lazy">
             </div>
-            <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 0.5rem;">All-Inclusive Full Coverage</h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.5;">
-              Zero-expense unpredictability for hospitals, high-traffic commercial towers, and premium condominium societies.
-            </p>
-            <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0; font-size: 0.85rem; color: var(--text-primary); line-height: 2;">
-              <li>✓ <strong>12 Monthly Preventive Visits</strong> + Unlimited Callouts</li>
-              <li>✓ <strong>100% Parts &amp; Labor Coverage</strong> (Motors, Inverters, PC Boards)</li>
-              <li>✓ Guaranteed &lt;30 min emergency rapid dispatch 24/7/365</li>
-              <li>✓ Wire ropes, sheaves, and brake coils replacement included</li>
-              <li>✓ Dedicated key account engineering manager</li>
-              <li>✓ Automatic compliance renewal &amp; annual state inspection support</li>
-            </ul>
-            <div style="margin-top: auto;">
-              <button class="btn btn-outline" style="width: 100%;" data-open-modal="quote" data-service="Gold AMC Plan">
-                Request Gold Proposal
+            <div class="service-card-body">
+              <h3 class="service-card-title">Safety Audit &amp; Certification</h3>
+              <p class="service-card-desc">
+                Multi-point IS 14665 testing, governor overspeed checks, and official state safety renewals.
+              </p>
+              <div class="service-card-tags">
+                <span class="service-card-tag">IS 14665</span>
+                <span class="service-card-tag">Govt Renewal</span>
+                <span class="service-card-tag">Load Tested</span>
+              </div>
+              <button class="btn btn-primary btn-sm" style="width: 100%; padding: 0.42rem 0.85rem; font-size: 0.76rem;" data-open-modal="quote" data-service="Safety Audit & Certification">
+                Schedule Safety Audit &nearr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Row 2 - Card 5: Genuine OEM Spare Parts -->
+          <div class="service-img-card">
+            <div class="service-card-media">
+              <span class="service-card-badge">OEM Guaranteed</span>
+              <img src="assets/images/service-spare-parts.jpg" alt="Organized Warehouse of Genuine Elevator Spare Parts" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Genuine OEM Spare Parts</h3>
+              <p class="service-card-desc">
+                Factory-certified mechanical and electronic components in stock for all major elevator makes.
+              </p>
+              <div class="service-card-tags">
+                <span class="service-card-tag">100% Genuine</span>
+                <span class="service-card-tag">Ready Stock</span>
+                <span class="service-card-tag">OEM Warranty</span>
+              </div>
+              <button class="btn btn-primary btn-sm" style="width: 100%; padding: 0.42rem 0.85rem; font-size: 0.76rem;" data-open-modal="quote" data-service="Genuine OEM Spare Parts">
+                Order OEM Spares &nearr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Row 2 - Card 6: IoT Telemetry & Monitoring -->
+          <div class="service-img-card">
+            <div class="service-card-media">
+              <span class="service-card-badge">Smart Telemetry</span>
+              <img src="assets/images/service-iot-monitoring.jpg" alt="Elevator IoT Monitoring Control Center Dashboard" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">IoT Predictive Monitoring</h3>
+              <p class="service-card-desc">
+                24/7 cloud telemetry tracking motor vibration, run-cycles, and early fault warning alerts.
+              </p>
+              <div class="service-card-tags">
+                <span class="service-card-tag">24/7 Telemetry</span>
+                <span class="service-card-tag">Auto Alerts</span>
+                <span class="service-card-tag">0 Downtime</span>
+              </div>
+              <button class="btn btn-primary btn-sm" style="width: 100%; padding: 0.42rem 0.85rem; font-size: 0.76rem;" data-open-modal="quote" data-service="IoT Predictive Monitoring">
+                Connect IoT System &nearr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Row 2 - Card 7: Luxury Cabin Styling -->
+          <div class="service-img-card">
+            <div class="service-card-media">
+              <span class="service-card-badge">Bespoke Finishes</span>
+              <img src="assets/images/service-cabin-styling.jpg" alt="Ultra Luxury Elevator Cabin Interior Architecture" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Luxury Cabin Refurbishment</h3>
+              <p class="service-card-desc">
+                Designer car interiors with titanium bronze panels, cove lighting, and Italian marble floors.
+              </p>
+              <div class="service-card-tags">
+                <span class="service-card-tag">Titanium Gold</span>
+                <span class="service-card-tag">LED Ceilings</span>
+                <span class="service-card-tag">Marble Floor</span>
+              </div>
+              <button class="btn btn-primary btn-sm" style="width: 100%; padding: 0.42rem 0.85rem; font-size: 0.76rem;" data-open-modal="quote" data-service="Luxury Cabin Refurbishment">
+                Explore Cabin Styles &nearr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Row 2 - Card 8: Structural Civil & Hoistway Works -->
+          <div class="service-img-card">
+            <div class="service-card-media">
+              <span class="service-card-badge">Civil &amp; Shaft</span>
+              <img src="assets/images/service-hoistway-structure.jpg" alt="Outdoor Glass Elevator Steel Shaft Structure" loading="lazy">
+            </div>
+            <div class="service-card-body">
+              <h3 class="service-card-title">Shaft &amp; Steel Fabrication</h3>
+              <p class="service-card-desc">
+                Precision self-supporting glass shaft framework, pit waterproofing, and machine room civil work.
+              </p>
+              <div class="service-card-tags">
+                <span class="service-card-tag">Steel Framing</span>
+                <span class="service-card-tag">Glass Shafts</span>
+                <span class="service-card-tag">Pit Sealed</span>
+              </div>
+              <button class="btn btn-primary btn-sm" style="width: 100%; padding: 0.42rem 0.85rem; font-size: 0.76rem;" data-open-modal="quote" data-service="Shaft & Steel Fabrication">
+                Request Shaft Survey &nearr;
               </button>
             </div>
           </div>
@@ -241,56 +342,56 @@
       </div>
     </section>
 
-    <!-- Rapid Dispatch & Breakdown Protocol Section -->
-    <section class="section" style="background: #F8FAFC; border-top: 1px solid rgba(15,23,42,0.06); border-bottom: 1px solid rgba(15,23,42,0.06);">
+    <!-- Rapid Dispatch & Breakdown Protocol Section (Compact) -->
+    <section class="section" style="background: #F8FAFC; border-top: 1px solid rgba(15,23,42,0.06); border-bottom: 1px solid rgba(15,23,42,0.06); padding: 2.2rem 0;">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">24/7 INCIDENT RESPONSE</span>
-          <h2 class="section-title">How Our Rapid Response Operates</h2>
-          <p class="section-subtitle">
-            When an elevator experiences a fault, every minute counts. Our dedicated dispatch network ensures rapid passenger rescue and swift mechanical restoration.
+        <div class="section-header text-center" style="margin-bottom: 1.25rem;">
+          <span class="section-tag" style="padding: 0.2rem 0.65rem; font-size: 0.68rem; margin-bottom: 0.35rem;">24/7 RAPID DISPATCH</span>
+          <h2 class="section-title" style="font-size: 1.85rem; margin-bottom: 0.25rem;">How Our Emergency Protocol Operates</h2>
+          <p class="section-desc" style="font-size: 0.86rem; max-width: 620px; margin: 0 auto; line-height: 1.4;">
+            Rapid passenger rescue and mechanical restoration across Gurgaon &amp; NCR.
           </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+        <div class="services-dispatch-grid">
           
-          <div style="background: #FFFFFF; padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(15,23,42,0.08);">
-            <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(4,104,174,0.1); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; margin-bottom: 1rem;">
+          <div style="background: #FFFFFF; padding: 1rem; border-radius: 10px; border: 1px solid rgba(15,23,42,0.08); box-shadow: var(--shadow-sm);">
+            <div style="width: 32px; height: 32px; border-radius: 6px; background: rgba(253,104,3,0.12); color: #FD6803; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; margin-bottom: 0.5rem;">
               01
             </div>
-            <h3 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.5rem;">Emergency Hotline Trigger</h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
-              Calls to +91 95577 61198 connect instantly to our 24/7 Gurgaon control room. The incident is logged, mapped by GPS, and assigned to the nearest patrol vehicle.
+            <h3 style="font-size: 0.88rem; color: var(--text-primary); margin: 0 0 0.2rem 0; font-weight: 700;">Hotline Trigger</h3>
+            <p style="font-size: 0.72rem; color: var(--text-muted); line-height: 1.35; margin: 0;">
+              24/7 call connects to Gurgaon control room and maps to nearest GPS patrol van.
             </p>
           </div>
 
-          <div style="background: #FFFFFF; padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(15,23,42,0.08);">
-            <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(4,104,174,0.1); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; margin-bottom: 1rem;">
+          <div style="background: #FFFFFF; padding: 1rem; border-radius: 10px; border: 1px solid rgba(15,23,42,0.08); box-shadow: var(--shadow-sm);">
+            <div style="width: 32px; height: 32px; border-radius: 6px; background: rgba(253,104,3,0.12); color: #FD6803; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; margin-bottom: 0.5rem;">
               02
             </div>
-            <h3 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.5rem;">Sub-30 Min Site Arrival</h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
-              Mobile service technicians stationed in DLF, Cyber City, Sohna Road, and Golf Course Road reach your premises in under 30 minutes equipped with diagnostic tools.
+            <h3 style="font-size: 0.88rem; color: var(--text-primary); margin: 0 0 0.2rem 0; font-weight: 700;">&lt;30 Min Arrival</h3>
+            <p style="font-size: 0.72rem; color: var(--text-muted); line-height: 1.35; margin: 0;">
+              Mobile vans in DLF, Cyber City, Golf Course Rd reach your site with diagnostic tools.
             </p>
           </div>
 
-          <div style="background: #FFFFFF; padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(15,23,42,0.08);">
-            <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(4,104,174,0.1); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; margin-bottom: 1rem;">
+          <div style="background: #FFFFFF; padding: 1rem; border-radius: 10px; border: 1px solid rgba(15,23,42,0.08); box-shadow: var(--shadow-sm);">
+            <div style="width: 32px; height: 32px; border-radius: 6px; background: rgba(253,104,3,0.12); color: #FD6803; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; margin-bottom: 0.5rem;">
               03
             </div>
-            <h3 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.5rem;">Safe Passenger Evacuation</h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
-              Immediate priority is passenger comfort and safety using automated ARD or manual brake release procedures executed in strict accordance with IS 14665 standards.
+            <h3 style="font-size: 0.88rem; color: var(--text-primary); margin: 0 0 0.2rem 0; font-weight: 700;">Safe Evacuation</h3>
+            <p style="font-size: 0.72rem; color: var(--text-muted); line-height: 1.35; margin: 0;">
+              Passenger safety priority with automated ARD or manual brake release per IS 14665.
             </p>
           </div>
 
-          <div style="background: #FFFFFF; padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(15,23,42,0.08);">
-            <div style="width: 44px; height: 44px; border-radius: 8px; background: rgba(4,104,174,0.1); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; margin-bottom: 1rem;">
+          <div style="background: #FFFFFF; padding: 1rem; border-radius: 10px; border: 1px solid rgba(15,23,42,0.08); box-shadow: var(--shadow-sm);">
+            <div style="width: 32px; height: 32px; border-radius: 6px; background: rgba(253,104,3,0.12); color: #FD6803; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; margin-bottom: 0.5rem;">
               04
             </div>
-            <h3 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.5rem;">Diagnostic &amp; Restoration</h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin: 0;">
-              The fault code is decoded from the microprocessor controller, genuine spare components are swapped from the van inventory, and the lift is re-commissioned with a test run.
+            <h3 style="font-size: 0.88rem; color: var(--text-primary); margin: 0 0 0.2rem 0; font-weight: 700;">OEM Restoration</h3>
+            <p style="font-size: 0.72rem; color: var(--text-muted); line-height: 1.35; margin: 0;">
+              Microprocessor fault decoded, genuine spare installed, and test-run verified.
             </p>
           </div>
 
@@ -298,58 +399,58 @@
       </div>
     </section>
 
-    <!-- Modernization & Upgrades Section -->
-    <section class="section">
+    <!-- Modernization & Upgrades Section (Compact) -->
+    <section class="section" style="padding: 2.2rem 0;">
       <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center;">
+        <div class="services-modernization-grid">
           <div>
-            <span class="section-tag">ELEVATOR MODERNIZATION</span>
-            <h2 class="section-title" style="margin-top: 0.5rem;">Transforming Aging Lifts into High-Tech Smart Systems</h2>
-            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
-              Is your existing elevator experiencing frequent breakdowns, jerky starts, or noisy operation? You don't need a total building demolition. Our engineering modernization retrofits new life into existing hoistways.
+            <span class="section-tag" style="padding: 0.2rem 0.65rem; font-size: 0.68rem; margin-bottom: 0.35rem;">ELEVATOR MODERNIZATION</span>
+            <h2 class="section-title" style="font-size: 1.75rem; margin: 0.25rem 0 0.35rem 0;">Transforming Aging Lifts Without Demolition</h2>
+            <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.45; margin-bottom: 0.95rem;">
+              Upgrade existing hoistways with PMSM gearless motors, 32-bit VVVF controllers, and modern cabins.
             </p>
-            <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
-              <div style="display: flex; gap: 1rem; align-items: flex-start;">
-                <span style="font-size: 1.25rem; color: var(--gold);">⚡</span>
+            <div style="display: flex; flex-direction: column; gap: 0.55rem; margin-bottom: 1.15rem;">
+              <div style="display: flex; gap: 0.75rem; align-items: center;">
+                <span style="font-size: 1rem; color: var(--accent-orange, #FD6803); width: 22px; text-align: center;">⚡</span>
                 <div>
-                  <h4 style="font-size: 1rem; color: var(--text-primary); margin: 0 0 0.25rem 0;">Geared-to-Gearless Motor Conversion</h4>
-                  <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Swap noisy geared motors for ultra-silent PMSM drives, saving up to 40% electricity.</p>
+                  <h4 style="font-size: 0.86rem; color: var(--text-primary); margin: 0; font-weight: 700;">PMSM Gearless Motor Conversion</h4>
+                  <p style="font-size: 0.72rem; color: var(--text-muted); margin: 0;">Saves up to 40% electricity with whisper-quiet drive.</p>
                 </div>
               </div>
-              <div style="display: flex; gap: 1rem; align-items: flex-start;">
-                <span style="font-size: 1.25rem; color: var(--gold);">🧠</span>
+              <div style="display: flex; gap: 0.75rem; align-items: center;">
+                <span style="font-size: 1rem; color: var(--accent-orange, #FD6803); width: 22px; text-align: center;">🧠</span>
                 <div>
-                  <h4 style="font-size: 1rem; color: var(--text-primary); margin: 0 0 0.25rem 0;">32-Bit Microprocessor Controller Retrofit</h4>
-                  <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Eliminate obsolete relay logic with intelligent full-collective VVVF control panels.</p>
+                  <h4 style="font-size: 0.86rem; color: var(--text-primary); margin: 0; font-weight: 700;">32-Bit Microprocessor Controller</h4>
+                  <p style="font-size: 0.72rem; color: var(--text-muted); margin: 0;">Replaces obsolete relay logic with smooth VVVF leveling.</p>
                 </div>
               </div>
-              <div style="display: flex; gap: 1rem; align-items: flex-start;">
-                <span style="font-size: 1.25rem; color: var(--gold);">✨</span>
+              <div style="display: flex; gap: 0.75rem; align-items: center;">
+                <span style="font-size: 1rem; color: var(--accent-orange, #FD6803); width: 22px; text-align: center;">✨</span>
                 <div>
-                  <h4 style="font-size: 1rem; color: var(--text-primary); margin: 0 0 0.25rem 0;">Luxury Aesthetic Cabin Refurbishment</h4>
-                  <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Replace dated laminates with brushed rose gold, mirror stainless steel, and modern LCD indicator panels.</p>
+                  <h4 style="font-size: 0.86rem; color: var(--text-primary); margin: 0; font-weight: 700;">Luxury Aesthetic Refurbishment</h4>
+                  <p style="font-size: 0.72rem; color: var(--text-muted); margin: 0;">Brushed rose gold/SS cabin styling &amp; modern LCD displays.</p>
                 </div>
               </div>
             </div>
-            <button class="btn btn-primary" data-open-modal="quote" data-service="Elevator Modernization Survey">
-              Book Modernization Hoistway Audit
+            <button class="btn btn-primary btn-sm" style="padding: 0.42rem 1.15rem; font-size: 0.78rem;" data-open-modal="quote" data-service="Elevator Modernization Survey">
+              Book Hoistway Audit &nearr;
             </button>
           </div>
 
-          <div style="background: #FFFFFF; border-radius: 16px; border: 1px solid rgba(15,23,42,0.08); padding: 2rem; box-shadow: var(--shadow-md);">
-            <h3 style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 1.25rem;">Modernization Payback Analysis</h3>
-            <div style="display: flex; flex-direction: column; gap: 1rem;">
-              <div style="padding: 1rem; background: #F8FAFC; border-radius: 8px; border-left: 4px solid var(--gold);">
-                <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Power Efficiency</div>
-                <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;">Reduces motor thermal dissipation and electricity bills by 35% to 45%.</div>
+          <div style="background: #FFFFFF; border-radius: 12px; border: 1px solid rgba(15,23,42,0.08); padding: 1.15rem; box-shadow: var(--shadow-sm);">
+            <h3 style="font-size: 0.95rem; color: var(--text-primary); margin-bottom: 0.75rem; font-weight: 700;">Modernization Impact</h3>
+            <div style="display: flex; flex-direction: column; gap: 0.55rem;">
+              <div style="padding: 0.65rem 0.8rem; background: #F8FAFC; border-radius: 6px; border-left: 3px solid var(--accent-orange, #FD6803);">
+                <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary);">Power Efficiency</div>
+                <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 1px;">Reduces electric draw and thermal dissipation by 35% to 45%.</div>
               </div>
-              <div style="padding: 1rem; background: #F8FAFC; border-radius: 8px; border-left: 4px solid var(--gold);">
-                <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Safety Code Compliance</div>
-                <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;">Instantly adds infrared curtain doors, ARD emergency rescue, and governor lockouts.</div>
+              <div style="padding: 0.65rem 0.8rem; background: #F8FAFC; border-radius: 6px; border-left: 3px solid var(--gold-primary, #0468AE);">
+                <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary);">Safety Code Compliance</div>
+                <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 1px;">Adds infrared light curtain, ARD rescue &amp; speed governor.</div>
               </div>
-              <div style="padding: 1rem; background: #F8FAFC; border-radius: 8px; border-left: 4px solid var(--gold);">
-                <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Property Valuation Boost</div>
-                <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;">Smooth, quiet lifts elevate resident satisfaction and commercial rental value by 15-20%.</div>
+              <div style="padding: 0.65rem 0.8rem; background: #F8FAFC; border-radius: 6px; border-left: 3px solid var(--accent-orange, #FD6803);">
+                <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary);">Property Valuation Boost</div>
+                <div style="font-size: 0.72rem; color: var(--text-muted); margin-top: 1px;">Whisper-quiet transit elevates resident satisfaction and asset value.</div>
               </div>
             </div>
           </div>
@@ -357,24 +458,24 @@
       </div>
     </section>
 
-    <!-- Consultation CTA -->
-    <section class="section" style="background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); color: #FFFFFF; text-align: center;">
+    <!-- Consultation CTA (Compact) -->
+    <section style="background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%); color: #FFFFFF; text-align: center; padding: 2.2rem 0;">
       <div class="container">
-        <span class="section-tag" style="background: rgba(4,104,174,0.3); color: #60A5FA; border-color: rgba(4,104,174,0.4);">
+        <span class="section-tag" style="background: rgba(253,104,3,0.15); color: #FF8533; border-color: rgba(253,104,3,0.35); padding: 0.2rem 0.65rem; font-size: 0.68rem; margin-bottom: 0.35rem;">
           SWITCH TO RELIABLE SERVICE
         </span>
-        <h2 style="font-size: clamp(1.6rem, 3.5vw, 2.3rem); color: #FFFFFF; margin: 1rem 0;">
-          Switch Your Building AMC to ERIS-NEXA Today
+        <h2 style="font-size: clamp(1.4rem, 2.5vw, 1.85rem); color: #FFFFFF; margin: 0.35rem 0 0.45rem 0;">
+          Switch Your Building AMC to ERIS-NEXA
         </h2>
-        <p style="max-width: 680px; margin: 0 auto 2rem auto; color: #CBD5E1; font-size: 0.95rem; line-height: 1.6;">
-          Free preliminary safety audit and civil shaft inspection conducted by a certified senior lift inspector in Gurgaon &amp; NCR.
+        <p style="max-width: 600px; margin: 0 auto 1.15rem auto; color: #CBD5E1; font-size: 0.82rem; line-height: 1.45;">
+          Free safety audit &amp; hoistway inspection conducted by a certified senior lift inspector in Gurgaon &amp; NCR.
         </p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <button class="btn btn-primary btn-lg" data-open-modal="quote" data-service="Free AMC Site Audit">
+        <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+          <button class="btn btn-sm" style="background: #FD6803; color: #FFFFFF; border: none; padding: 0.45rem 1.25rem; font-size: 0.8rem;" data-open-modal="quote" data-service="Free AMC Site Audit">
             Book Free Hoistway Inspection
           </button>
-          <a href="tel:+919557761198" class="btn btn-outline btn-lg" style="color: #FFFFFF; border-color: rgba(255,255,255,0.3);">
-            Call Hotline: +91 95577 61198
+          <a href="tel:+919557761198" class="btn btn-sm" style="background: rgba(255,255,255,0.08); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.3); padding: 0.45rem 1.25rem; font-size: 0.8rem; display: inline-flex; align-items: center; justify-content: center; text-decoration: none;">
+            Call Helpline: +91 95577 61198
           </a>
         </div>
       </div>
@@ -507,11 +608,17 @@
           <div class="form-field-group">
             <label for="modalRequirement">Requirement</label>
             <select id="modalRequirement" name="requirement" class="form-select">
+              <option value="Annual Maintenance Contract (AMC)">Annual Maintenance Contract (AMC)</option>
+              <option value="Emergency Breakdown Repair">Emergency Breakdown Repair</option>
+              <option value="Modernization & Upgrades">Modernization &amp; Upgrades</option>
+              <option value="Safety Audit & Certification">Safety Audit &amp; Certification</option>
+              <option value="Genuine OEM Spare Parts">Genuine OEM Spare Parts</option>
+              <option value="IoT Predictive Monitoring">IoT Predictive Monitoring</option>
+              <option value="Luxury Cabin Refurbishment">Luxury Cabin Refurbishment</option>
+              <option value="Shaft & Steel Fabrication">Shaft &amp; Steel Fabrication</option>
               <option value="Silver Semi-Comprehensive AMC">Silver Semi-Comprehensive AMC</option>
               <option value="Gold Comprehensive AMC">Gold Comprehensive AMC</option>
               <option value="Bronze Essential AMC">Bronze Essential AMC</option>
-              <option value="Emergency Breakdown Repair">Emergency Breakdown Repair</option>
-              <option value="Modernization & Upgrades">Modernization &amp; Upgrades</option>
             </select>
           </div>
         </div>
