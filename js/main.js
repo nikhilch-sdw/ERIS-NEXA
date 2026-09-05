@@ -142,6 +142,8 @@ function initElevatorSimulator() {
    2. LIVE REACTIVE LIFT & CABIN CONFIGURATOR
    ========================================================================== */
 function initConfigurator() {
+  if (!document.getElementById('configurator')) return;
+
   const configState = {
     application: 'home', // 'home', 'passenger', 'hospital', 'goods', 'auto', 'dumbwaiter'
     floors: 3,
@@ -499,14 +501,14 @@ function initModalsAndDialogs() {
    6. NAVIGATION & SCROLL OBSERVERS
    ========================================================================== */
 function initNavigation() {
-  const navbar = document.querySelector('.navbar');
+  const navbar = document.querySelector('.navbar, .site-header');
   const mobileToggle = document.querySelector('.mobile-menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
   const topScrollBtn = document.getElementById('btnBackToTop');
 
   // Sticky Navbar Scroll Listener
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 40) {
       navbar?.classList.add('scrolled');
       topScrollBtn?.classList.add('visible');
     } else {
@@ -522,6 +524,12 @@ function initNavigation() {
       mobileToggle.classList.toggle('open', isOpen);
       mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       document.body.style.overflow = isOpen ? 'hidden' : '';
+
+      if (isOpen && navbar) {
+        const rect = navbar.getBoundingClientRect();
+        const topOffset = Math.max(0, Math.round(rect.bottom));
+        document.documentElement.style.setProperty('--nav-drawer-top', `${topOffset}px`);
+      }
     });
 
     // Close mobile menu on link click
@@ -544,9 +552,9 @@ function initNavigation() {
       }
     });
 
-    // Reset when resizing back to desktop screen (> 1080px)
+    // Reset when resizing back to desktop screen (> 1140px)
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 1080 && navMenu.classList.contains('open')) {
+      if (window.innerWidth > 1140 && navMenu.classList.contains('open')) {
         navMenu.classList.remove('open');
         mobileToggle.classList.remove('open');
         mobileToggle.setAttribute('aria-expanded', 'false');

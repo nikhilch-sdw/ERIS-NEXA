@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Elevator Models &amp; Architectural Specifications — ERIS-NEXA</title>
+  <meta name="description"
+    content="Explore all 7 premier elevator classes by ERIS-NEXA Elevators Gurgaon. Luxury passenger towers, bespoke villa lifts, hospital stretchers, heavy freight, automobile showroom lifts, and panoramic glass facades.">
+  <meta name="theme-color" content="#FFFFFF">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="All Elevator Models &amp; Architectural Specifications — ERIS-NEXA">
+  <meta property="og:description"
+    content="German-grade PMSM gearless elevators engineered for luxury residences, commercial towers, and healthcare across Gurgaon &amp; NCR.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo-mark.png">
+
+  <!-- Core Design System -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Top Operational Status Bar -->
+  <aside class="top-status-bar" aria-label="Operational Live Status">
+    <div class="container top-bar-content">
+      <div class="status-indicator">
+        <span class="status-dot pulse" aria-hidden="true"></span>
+        <span class="status-text"><strong>24/7 RAPID RESPONSE:</strong><span class="status-sub-text"> Dispatch hotline active across Gurgaon &amp; NCR</span></span>
+      </div>
+      <div class="top-contacts">
+        <a href="tel:+919557761198" class="contact-link">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          <span>+91 95577 61198</span>
+        </a>
+        <span class="separator" aria-hidden="true">&bull;</span>
+        <a href="mailto:Sahil.eris1@gmail.com" class="contact-link top-hide-mobile">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span>Sahil.eris1@gmail.com</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Executive Header -->
+  <header class="navbar" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="ERIS-NEXA Home">
+        <div class="logo-badge">
+          <img src="assets/images/logo-mark.png" alt="ERIS-NEXA Monogram" width="26" height="26">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">ERIS&ndash;NEXA<span>.</span></span>
+          <span class="brand-tagline">Vertical Transportation</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="elevators.html" class="nav-link active">Elevators</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="showcase.html" class="nav-link">Showcase</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+919557761198" class="btn btn-outline btn-sm nav-call-btn" title="Instant Phone Call">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          <span>Call Engineer</span>
+        </a>
+        <button class="btn btn-primary btn-sm nav-quote-btn" data-open-modal="quote"
+          data-service="General Consultation">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+          </svg>
+          <span>Get Quote</span>
+        </button>
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-box" aria-hidden="true">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero Banner -->
+    <section class="page-hero-section">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumbs">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Elevator Models</span>
+        </nav>
+        <h1 class="page-hero-title">
+          Precision Engineering Portfolio &mdash; <span class="gold-text">All 7 Classes</span>
+        </h1>
+        <p class="page-hero-desc">
+          German-grade PMSM gearless vertical transportation engineered for luxury residential villas, high-rise commercial towers, healthcare facilities, and heavy industrial plants.
+        </p>
+      </div>
+    </section>
+
+    <!-- Product Portfolio Section -->
+    <section class="section products-section" id="products">
+      <div class="container">
+        <!-- Interactive Category Filters -->
+        <div class="product-filters">
+          <button class="filter-btn active" data-filter="all">All Models (7)</button>
+          <button class="filter-btn" data-filter="passenger">Passenger Towers</button>
+          <button class="filter-btn" data-filter="home">Villa &amp; Home</button>
+          <button class="filter-btn" data-filter="hospital">Healthcare / Hospital</button>
+          <button class="filter-btn" data-filter="goods">Industrial Goods</button>
+          <button class="filter-btn" data-filter="auto">Automobile Lifts</button>
+          <button class="filter-btn" data-filter="service">Dumbwaiters &amp; Special</button>
+        </div>
+
+        <!-- Product Cards Grid (60:40 Compact Luxury Layout) -->
+        <div class="products-grid">
+          <!-- 01: Passenger Elevators -->
+          <article class="product-card" data-category="passenger">
+            <div class="product-media-wrap">
+              <img src="assets/images/passenger-cover-2.jpeg" alt="Luxury Passenger Elevator by ERIS-NEXA" loading="lazy">
+              <span class="product-cat-badge">01 / PASSENGER</span>
+              <span class="product-speed-tag">Up to 2.50 m/s</span>
+            </div>
+            <div class="product-body">
+              <div class="product-header-block">
+                <h3 class="product-title">Luxury Passenger Elevators</h3>
+                <p class="product-excerpt">Commercial towers &amp; residential complexes</p>
+              </div>
+              <div class="product-meta-strip">
+                <span class="meta-tag">6 to 26 Pax</span>
+                <span class="meta-tag">PMSM Gearless</span>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-outline-gold btn-sm" data-open-modal="quote"
+                  data-service="Passenger Elevators">Inquire Specs</button>
+                <a href="https://wa.me/919557761198?text=Hello%20ERIS-NEXA%2C%20I%20would%20like%20a%20quote%20for%20Passenger%20Elevators."
+                  target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">WhatsApp Quote &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 02: Home Elevators -->
+          <article class="product-card" data-category="home">
+            <div class="product-media-wrap">
+              <img src="assets/images/home-1.jpeg" alt="Bespoke Villa Home Elevator by ERIS-NEXA" loading="lazy">
+              <span class="product-cat-badge">02 / HOME &amp; VILLA</span>
+              <span class="product-speed-tag">Low Pit / 0.4 m/s</span>
+            </div>
+            <div class="product-body">
+              <div class="product-header-block">
+                <h3 class="product-title">Bespoke Villa Home Elevators</h3>
+                <p class="product-excerpt">Low-pit luxury mobility for penthouses &amp; villas</p>
+              </div>
+              <div class="product-meta-strip">
+                <span class="meta-tag">3 to 8 Pax</span>
+                <span class="meta-tag">250mm Low Pit</span>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-outline-gold btn-sm" data-open-modal="quote"
+                  data-service="Home & Villa Elevators">Inquire Specs</button>
+                <a href="https://wa.me/919557761198?text=Hello%20ERIS-NEXA%2C%20I%20would%20like%20a%20quote%20for%20Home%20and%20Villa%20Elevators."
+                  target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">WhatsApp Quote &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 03: Hospital Elevators -->
+          <article class="product-card" data-category="hospital">
+            <div class="product-media-wrap">
+              <img src="assets/images/hospital-cover.jpeg" alt="Hospital Stretcher Elevator by ERIS-NEXA" loading="lazy">
+              <span class="product-cat-badge">03 / HEALTHCARE</span>
+              <span class="product-speed-tag">Code Blue Priority</span>
+            </div>
+            <div class="product-body">
+              <div class="product-header-block">
+                <h3 class="product-title">Hospital &amp; Stretcher Elevators</h3>
+                <p class="product-excerpt">Jerk-free bed transit with medical SS 304 cabin</p>
+              </div>
+              <div class="product-meta-strip">
+                <span class="meta-tag">15 to 26 Pax</span>
+                <span class="meta-tag">Stretcher Leveling</span>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-outline-gold btn-sm" data-open-modal="quote"
+                  data-service="Hospital Elevators">Inquire Specs</button>
+                <a href="https://wa.me/919557761198?text=Hello%20ERIS-NEXA%2C%20I%20would%20like%20a%20quote%20for%20Hospital%20Stretcher%20Elevators."
+                  target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">WhatsApp Quote &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 04: Goods & Freight Elevators -->
+          <article class="product-card" data-category="goods">
+            <div class="product-media-wrap">
+              <img src="assets/images/goods-g3.jpeg" alt="Industrial Goods Freight Elevator" loading="lazy">
+              <span class="product-cat-badge">04 / INDUSTRIAL</span>
+              <span class="product-speed-tag">Forklift-Rated</span>
+            </div>
+            <div class="product-body">
+              <div class="product-header-block">
+                <h3 class="product-title">Goods &amp; Freight Elevators</h3>
+                <p class="product-excerpt">Heavy-duty freight for factories &amp; warehouses</p>
+              </div>
+              <div class="product-meta-strip">
+                <span class="meta-tag">1,000 to 5,000 kg+</span>
+                <span class="meta-tag">Checker Plate</span>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-outline-gold btn-sm" data-open-modal="quote"
+                  data-service="Goods Freight Elevators">Inquire Specs</button>
+                <a href="https://wa.me/919557761198?text=Hello%20ERIS-NEXA%2C%20I%20would%20like%20a%20quote%20for%20Goods%20and%20Freight%20Elevators."
+                  target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">WhatsApp Quote &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 05: Automobile Elevators -->
+          <article class="product-card" data-category="auto">
+            <div class="product-media-wrap">
+              <img src="assets/images/automobile-cover.jpeg" alt="Automobile Car Elevator Showroom Lift" loading="lazy">
+              <span class="product-cat-badge">05 / AUTOMOBILE</span>
+              <span class="product-speed-tag">SUV &amp; Sedan Rated</span>
+            </div>
+            <div class="product-body">
+              <div class="product-header-block">
+                <h3 class="product-title">Automobile &amp; Showroom Lifts</h3>
+                <p class="product-excerpt">High-load vehicular lifts for showrooms &amp; parking</p>
+              </div>
+              <div class="product-meta-strip">
+                <span class="meta-tag">3,000 to 4,500 kg</span>
+                <span class="meta-tag">2.8 &times; 5.8m Platform</span>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-outline-gold btn-sm" data-open-modal="quote"
+                  data-service="Automobile Car Lifts">Inquire Specs</button>
+                <a href="https://wa.me/919557761198?text=Hello%20ERIS-NEXA%2C%20I%20would%20like%20a%20quote%20for%20Automobile%20Car%20Lifts."
+                  target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">WhatsApp Quote &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 06: Dumbwaiters -->
+          <article class="product-card" data-category="service">
+            <div class="product-media-wrap">
+              <img src="assets/images/dumbwaiter-1.jpeg" alt="Commercial Pantry Dumbwaiter" loading="lazy">
+              <span class="product-cat-badge">06 / SERVICE</span>
+              <span class="product-speed-tag">SS 304 Cleanroom</span>
+            </div>
+            <div class="product-body">
+              <div class="product-header-block">
+                <h3 class="product-title">Commercial Pantry Dumbwaiters</h3>
+                <p class="product-excerpt">Food-grade service lifts for kitchens &amp; laboratories</p>
+              </div>
+              <div class="product-meta-strip">
+                <span class="meta-tag">50 to 250 kg</span>
+                <span class="meta-tag">Bi-Parting Shutters</span>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-outline-gold btn-sm" data-open-modal="quote"
+                  data-service="Pantry Dumbwaiters">Inquire Specs</button>
+                <a href="https://wa.me/919557761198?text=Hello%20ERIS-NEXA%2C%20I%20would%20like%20a%20quote%20for%20Pantry%20Dumbwaiters."
+                  target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">WhatsApp Quote &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 07: Special Purpose & Facade Glass Elevators -->
+          <article class="product-card" data-category="service">
+            <div class="product-media-wrap">
+              <img src="assets/images/special-cover.jpeg" alt="Panoramic Glass Capsule Elevator" loading="lazy">
+              <span class="product-cat-badge">07 / ARCHITECTURAL</span>
+              <span class="product-speed-tag">Custom Glass Facade</span>
+            </div>
+            <div class="product-body">
+              <div class="product-header-block">
+                <h3 class="product-title">Special Purpose &amp; Glass Facades</h3>
+                <p class="product-excerpt">Panoramic capsule elevators with steel glass mast</p>
+              </div>
+              <div class="product-meta-strip">
+                <span class="meta-tag">Laminated Tough Glass</span>
+                <span class="meta-tag">IP65 Weatherproof</span>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-outline-gold btn-sm" data-open-modal="quote"
+                  data-service="Special Purpose Elevators">Inquire Specs</button>
+                <a href="https://wa.me/919557761198?text=Hello%20ERIS-NEXA%2C%20I%20would%20like%20a%20quote%20for%20Panoramic%20Glass%20Elevators."
+                  target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">WhatsApp Quote &rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Comparative Architectural Civil Engineering Table -->
+        <div class="spec-matrix-card">
+          <div class="section-header" style="margin-bottom: 1.25rem;">
+            <span class="section-tag">CIVIL CLEARANCES &amp; ENGINEERING</span>
+            <h2 class="section-title" style="font-size: 1.5rem;">
+              Comparative <span class="gold-text">Shaft Dimensions Matrix</span>
+            </h2>
+            <p class="section-desc">
+              Engineering guidelines for architects, civil consultants, and structural planners across Gurgaon &amp; NCR.
+            </p>
+          </div>
+
+          <table class="spec-matrix-table">
+            <thead>
+              <tr>
+                <th>Elevator Category</th>
+                <th>Capacity Range</th>
+                <th>Clear Shaft (W &times; D)</th>
+                <th>Min Pit Depth</th>
+                <th>Overhead Clearance</th>
+                <th>Rated Speed</th>
+                <th>Drive Motor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Luxury Passenger</strong></td>
+                <td>6 - 26 Persons (408 - 1760 kg)</td>
+                <td>1800 &times; 1850 mm</td>
+                <td>1400 mm</td>
+                <td>4200 mm</td>
+                <td>1.00 - 2.50 m/s</td>
+                <td>PMSM Gearless MRL</td>
+              </tr>
+              <tr>
+                <td><strong>Bespoke Villa Home</strong></td>
+                <td>3 - 8 Persons (250 - 600 kg)</td>
+                <td>1350 &times; 1400 mm</td>
+                <td>300 mm (Low Pit)</td>
+                <td>3400 mm</td>
+                <td>0.40 - 0.75 m/s</td>
+                <td>Quiet Hydraulic / PMSM</td>
+              </tr>
+              <tr>
+                <td><strong>Hospital &amp; Stretcher</strong></td>
+                <td>15 - 26 Persons (1020 - 2000 kg)</td>
+                <td>2100 &times; 2800 mm</td>
+                <td>1500 mm</td>
+                <td>4400 mm</td>
+                <td>1.00 - 1.50 m/s</td>
+                <td>Heavy-Duty Vector PMSM</td>
+              </tr>
+              <tr>
+                <td><strong>Goods &amp; Freight</strong></td>
+                <td>1,000 - 5,000 kg Material</td>
+                <td>2400 &times; 3000 mm</td>
+                <td>1600 mm</td>
+                <td>4500 mm</td>
+                <td>0.50 - 1.00 m/s</td>
+                <td>High-Torque Traction</td>
+              </tr>
+              <tr>
+                <td><strong>Automobile &amp; Car</strong></td>
+                <td>3,000 - 4,500 kg (SUVs)</td>
+                <td>3200 &times; 6200 mm</td>
+                <td>1800 mm</td>
+                <td>4800 mm</td>
+                <td>0.25 - 0.50 m/s</td>
+                <td>Dual Ram / Traction</td>
+              </tr>
+              <tr>
+                <td><strong>Pantry Dumbwaiter</strong></td>
+                <td>50 - 250 kg Supplies</td>
+                <td>950 &times; 950 mm</td>
+                <td>200 mm</td>
+                <td>2800 mm</td>
+                <td>0.35 - 0.50 m/s</td>
+                <td>Compact 1.1 kW Motor</td>
+              </tr>
+              <tr>
+                <td><strong>Panoramic Glass</strong></td>
+                <td>6 - 16 Persons (408 - 1088 kg)</td>
+                <td>Custom Glass Mast</td>
+                <td>1200 mm</td>
+                <td>4000 mm</td>
+                <td>1.00 - 1.75 m/s</td>
+                <td>Sleek MRL Gearless</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Custom Feasibility Survey Banner -->
+        <div class="rapid-dispatch-banner" style="margin-top: 2.5rem;">
+          <div class="dispatch-info">
+            <span class="section-tag" style="background: rgba(255,255,255,0.2); color: #fff; border-color: rgba(255,255,255,0.4);">
+              CIVIL SURVEY ASSISTANCE
+            </span>
+            <h3>Need a Customized Shaft Feasibility Assessment?</h3>
+            <p>Our senior lift civil engineers conduct on-site shaft surveys in Gurgaon and NCR to verify pit depths, headroom clearance, and structural beam anchorage.</p>
+          </div>
+          <button class="btn btn-primary btn-lg" data-open-modal="quote" data-service="Site Feasibility Survey">
+            <span>Book Free On-Site Civil Survey &rarr;</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Executive Corporate Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-col brand-col">
+          <div class="footer-brand">
+            <div class="logo-badge">
+              <img src="assets/images/logo-mark.png" alt="ERIS-NEXA Monogram" width="30" height="30">
+            </div>
+            <span class="brand-name">ERIS&ndash;NEXA</span>
+          </div>
+          <p class="footer-desc">
+            Premier vertical transportation engineering firm based in Gurgaon, Haryana. Specialized in precision PMSM
+            gearless elevators for private residences, commercial towers, and hospitals.
+          </p>
+          <div class="footer-socials">
+            <a href="https://wa.me/919557761198" target="_blank" rel="noopener noreferrer" class="social-btn"
+              title="WhatsApp Business">
+              <span>💬 WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="elevators.html">Elevator Models</a></li>
+            <li><a href="safety.html">8 Safety Mechanisms</a></li>
+            <li><a href="technology.html">Technology Matrix</a></li>
+            <li><a href="services.html">AMC Service Plans</a></li>
+            <li><a href="showcase.html">Project Showcase</a></li>
+            <li><a href="about.html">Founders &amp; Leadership</a></li>
+            <li><a href="contact.html">Contact &amp; FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Elevator Categories -->
+        <div class="footer-col">
+          <h4>Elevator Systems</h4>
+          <ul class="footer-links-list">
+            <li><a href="elevators.html?cat=passenger">Passenger Elevators</a></li>
+            <li><a href="elevators.html?cat=home">Home &amp; Villa Lifts</a></li>
+            <li><a href="elevators.html?cat=hospital">Hospital Stretcher Lifts</a></li>
+            <li><a href="elevators.html?cat=goods">Heavy Freight Elevators</a></li>
+            <li><a href="elevators.html?cat=auto">Automobile &amp; Car Lifts</a></li>
+            <li><a href="elevators.html?cat=service">Kitchen Dumbwaiters</a></li>
+            <li><a href="elevators.html?cat=service">Facade Panoramic Glass</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Corporate Contact -->
+        <div class="footer-col">
+          <h4>Corporate Contact</h4>
+          <div class="footer-contact-block">
+            <p><strong>Office:</strong> UGF 124, Sushant Vyapar Kendra, Sushant Lok-01, Gurgaon, Haryana &ndash; 122002</p>
+            <p><strong>Direct Helplines:</strong><br>
+              <a href="tel:+919557761198">+91 95577 61198</a> / <a href="tel:+919318323530">+91 93183 23530</a>
+            </p>
+            <p><strong>Email:</strong> <a href="mailto:Sahil.eris1@gmail.com">Sahil.eris1@gmail.com</a></p>
+            <p><strong>Emergency:</strong> 24/7 Rapid Intervention Unit Active</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 ERIS-NEXA Elevators Pvt. Ltd. All Rights Reserved. CIN &amp; GST Registered in Haryana.</div>
+        <div>Engineered for Safety, Elegance &amp; Reliability &bull; ISO 9001:2015 Certified</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Actions -->
+  <aside class="floating-widget-bar" aria-label="Floating Quick Actions">
+    <a href="https://wa.me/919557761198?text=Hello%20ERIS-NEXA%20Elevators%2C%20I%20would%20like%20to%20discuss%20an%20elevator%20requirement."
+      target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp" title="Chat Directly on WhatsApp">
+      💬
+    </a>
+    <button class="floating-btn top-scroll" id="btnBackToTop" title="Scroll Back to Top" aria-label="Back to Top">
+      &uarr;
+    </button>
+  </aside>
+
+  <!-- Accessible Consultation & Quote Modal -->
+  <dialog id="quoteModal" closedby="any" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" aria-label="Close quote modal">✕</button>
+
+      <div class="modal-wizard-header">
+        <span class="section-tag" style="margin-bottom: 0.5rem;">INSTANT CONSULTATION</span>
+        <h3 id="modalTitle">Request a Technical Quotation</h3>
+        <p>Tell us about your building and our senior engineering team will provide a tailored layout and cost estimate.</p>
+      </div>
+
+      <form id="quoteForm">
+        <div class="form-row-2">
+          <div class="form-field-group">
+            <label for="modalName">Your Full Name *</label>
+            <input type="text" id="modalName" name="name" class="form-input" required placeholder="e.g. Rajesh Sharma">
+          </div>
+          <div class="form-field-group">
+            <label for="modalPhone">Phone / WhatsApp *</label>
+            <input type="tel" id="modalPhone" name="phone" class="form-input" required placeholder="+91 98765 43210">
+          </div>
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-field-group">
+            <label for="modalEmail">Official Email *</label>
+            <input type="email" id="modalEmail" name="email" class="form-input" required placeholder="name@company.com">
+          </div>
+          <div class="form-field-group">
+            <label for="modalCity">City / Location *</label>
+            <input type="text" id="modalCity" name="city" class="form-input" required value="Gurgaon"
+              placeholder="e.g. Gurgaon, Delhi, Noida">
+          </div>
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-field-group">
+            <label for="modalBuildingType">Building / Site Type</label>
+            <select id="modalBuildingType" name="building_type" class="form-select">
+              <option value="Private Villa / Duplex">Private Villa / Duplex</option>
+              <option value="Residential Apartment Building">Residential Apartment</option>
+              <option value="Commercial Office Complex">Commercial Office</option>
+              <option value="Hospital / Healthcare Facility">Hospital / Clinic</option>
+              <option value="Factory / Industrial Warehouse">Factory / Warehouse</option>
+              <option value="Automobile Dealership / Showroom">Automobile Showroom</option>
+              <option value="Hotel / Banquet / Resort">Hotel / Banquet</option>
+            </select>
+          </div>
+          <div class="form-field-group">
+            <label for="modalRequirement">Elevator Requirement</label>
+            <select id="modalRequirement" name="requirement" class="form-select">
+              <option value="Passenger Elevators">Passenger Elevator</option>
+              <option value="Home & Villa Elevators">Home &amp; Villa Elevator</option>
+              <option value="Hospital Elevators">Hospital Stretcher Elevator</option>
+              <option value="Goods Freight Elevators">Goods / Freight Elevator</option>
+              <option value="Automobile Car Lifts">Automobile Elevator</option>
+              <option value="Pantry Dumbwaiters">Commercial Dumbwaiter</option>
+              <option value="Special Purpose Elevators">Special Panoramic Glass</option>
+              <option value="AMC Annual Maintenance">AMC Annual Maintenance</option>
+              <option value="Modernization & Upgrades">Modernization &amp; Upgrades</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field-group">
+          <label for="modalMessage">Project Details / Shaft Dimensions (Optional)</label>
+          <textarea id="modalMessage" name="message" class="form-textarea" rows="3"
+            placeholder="Tell us number of floors, preferred speed, or existing shaft dimensions..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.5rem;">
+          <span>Submit &bull; Dispatch Directly to Engineering WhatsApp &nearr;</span>
+        </button>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
