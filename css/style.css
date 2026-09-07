@@ -1975,7 +1975,7 @@ nav {
 
 /* --- Safety Engineering Interactive Section (Dark Luxury Mode) --- */
 .safety-section {
-  background: 
+  background:
     radial-gradient(circle at 10% 20%, rgba(4, 104, 174, 0.35) 0%, transparent 45%),
     radial-gradient(circle at 90% 80%, rgba(2, 132, 199, 0.25) 0%, transparent 45%),
     linear-gradient(135deg, #090D16 0%, #0F172A 50%, #080C15 100%);
@@ -3338,7 +3338,7 @@ nav {
 .director-card {
   height: 100%;
   background: radial-gradient(circle at 90% 12%, rgba(2, 132, 199, 0.16) 0%, transparent 60%),
-              linear-gradient(145deg, #0B1220 0%, #0F172A 55%, #080D1A 100%);
+    linear-gradient(145deg, #0B1220 0%, #0F172A 55%, #080D1A 100%);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 18px;
   overflow: hidden;
@@ -3969,9 +3969,11 @@ nav {
   0% {
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.65), 0 8px 25px rgba(37, 211, 102, 0.45);
   }
+
   65% {
     box-shadow: 0 0 0 16px rgba(37, 211, 102, 0), 0 8px 25px rgba(37, 211, 102, 0.45);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 8px 25px rgba(37, 211, 102, 0.45);
   }
@@ -4071,17 +4073,21 @@ nav {
     right: 18px;
     gap: 10px;
   }
+
   .floating-btn {
     width: 48px;
     height: 48px;
   }
+
   .floating-btn.whatsapp svg {
     width: 26px;
     height: 26px;
   }
+
   .floating-tooltip {
     display: none;
   }
+
   .floating-btn.top-scroll {
     width: 40px;
     height: 40px;
@@ -5591,7 +5597,7 @@ dialog::backdrop {
 .contact-hub-card {
   position: relative;
   background: radial-gradient(circle at 85% 15%, rgba(2, 132, 199, 0.14) 0%, transparent 60%),
-              linear-gradient(145deg, #0B1220 0%, #0F172A 60%, #080D1A 100%);
+    linear-gradient(145deg, #0B1220 0%, #0F172A 60%, #080D1A 100%);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 14px;
   padding: 1.25rem 1.35rem 1.15rem;
@@ -5872,11 +5878,13 @@ dialog::backdrop {
   .contact-survey-split {
     grid-template-columns: 1fr;
   }
+
   .contact-survey-visual {
     height: 260px;
     min-height: 260px;
     padding: 0;
   }
+
   .contact-survey-form-wrap {
     padding: 1.5rem;
   }
@@ -5987,11 +5995,221 @@ dialog::backdrop {
   .contact-map-wrap {
     height: 360px;
   }
+
   .contact-map-overlay-badge {
     bottom: 12px;
     left: 12px;
     right: 12px;
     max-width: none;
     padding: 0.75rem 0.9rem;
+  }
+}
+
+/* ==========================================================================
+   HOMEPAGE ABOUT US SECTION (50-50% REFERENCE-MATCHED SPLIT)
+   ========================================================================== */
+.home-about-section {
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+  padding: 2.75rem 0;
+}
+
+.home-about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Exact 50% - 50% split */
+  gap: 3rem;
+  align-items: center;
+}
+
+.home-about-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-about-content .section-title {
+  margin-bottom: 0.65rem;
+}
+
+.home-about-content .section-desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.home-about-content .section-desc strong {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+/* 4 Feature Columns with Vertical Dividers (Matched to Reference Screenshot 2) */
+.home-about-features-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin: 1.15rem 0 1.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.home-about-feature-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 0.5rem;
+  position: relative;
+}
+
+.home-about-feature-col:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(15, 23, 42, 0.1);
+}
+
+.home-about-feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #F8FAFC;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  color: var(--blue-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.45rem;
+  transition: all var(--transition-base);
+}
+
+.home-about-feature-col:hover .home-about-feature-icon {
+  background: var(--blue-primary);
+  color: #FFFFFF;
+  border-color: var(--blue-primary);
+  transform: translateY(-2px);
+}
+
+.home-about-feature-col span {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+/* Action Buttons (Matched to Website Standard Buttons) */
+.home-about-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* 50% Image Column */
+.home-about-visual {
+  position: relative;
+  width: 100%;
+}
+
+.home-about-img-frame {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 14px 30px -6px rgba(15, 23, 42, 0.14);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  height: 450px;
+  width: 100%;
+  background: #0B132B;
+}
+
+.home-about-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.home-about-img-frame:hover img {
+  transform: scale(1.03);
+}
+
+/* Subtle corner badge overlay matching Screenshot 1 */
+.home-about-corner-overlay {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  padding: 0.65rem 0.95rem;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.corner-overlay-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #25D366;
+  box-shadow: 0 0 8px #25D366;
+  flex-shrink: 0;
+}
+
+.home-about-corner-overlay strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.home-about-corner-overlay span {
+  font-size: 0.68rem;
+  color: #CBD5E1;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .home-about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .home-about-img-frame {
+    height: 360px;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-about-section {
+    padding: 2rem 0;
+  }
+  .home-about-features-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 0;
+  }
+  .home-about-feature-col:nth-child(2)::after {
+    display: none;
+  }
+  .home-about-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .home-about-actions .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 }
