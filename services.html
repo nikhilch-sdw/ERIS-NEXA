@@ -24,17 +24,17 @@
 </head>
 
 <body>
-  <!-- Top Operational Status Bar -->
-  <aside class="top-status-bar" aria-label="Operational Live Status">
+  <!-- Top Emergency & Status Bar -->
+  <aside class="top-status-bar" aria-label="Rapid Dispatch Status and Emergency Numbers">
     <div class="container top-bar-content">
       <div class="status-indicator">
-        <span class="status-dot pulse" aria-hidden="true"></span>
-        <span class="status-text"><strong>24/7 RAPID RESPONSE:</strong><span class="status-sub-text"> Emergency
-            breakdown dispatch active across Gurgaon &amp; NCR</span></span>
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="status-text"><strong>24/7 RAPID DISPATCH:</strong><span class="status-sub-text"> Emergency
+            breakdown hotline active across Gurgaon &amp; NCR</span></span>
       </div>
       <div class="top-contacts">
-        <a href="tel:+919557761198" class="contact-link">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+        <a href="tel:+919557761198" title="Call Primary 24/7 Helpline">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path
               d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
@@ -42,30 +42,34 @@
           </svg>
           <span>+91 95577 61198</span>
         </a>
-        <span class="separator" aria-hidden="true">&bull;</span>
-        <a href="mailto:Sahil.eris1@gmail.com" class="contact-link top-hide-mobile">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+        <a href="tel:+919717585098" class="top-hide-mobile" title="Call Technical Director">
+          <span>+91 97175 85098</span>
+        </a>
+        <a href="mailto:Sahil.eris1@gmail.com" class="top-hide-tablet" title="Official Inquiry Email">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
             <polyline points="22,6 12,13 2,6"></polyline>
           </svg>
           <span>Sahil.eris1@gmail.com</span>
         </a>
+        <span class="top-hide-tablet top-location">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Sushant Lok-01, Gurgaon</span>
+        </span>
       </div>
     </div>
   </aside>
 
-  <!-- Sticky Executive Header -->
+  <!-- Sticky Glassmorphic Navbar -->
   <header class="navbar" id="siteHeader">
     <div class="container nav-container">
-      <a href="index.html" class="brand-logo" aria-label="ERIS-NEXA Home">
-        <div class="logo-badge">
-          <img src="assets/images/logo-mark.png" alt="ERIS-NEXA Monogram" width="26" height="26">
-        </div>
-        <div class="brand-text">
-          <span class="brand-name">ERIS&ndash;NEXA<span>.</span></span>
-          <span class="brand-tagline">Vertical Transportation</span>
-        </div>
+      <a href="index.html" class="brand-logo" title="ERIS-NEXA Elevators Homepage" aria-label="ERIS-NEXA Home">
+        <img src="assets/logo/logo dark.png" alt="ERIS-NEXA Elevators" class="header-logo-img" width="112" height="45">
       </a>
 
       <nav aria-label="Primary Navigation">
@@ -90,12 +94,12 @@
           <span>Call Engineer</span>
         </a>
         <button class="btn btn-primary btn-sm nav-quote-btn" data-open-modal="quote"
-          data-service="AMC Maintenance Contract">
+          data-service="General Consultation">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
           </svg>
-          <span>Get AMC Quote</span>
+          <span>Get Quote</span>
         </button>
         <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
           <span class="hamburger-box" aria-hidden="true">
@@ -484,8 +488,9 @@
       <div class="footer-grid">
         <div class="footer-brand-col">
           <div class="footer-logo">
-            <img src="assets/images/logo-mark.png" alt="ERIS-NEXA Logo" width="32" height="32">
-            <span class="footer-brand-name">ERIS&ndash;NEXA</span>
+            <a href="index.html" aria-label="ERIS-NEXA Home">
+              <img src="assets/logo/logo light.png" alt="ERIS-NEXA Elevators" class="footer-logo-img" width="115" height="46">
+            </a>
           </div>
           <p class="footer-desc">
             Premier vertical transportation systems engineered for Gurgaon, Delhi NCR, and prestigious infrastructure
@@ -539,7 +544,7 @@
 
       <div class="footer-bottom">
         <div>&copy; 2026 ERIS-NEXA Elevators Pvt. Ltd. All Rights Reserved. CIN &amp; GST Registered in Haryana.</div>
-        <div>Engineered for Safety, Elegance &amp; Reliability &bull; ISO 9001:2015 Certified</div>
+        <div>Designed And Developed By <a href="https://smartdigitalwings.com" target="_blank" rel="noopener noreferrer">Smart Digital Wings</a></div>
       </div>
     </div>
   </footer>
@@ -547,11 +552,16 @@
   <!-- Floating Actions -->
   <aside class="floating-widget-bar" aria-label="Floating Quick Actions">
     <a href="https://wa.me/919557761198?text=Hello%20ERIS-NEXA%20Elevators%2C%20I%20would%20like%20to%20inquire%20about%20your%20AMC%20and%20service%20packages."
-      target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp" title="Chat Directly on WhatsApp">
-      💬
+      target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp" title="Chat Directly on WhatsApp" aria-label="Chat on WhatsApp">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2ZM12.04 20.15C10.55 20.15 9.09 19.75 7.82 19L7.52 18.82L4.4 19.64L5.23 16.59L5.03 16.27C4.21 14.97 3.78 13.46 3.78 11.91C3.78 7.36 7.49 3.65 12.04 3.65C14.25 3.65 16.32 4.51 17.88 6.07C19.44 7.63 20.3 9.7 20.3 11.91C20.3 16.47 16.59 20.15 12.04 20.15ZM16.57 14.43C16.32 14.3 15.1 13.7 14.87 13.62C14.65 13.54 14.48 13.5 14.31 13.75C14.14 14 13.65 14.58 13.5 14.75C13.35 14.92 13.2 14.94 12.95 14.82C12.7 14.7 11.89 14.43 10.93 13.58C10.18 12.91 9.68 12.08 9.53 11.83C9.38 11.58 9.51 11.45 9.64 11.32C9.75 11.21 9.89 11.03 10.01 10.88C10.14 10.73 10.18 10.63 10.26 10.46C10.34 10.29 10.3 10.15 10.24 10.02C10.18 9.9 9.68 8.67 9.47 8.17C9.27 7.68 9.06 7.75 8.91 7.74C8.76 7.73 8.59 7.73 8.43 7.73C8.26 7.73 7.99 7.79 7.76 8.04C7.53 8.29 6.88 8.9 6.88 10.14C6.88 11.38 7.78 12.58 7.91 12.75C8.03 12.92 9.68 15.47 12.21 16.56C14.01 17.34 14.71 17.27 15.6 17.14C16.14 17.06 17.26 16.46 17.5 15.79C17.73 15.13 17.73 14.56 17.67 14.43C17.6 14.31 17.43 14.24 17.18 14.12L16.57 14.43Z"/>
+      </svg>
+      <span class="floating-tooltip">Chat on WhatsApp</span>
     </a>
     <button class="floating-btn top-scroll" id="btnBackToTop" title="Scroll Back to Top" aria-label="Back to Top">
-      &uarr;
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M18 15l-6-6-6 6"/>
+      </svg>
     </button>
   </aside>
 

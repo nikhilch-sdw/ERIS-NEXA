@@ -24,17 +24,17 @@
 </head>
 
 <body>
-  <!-- Top Operational Status Bar -->
-  <aside class="top-status-bar" aria-label="Operational Live Status">
+  <!-- Top Emergency & Status Bar -->
+  <aside class="top-status-bar" aria-label="Rapid Dispatch Status and Emergency Numbers">
     <div class="container top-bar-content">
       <div class="status-indicator">
-        <span class="status-dot pulse" aria-hidden="true"></span>
-        <span class="status-text"><strong>24/7 PROJECT DESK:</strong><span class="status-sub-text"> 500+ successful
-            installations across Delhi NCR</span></span>
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="status-text"><strong>24/7 RAPID DISPATCH:</strong><span class="status-sub-text"> Emergency
+            breakdown hotline active across Gurgaon &amp; NCR</span></span>
       </div>
       <div class="top-contacts">
-        <a href="tel:+919557761198" class="contact-link">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+        <a href="tel:+919557761198" title="Call Primary 24/7 Helpline">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path
               d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
@@ -42,30 +42,34 @@
           </svg>
           <span>+91 95577 61198</span>
         </a>
-        <span class="separator" aria-hidden="true">&bull;</span>
-        <a href="mailto:Sahil.eris1@gmail.com" class="contact-link top-hide-mobile">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+        <a href="tel:+919717585098" class="top-hide-mobile" title="Call Technical Director">
+          <span>+91 97175 85098</span>
+        </a>
+        <a href="mailto:Sahil.eris1@gmail.com" class="top-hide-tablet" title="Official Inquiry Email">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
             <polyline points="22,6 12,13 2,6"></polyline>
           </svg>
           <span>Sahil.eris1@gmail.com</span>
         </a>
+        <span class="top-hide-tablet top-location">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Sushant Lok-01, Gurgaon</span>
+        </span>
       </div>
     </div>
   </aside>
 
-  <!-- Sticky Executive Header -->
+  <!-- Sticky Glassmorphic Navbar -->
   <header class="navbar" id="siteHeader">
     <div class="container nav-container">
-      <a href="index.html" class="brand-logo" aria-label="ERIS-NEXA Home">
-        <div class="logo-badge">
-          <img src="assets/images/logo-mark.png" alt="ERIS-NEXA Monogram" width="26" height="26">
-        </div>
-        <div class="brand-text">
-          <span class="brand-name">ERIS&ndash;NEXA<span>.</span></span>
-          <span class="brand-tagline">Vertical Transportation</span>
-        </div>
+      <a href="index.html" class="brand-logo" title="ERIS-NEXA Elevators Homepage" aria-label="ERIS-NEXA Home">
+        <img src="assets/logo/logo dark.png" alt="ERIS-NEXA Elevators" class="header-logo-img" width="112" height="45">
       </a>
 
       <nav aria-label="Primary Navigation">
@@ -90,7 +94,7 @@
           <span>Call Engineer</span>
         </a>
         <button class="btn btn-primary btn-sm nav-quote-btn" data-open-modal="quote"
-          data-service="Architectural Showcase Project Inquiry">
+          data-service="General Consultation">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
@@ -133,320 +137,422 @@
           </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem;">
-
+        <div class="showcase-videos-grid">
           <!-- Video 1 -->
-          <div class="showcase-card" data-video-src="assets/videos/showcase-1.mp4"
-            data-video-title="DLF Phase 5 Luxury Villa Elevator Motion">
-            <div
-              style="position: relative; border-radius: 12px; overflow: hidden; background: #000000; aspect-ratio: 16/10; cursor: pointer; box-shadow: var(--shadow-sm);">
-              <video src="assets/videos/showcase-1.mp4" preload="metadata" muted playsinline
-                style="width: 100%; height: 100%; object-fit: cover;"></video>
-              <div
-                style="position: absolute; inset: 0; background: rgba(15,23,42,0.3); display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">
-                <div
-                  style="width: 52px; height: 52px; border-radius: 50%; background: var(--gold); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; box-shadow: 0 4px 16px rgba(4,104,174,0.5);">
-                  ▶
+          <div class="video-showcase-card" data-video-src="assets/videos/showcase-4.mp4"
+            data-video-title="Private Villa Glass Elevator in Motion">
+            <div class="video-thumb-wrap">
+              <img src="assets/images/video-poster-4.jpg" alt="Villa Glass Lift Poster" loading="lazy">
+              <div class="video-play-trigger">
+                <div class="play-btn-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="6 3 20 12 6 21 6 3" />
+                  </svg>
                 </div>
-              </div>
-              <div
-                style="position: absolute; bottom: 12px; left: 12px; right: 12px; color: #FFFFFF; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">
-                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #93C5FD;">DLF Phase
-                  5 &bull; Private Villa</div>
-                <div style="font-weight: 600; font-size: 0.95rem;">Whisper-Quiet PMSM Gearless Ride</div>
               </div>
             </div>
           </div>
 
           <!-- Video 2 -->
-          <div class="showcase-card" data-video-src="assets/videos/showcase-3.mp4"
-            data-video-title="Golf Course Road High-Speed Passenger Lift">
-            <div
-              style="position: relative; border-radius: 12px; overflow: hidden; background: #000000; aspect-ratio: 16/10; cursor: pointer; box-shadow: var(--shadow-sm);">
-              <video src="assets/videos/showcase-3.mp4" preload="metadata" muted playsinline
-                style="width: 100%; height: 100%; object-fit: cover;"></video>
-              <div
-                style="position: absolute; inset: 0; background: rgba(15,23,42,0.3); display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">
-                <div
-                  style="width: 52px; height: 52px; border-radius: 50%; background: var(--gold); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; box-shadow: 0 4px 16px rgba(4,104,174,0.5);">
-                  ▶
+          <div class="video-showcase-card" data-video-src="assets/videos/showcase-6.mp4"
+            data-video-title="Outdoor Facade Glass Elevator">
+            <div class="video-thumb-wrap">
+              <img src="assets/images/video-poster-6.jpg" alt="Outdoor Glass Lift Poster" loading="lazy">
+              <div class="video-play-trigger">
+                <div class="play-btn-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="6 3 20 12 6 21 6 3" />
+                  </svg>
                 </div>
-              </div>
-              <div
-                style="position: absolute; bottom: 12px; left: 12px; right: 12px; color: #FFFFFF; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">
-                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #93C5FD;">Golf
-                  Course Ext. &bull; Corporate Tower</div>
-                <div style="font-weight: 600; font-size: 0.95rem;">High-Speed VVVF Smooth Leveling</div>
               </div>
             </div>
           </div>
 
           <!-- Video 3 -->
-          <div class="showcase-card" data-video-src="assets/videos/showcase-4.mp4"
-            data-video-title="Panoramic Curved Glass Elevator Commissioning">
-            <div
-              style="position: relative; border-radius: 12px; overflow: hidden; background: #000000; aspect-ratio: 16/10; cursor: pointer; box-shadow: var(--shadow-sm);">
-              <video src="assets/videos/showcase-4.mp4" preload="metadata" muted playsinline
-                style="width: 100%; height: 100%; object-fit: cover;"></video>
-              <div
-                style="position: absolute; inset: 0; background: rgba(15,23,42,0.3); display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">
-                <div
-                  style="width: 52px; height: 52px; border-radius: 50%; background: var(--gold); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; box-shadow: 0 4px 16px rgba(4,104,174,0.5);">
-                  ▶
+          <div class="video-showcase-card" data-video-src="assets/videos/showcase-3.mp4"
+            data-video-title="Stainless Steel Telescopic Landing Doors">
+            <div class="video-thumb-wrap">
+              <img src="assets/images/video-poster-3.jpg" alt="Landing Doors Poster" loading="lazy">
+              <div class="video-play-trigger">
+                <div class="play-btn-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="6 3 20 12 6 21 6 3" />
+                  </svg>
                 </div>
-              </div>
-              <div
-                style="position: absolute; bottom: 12px; left: 12px; right: 12px; color: #FFFFFF; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">
-                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #93C5FD;">Sushant
-                  Lok &bull; Architectural Duplex</div>
-                <div style="font-weight: 600; font-size: 0.95rem;">Curved Panoramic Glass Commissioning</div>
               </div>
             </div>
           </div>
 
           <!-- Video 4 -->
-          <div class="showcase-card" data-video-src="assets/videos/showcase-6.mp4"
-            data-video-title="Rose Gold Stainless Steel Cabin Interior">
-            <div
-              style="position: relative; border-radius: 12px; overflow: hidden; background: #000000; aspect-ratio: 16/10; cursor: pointer; box-shadow: var(--shadow-sm);">
-              <video src="assets/videos/showcase-6.mp4" preload="metadata" muted playsinline
-                style="width: 100%; height: 100%; object-fit: cover;"></video>
-              <div
-                style="position: absolute; inset: 0; background: rgba(15,23,42,0.3); display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">
-                <div
-                  style="width: 52px; height: 52px; border-radius: 50%; background: var(--gold); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; box-shadow: 0 4px 16px rgba(4,104,174,0.5);">
-                  ▶
+          <div class="video-showcase-card" data-video-src="assets/videos/showcase-1.mp4"
+            data-video-title="Luxury Elevator Cabin Interior">
+            <div class="video-thumb-wrap">
+              <img src="assets/images/video-poster-1.jpg" alt="Cabin Interior Poster" loading="lazy">
+              <div class="video-play-trigger">
+                <div class="play-btn-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="6 3 20 12 6 21 6 3" />
+                  </svg>
                 </div>
-              </div>
-              <div
-                style="position: absolute; bottom: 12px; left: 12px; right: 12px; color: #FFFFFF; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">
-                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #93C5FD;">Cyber City
-                  &bull; Luxury Penthouse</div>
-                <div style="font-weight: 600; font-size: 0.95rem;">Titanium Gold Mirror Cabin Finish</div>
               </div>
             </div>
           </div>
 
+          <!-- Video 5 -->
+          <div class="video-showcase-card" data-video-src="assets/videos/hero-bg.mp4"
+            data-video-title="High-Speed Commercial Tower MRL Elevator">
+            <div class="video-thumb-wrap">
+              <img src="assets/images/video-poster-2.jpg" alt="Commercial Passenger Lift Poster" loading="lazy">
+              <div class="video-play-trigger">
+                <div class="play-btn-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="6 3 20 12 6 21 6 3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 6 -->
+          <div class="video-showcase-card" data-video-src="assets/videos/showcase-4.mp4"
+            data-video-title="Curved Staircase Capsule Glass Lift">
+            <div class="video-thumb-wrap">
+              <img src="assets/images/glass-staircase.jpeg" alt="Staircase Capsule Glass Lift Poster" loading="lazy">
+              <div class="video-play-trigger">
+                <div class="play-btn-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="6 3 20 12 6 21 6 3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 7 -->
+          <div class="video-showcase-card" data-video-src="assets/videos/showcase-1.mp4"
+            data-video-title="Champagne Gold Luxury Elevator Cabin">
+            <div class="video-thumb-wrap">
+              <img src="assets/images/cabin-gold-1.jpeg" alt="Champagne Gold Luxury Cabin Poster" loading="lazy">
+              <div class="video-play-trigger">
+                <div class="play-btn-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="6 3 20 12 6 21 6 3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 8 -->
+          <div class="video-showcase-card" data-video-src="assets/videos/showcase-6.mp4"
+            data-video-title="External Architectural Panoramic Glass Lift">
+            <div class="video-thumb-wrap">
+              <img src="assets/images/glass-outdoor-1.jpeg" alt="Outdoor Panoramic Glass Lift Poster" loading="lazy">
+              <div class="video-play-trigger">
+                <div class="play-btn-circle">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="6 3 20 12 6 21 6 3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- High-Resolution Photographic Installation Gallery -->
-    <section class="section"
-      style="background: #F8FAFC; border-top: 1px solid rgba(15,23,42,0.06); border-bottom: 1px solid rgba(15,23,42,0.06);">
+    <section class="section showcase-photo-section"
+      style="padding: 2.75rem 0; background: #F8FAFC; border-top: 1px solid rgba(15,23,42,0.06); border-bottom: 1px solid rgba(15,23,42,0.06);">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">ARCHITECTURAL PHOTOGRAPHY</span>
-          <h2 class="section-title">High-Resolution Installation Gallery</h2>
-          <p class="section-subtitle">
-            Click any image to view in enlarged lightbox preview. All projects engineered and installed by ERIS-NEXA
-            engineers.
+        <div class="section-header text-center" style="margin-bottom: 1.5rem;">
+          <span class="section-tag" style="font-size: 0.68rem; padding: 0.2rem 0.65rem;">ARCHITECTURAL PHOTOGRAPHY</span>
+          <h2 class="section-title" style="font-size: 1.75rem; margin-bottom: 0.35rem;">High-Resolution Installation Gallery</h2>
+          <p class="section-subtitle" style="font-size: 0.85rem; max-width: 580px; margin: 0 auto; line-height: 1.45;">
+            Click any image to view in enlarged lightbox preview. All projects engineered and installed by ERIS-NEXA engineers.
           </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
-
+        <div class="showcase-photo-grid">
           <!-- Image 1 -->
-          <div
-            style="background: #FFFFFF; border-radius: 12px; overflow: hidden; border: 1px solid rgba(15,23,42,0.08); box-shadow: var(--shadow-sm); cursor: pointer;"
-            data-gallery-img="assets/images/gallery-1.jpeg"
+          <div class="showcase-photo-card" data-gallery-img="assets/images/gallery-1.jpeg"
             data-gallery-title="Bespoke Titanium Gold Mirror Passenger Cabin">
-            <div style="aspect-ratio: 4/3; overflow: hidden; position: relative;">
-              <img src="assets/images/gallery-1.jpeg" alt="Titanium Gold Cabin" loading="lazy"
-                style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
-              <span
-                style="position: absolute; top: 10px; left: 10px; background: rgba(15,23,42,0.7); color: #FFFFFF; font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; backdrop-filter: blur(4px);">
-                DLF PHASE 5
-              </span>
-            </div>
-            <div style="padding: 1.25rem;">
-              <h3 style="font-size: 1.05rem; color: var(--text-primary); margin-bottom: 0.35rem;">Bespoke Titanium Gold
-                Mirror Cabin</h3>
-              <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-                Laser-etched decorative stainless steel panels with custom perimeter LED cove lighting and Italian
-                marble flooring.
-              </p>
+            <img src="assets/images/gallery-1.jpeg" alt="Titanium Gold Cabin" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
             </div>
           </div>
 
           <!-- Image 2 -->
-          <div
-            style="background: #FFFFFF; border-radius: 12px; overflow: hidden; border: 1px solid rgba(15,23,42,0.08); box-shadow: var(--shadow-sm); cursor: pointer;"
-            data-gallery-img="assets/images/gallery-2.jpeg" data-gallery-title="Panoramic 360° Glass Elevator Shaft">
-            <div style="aspect-ratio: 4/3; overflow: hidden; position: relative;">
-              <img src="assets/images/gallery-2.jpeg" alt="Panoramic Glass Shaft" loading="lazy"
-                style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
-              <span
-                style="position: absolute; top: 10px; left: 10px; background: rgba(15,23,42,0.7); color: #FFFFFF; font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; backdrop-filter: blur(4px);">
-                GOLF COURSE RD
-              </span>
-            </div>
-            <div style="padding: 1.25rem;">
-              <h3 style="font-size: 1.05rem; color: var(--text-primary); margin-bottom: 0.35rem;">Curved Scenic Glass
-                Elevator</h3>
-              <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-                Full-height toughened laminated safety glass with minimal architectural framing and panoramic exterior
-                sightlines.
-              </p>
+          <div class="showcase-photo-card" data-gallery-img="assets/images/gallery-2.jpeg"
+            data-gallery-title="Panoramic 360° Glass Elevator Shaft">
+            <img src="assets/images/gallery-2.jpeg" alt="Panoramic Glass Shaft" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
             </div>
           </div>
 
           <!-- Image 3 -->
-          <div
-            style="background: #FFFFFF; border-radius: 12px; overflow: hidden; border: 1px solid rgba(15,23,42,0.08); box-shadow: var(--shadow-sm); cursor: pointer;"
-            data-gallery-img="assets/images/gallery-3.jpeg" data-gallery-title="Minimalist Luxury Home Villa Lift">
-            <div style="aspect-ratio: 4/3; overflow: hidden; position: relative;">
-              <img src="assets/images/gallery-3.jpeg" alt="Villa Home Lift" loading="lazy"
-                style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
-              <span
-                style="position: absolute; top: 10px; left: 10px; background: rgba(15,23,42,0.7); color: #FFFFFF; font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; backdrop-filter: blur(4px);">
-                SUSHANT LOK
-              </span>
-            </div>
-            <div style="padding: 1.25rem;">
-              <h3 style="font-size: 1.05rem; color: var(--text-primary); margin-bottom: 0.35rem;">Compact Pit Villa Home
-                Elevator</h3>
-              <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-                Engineered for existing residential stairwells requiring only 300 mm pit depth and single-phase 230V
-                power compatibility.
-              </p>
+          <div class="showcase-photo-card" data-gallery-img="assets/images/gallery-3.jpeg"
+            data-gallery-title="Minimalist Luxury Home Villa Lift">
+            <img src="assets/images/gallery-3.jpeg" alt="Villa Home Lift" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
             </div>
           </div>
 
           <!-- Image 4 -->
-          <div
-            style="background: #FFFFFF; border-radius: 12px; overflow: hidden; border: 1px solid rgba(15,23,42,0.08); box-shadow: var(--shadow-sm); cursor: pointer;"
-            data-gallery-img="assets/images/gallery-4.jpeg"
+          <div class="showcase-photo-card" data-gallery-img="assets/images/gallery-4.jpeg"
             data-gallery-title="Hospital Grade Stretcher & Bed Elevator">
-            <div style="aspect-ratio: 4/3; overflow: hidden; position: relative;">
-              <img src="assets/images/gallery-4.jpeg" alt="Hospital Bed Elevator" loading="lazy"
-                style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
-              <span
-                style="position: absolute; top: 10px; left: 10px; background: rgba(15,23,42,0.7); color: #FFFFFF; font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; backdrop-filter: blur(4px);">
-                SOHNA ROAD
-              </span>
-            </div>
-            <div style="padding: 1.25rem;">
-              <h3 style="font-size: 1.05rem; color: var(--text-primary); margin-bottom: 0.35rem;">Healthcare Stretcher
-                Transport</h3>
-              <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-                Antimicrobial medical stainless steel, extended door hold times, smooth jerk-free acceleration curves,
-                and emergency override.
-              </p>
+            <img src="assets/images/gallery-4.jpeg" alt="Hospital Bed Elevator" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
             </div>
           </div>
 
           <!-- Image 5 -->
-          <div
-            style="background: #FFFFFF; border-radius: 12px; overflow: hidden; border: 1px solid rgba(15,23,42,0.08); box-shadow: var(--shadow-sm); cursor: pointer;"
-            data-gallery-img="assets/images/gallery-5.jpeg"
+          <div class="showcase-photo-card" data-gallery-img="assets/images/gallery-5.jpeg"
             data-gallery-title="High-Traffic Commercial Office Lobby Elevators">
-            <div style="aspect-ratio: 4/3; overflow: hidden; position: relative;">
-              <img src="assets/images/gallery-5.jpeg" alt="Commercial Elevators" loading="lazy"
-                style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
-              <span
-                style="position: absolute; top: 10px; left: 10px; background: rgba(15,23,42,0.7); color: #FFFFFF; font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; backdrop-filter: blur(4px);">
-                CYBER CITY
-              </span>
-            </div>
-            <div style="padding: 1.25rem;">
-              <h3 style="font-size: 1.05rem; color: var(--text-primary); margin-bottom: 0.35rem;">Twin High-Rise
-                Commercial Bank</h3>
-              <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-                Duplex group dispatching with smart traffic prediction algorithms handling 1,200+ passenger trips daily
-                with zero wait bottlenecks.
-              </p>
+            <img src="assets/images/gallery-5.jpeg" alt="Commercial Elevators" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
             </div>
           </div>
 
           <!-- Image 6 -->
-          <div
-            style="background: #FFFFFF; border-radius: 12px; overflow: hidden; border: 1px solid rgba(15,23,42,0.08); box-shadow: var(--shadow-sm); cursor: pointer;"
-            data-gallery-img="assets/images/special-cover.jpeg"
+          <div class="showcase-photo-card" data-gallery-img="assets/images/special-cover.jpeg"
             data-gallery-title="Custom Circular Panoramic Glass Lift">
-            <div style="aspect-ratio: 4/3; overflow: hidden; position: relative;">
-              <img src="assets/images/special-cover.jpeg" alt="Circular Panoramic Lift" loading="lazy"
-                style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
-              <span
-                style="position: absolute; top: 10px; left: 10px; background: rgba(15,23,42,0.7); color: #FFFFFF; font-size: 0.7rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; backdrop-filter: blur(4px);">
-                SOUTH DELHI
-              </span>
-            </div>
-            <div style="padding: 1.25rem;">
-              <h3 style="font-size: 1.05rem; color: var(--text-primary); margin-bottom: 0.35rem;">Circular Panoramic
-                Capsule</h3>
-              <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">
-                Custom 360-degree cylindrical curved glass hoistway integrated into a spiral central staircase atrium
-                for an iconic statement.
-              </p>
+            <img src="assets/images/special-cover.jpeg" alt="Circular Panoramic Lift" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
             </div>
           </div>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- Engineering Case Studies -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">ENGINEERING CHALLENGES SOLVED</span>
-          <h2 class="section-title">Landmark Project Case Studies</h2>
-          <p class="section-subtitle">
-            How ERIS-NEXA engineers tailored civil hoistway designs to match architectural visions across challenging
-            NCR sites.
-          </p>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
-
-          <div
-            style="background: #FFFFFF; border-radius: 12px; border: 1px solid rgba(15,23,42,0.1); padding: 1.75rem; box-shadow: var(--shadow-sm);">
-            <div
-              style="font-size: 0.75rem; font-weight: 700; color: var(--gold); text-transform: uppercase; margin-bottom: 0.5rem;">
-              CASE STUDY 01 &bull; RESIDENTIAL VILLA
-            </div>
-            <h3 style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.75rem;">DLF Phase 1: Zero Pit
-              Depth Civil Constraint</h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
-              <strong>Challenge:</strong> An existing 4-story luxury residence had no pre-cast elevator shaft and
-              underground foundation restrictions prevented excavating a standard 1,400 mm pit.
-            </p>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem;">
-              <strong>ERIS-NEXA Solution:</strong> Engineered a bespoke MRL Home Lift requiring only 300 mm pit depth
-              using a cantilever car frame and structural glass steel tower anchored to existing slab beams.
-            </p>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <span class="badge">300 mm Pit</span>
-              <span class="badge">230V Single Phase</span>
-              <span class="badge">Titanium Gold Finish</span>
+          <!-- Image 7 -->
+          <div class="showcase-photo-card" data-gallery-img="assets/images/glass-outdoor-1.jpeg"
+            data-gallery-title="External Weatherproof Structural Steel Shaft">
+            <img src="assets/images/glass-outdoor-1.jpeg" alt="External Structural Glass Lift" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
             </div>
           </div>
 
-          <div
-            style="background: #FFFFFF; border-radius: 12px; border: 1px solid rgba(15,23,42,0.1); padding: 1.75rem; box-shadow: var(--shadow-sm);">
-            <div
-              style="font-size: 0.75rem; font-weight: 700; color: var(--gold); text-transform: uppercase; margin-bottom: 0.5rem;">
-              CASE STUDY 02 &bull; CORPORATE HEADQUARTERS
-            </div>
-            <h3 style="font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.75rem;">Golf Course Road:
-              High-Traffic Surge Optimization</h3>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
-              <strong>Challenge:</strong> 12-story commercial tower experiencing severe morning lobby crowding with wait
-              times exceeding 90 seconds.
-            </p>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.25rem;">
-              <strong>ERIS-NEXA Solution:</strong> Modernized existing hoistways with dual 1.75 m/s PMSM gearless
-              machines and integrated dynamic dispatch algorithms, reducing average passenger wait time to under 22
-              seconds.
-            </p>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <span class="badge">1.75 m/s Speed</span>
-              <span class="badge">Duplex Algorithm</span>
-              <span class="badge">40% Energy Saved</span>
+          <!-- Image 8 -->
+          <div class="showcase-photo-card" data-gallery-img="assets/images/glass-staircase.jpeg"
+            data-gallery-title="Curved Staircase Capsule Glass Lift">
+            <img src="assets/images/glass-staircase.jpeg" alt="Curved Staircase Capsule Lift" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
             </div>
           </div>
 
+          <!-- Image 9 -->
+          <div class="showcase-photo-card" data-gallery-img="assets/images/cabin-gold-1.jpeg"
+            data-gallery-title="Champagne Gold Mirror Finish Luxury Cabin">
+            <img src="assets/images/cabin-gold-1.jpeg" alt="Gold Mirror Luxury Cabin" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Image 10 -->
+          <div class="showcase-photo-card" data-gallery-img="assets/images/home-1.jpeg"
+            data-gallery-title="Private Villa Scenic Panoramic Elevator">
+            <img src="assets/images/home-1.jpeg" alt="Private Villa Elevator" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Image 11 -->
+          <div class="showcase-photo-card" data-gallery-img="assets/images/home-2.jpeg"
+            data-gallery-title="Architectural Modern Residence Elevator">
+            <img src="assets/images/home-2.jpeg" alt="Modern Residence Lift" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Image 12 -->
+          <div class="showcase-photo-card" data-gallery-img="assets/images/passenger-cover.jpeg"
+            data-gallery-title="High-Rise Commercial Passenger Lift">
+            <img src="assets/images/passenger-cover.jpeg" alt="Commercial Passenger Lift" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Image 13 -->
+          <div class="showcase-photo-card" data-gallery-img="assets/images/passenger-g1.jpeg"
+            data-gallery-title="Hairline Stainless Steel Telescopic Landing">
+            <img src="assets/images/passenger-g1.jpeg" alt="SS Telescopic Landing" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Image 14 -->
+          <div class="showcase-photo-card" data-gallery-img="assets/images/hospital-cover.jpeg"
+            data-gallery-title="Medical Facility Bed Elevator Transit">
+            <img src="assets/images/hospital-cover.jpeg" alt="Medical Bed Elevator" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Image 15 -->
+          <div class="showcase-photo-card" data-gallery-img="assets/images/special-g1.jpeg"
+            data-gallery-title="Designer Hydraulic Capsule Glass Lift">
+            <img src="assets/images/special-g1.jpeg" alt="Hydraulic Capsule Glass Lift" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Image 16 -->
+          <div class="showcase-photo-card" data-gallery-img="assets/images/goods-1.jpeg"
+            data-gallery-title="Heavy Industrial Freight Elevator">
+            <img src="assets/images/goods-1.jpeg" alt="Heavy Industrial Freight Elevator" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Image 17 -->
+          <div class="showcase-photo-card" data-gallery-img="assets/images/automobile-1.jpeg"
+            data-gallery-title="Commercial Automotive & Parking Elevator">
+            <img src="assets/images/automobile-1.jpeg" alt="Commercial Automotive Lift" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Image 18 -->
+          <div class="showcase-photo-card" data-gallery-img="assets/images/home-g2.jpeg"
+            data-gallery-title="Contemporary Residential Villa Lift">
+            <img src="assets/images/home-g2.jpeg" alt="Residential Villa Lift" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Image 19 -->
+          <div class="showcase-photo-card" data-gallery-img="assets/images/passenger-g4.jpeg"
+            data-gallery-title="High-Speed Commercial Passenger Lift">
+            <img src="assets/images/passenger-g4.jpeg" alt="Commercial Passenger Lift" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Image 20 -->
+          <div class="showcase-photo-card" data-gallery-img="assets/images/goods-g1.jpeg"
+            data-gallery-title="Warehouse Heavy Material Hoist Lift">
+            <img src="assets/images/goods-g1.jpeg" alt="Warehouse Material Lift" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -470,9 +576,8 @@
           <button class="btn btn-primary btn-lg" data-open-modal="quote" data-service="Showcase Architectural Proposal">
             Request Custom Architectural Proposal
           </button>
-          <a href="elevators.html" class="btn btn-outline btn-lg"
-            style="color: #FFFFFF; border-color: rgba(255,255,255,0.3);">
-            Explore All 7 Elevator Models &rarr;
+          <a href="elevators.html" class="btn btn-outline-white btn-lg">
+            <span>Explore All 7 Elevator Models &rarr;</span>
           </a>
         </div>
       </div>
@@ -485,8 +590,9 @@
       <div class="footer-grid">
         <div class="footer-brand-col">
           <div class="footer-logo">
-            <img src="assets/images/logo-mark.png" alt="ERIS-NEXA Logo" width="32" height="32">
-            <span class="footer-brand-name">ERIS&ndash;NEXA</span>
+            <a href="index.html" aria-label="ERIS-NEXA Home">
+              <img src="assets/logo/logo light.png" alt="ERIS-NEXA Elevators" class="footer-logo-img" width="115" height="46">
+            </a>
           </div>
           <p class="footer-desc">
             Premier vertical transportation systems engineered for Gurgaon, Delhi NCR, and prestigious infrastructure
@@ -540,7 +646,7 @@
 
       <div class="footer-bottom">
         <div>&copy; 2026 ERIS-NEXA Elevators Pvt. Ltd. All Rights Reserved. CIN &amp; GST Registered in Haryana.</div>
-        <div>Engineered for Safety, Elegance &amp; Reliability &bull; ISO 9001:2015 Certified</div>
+        <div>Designed And Developed By <a href="https://smartdigitalwings.com" target="_blank" rel="noopener noreferrer">Smart Digital Wings</a></div>
       </div>
     </div>
   </footer>
@@ -548,11 +654,16 @@
   <!-- Floating Actions -->
   <aside class="floating-widget-bar" aria-label="Floating Quick Actions">
     <a href="https://wa.me/919557761198?text=Hello%20ERIS-NEXA%20Elevators%2C%20I%20saw%20your%20completed%20projects%20showcase%20and%20would%20like%20to%20consult%20for%20my%20site."
-      target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp" title="Chat Directly on WhatsApp">
-      💬
+      target="_blank" rel="noopener noreferrer" class="floating-btn whatsapp" title="Chat Directly on WhatsApp" aria-label="Chat on WhatsApp">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2ZM12.04 20.15C10.55 20.15 9.09 19.75 7.82 19L7.52 18.82L4.4 19.64L5.23 16.59L5.03 16.27C4.21 14.97 3.78 13.46 3.78 11.91C3.78 7.36 7.49 3.65 12.04 3.65C14.25 3.65 16.32 4.51 17.88 6.07C19.44 7.63 20.3 9.7 20.3 11.91C20.3 16.47 16.59 20.15 12.04 20.15ZM16.57 14.43C16.32 14.3 15.1 13.7 14.87 13.62C14.65 13.54 14.48 13.5 14.31 13.75C14.14 14 13.65 14.58 13.5 14.75C13.35 14.92 13.2 14.94 12.95 14.82C12.7 14.7 11.89 14.43 10.93 13.58C10.18 12.91 9.68 12.08 9.53 11.83C9.38 11.58 9.51 11.45 9.64 11.32C9.75 11.21 9.89 11.03 10.01 10.88C10.14 10.73 10.18 10.63 10.26 10.46C10.34 10.29 10.3 10.15 10.24 10.02C10.18 9.9 9.68 8.67 9.47 8.17C9.27 7.68 9.06 7.75 8.91 7.74C8.76 7.73 8.59 7.73 8.43 7.73C8.26 7.73 7.99 7.79 7.76 8.04C7.53 8.29 6.88 8.9 6.88 10.14C6.88 11.38 7.78 12.58 7.91 12.75C8.03 12.92 9.68 15.47 12.21 16.56C14.01 17.34 14.71 17.27 15.6 17.14C16.14 17.06 17.26 16.46 17.5 15.79C17.73 15.13 17.73 14.56 17.67 14.43C17.6 14.31 17.43 14.24 17.18 14.12L16.57 14.43Z"/>
+      </svg>
+      <span class="floating-tooltip">Chat on WhatsApp</span>
     </a>
     <button class="floating-btn top-scroll" id="btnBackToTop" title="Scroll Back to Top" aria-label="Back to Top">
-      &uarr;
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M18 15l-6-6-6 6"/>
+      </svg>
     </button>
   </aside>
 
@@ -629,29 +740,12 @@
   </dialog>
 
   <!-- Media Lightbox Modal (For Videos & Photos) -->
-  <dialog id="mediaLightbox" closedby="any" aria-labelledby="lightboxTitle">
+  <dialog id="mediaLightbox" closedby="any" aria-label="Media Showcase">
     <div class="modal-card">
-      <div class="lightbox-header">
-        <div class="lightbox-title-wrap">
-          <span class="lightbox-live-badge"><span class="badge-dot"></span> LIVE 4K HD</span>
-          <h4 id="lightboxTitle">Installation Showcase</h4>
-        </div>
-        <button type="button" class="modal-close-btn lightbox-close-btn" aria-label="Close media preview">✕</button>
-      </div>
+      <span id="lightboxTitle" style="display:none;" aria-hidden="true"></span>
+      <button type="button" class="modal-close-btn lightbox-close-btn" aria-label="Close media preview">✕</button>
       <div id="lightboxContainer">
         <!-- Dynamically injected video or high-res photo -->
-      </div>
-      <div class="lightbox-footer">
-        <span class="lightbox-footer-tag">ERIS-NEXA Vertical Transportation &bull; Certified On-Site
-          Commissioning</span>
-        <a href="tel:+919557761198" class="lightbox-call-btn">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-            <path
-              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-            </path>
-          </svg>
-          <span>Consult Project Engineer</span>
-        </a>
       </div>
     </div>
   </dialog>
