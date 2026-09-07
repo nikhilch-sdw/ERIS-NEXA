@@ -163,7 +163,7 @@ function initConfigurator() {
       speed: '0.40 - 0.75 m/s',
       motorKW: '2.2 - 3.7 kW PMSM Gearless',
       basePriceLakhs: 8.5,
-      capacityLabel: '4 - 8 Persons (300 - 600 kg)'
+      capacityLabel: '3 - 4 Persons (250 - 320 kg)'
     },
     passenger: {
       name: 'High-Rise Passenger Elevator',
@@ -185,7 +185,7 @@ function initConfigurator() {
       speed: '1.00 - 1.50 m/s (Jerk-Free)',
       motorKW: '11 - 15 kW Heavy Duty',
       basePriceLakhs: 14.5,
-      capacityLabel: '15 - 26 Persons / Stretcher (1020 - 2000 kg)'
+      capacityLabel: '13 - 26 Persons / Stretcher (1020 - 2000 kg)'
     },
     goods: {
       name: 'Industrial Goods & Freight Lift',
@@ -196,7 +196,7 @@ function initConfigurator() {
       speed: '0.50 - 1.00 m/s',
       motorKW: '11 - 22 kW High-Torque',
       basePriceLakhs: 13.0,
-      capacityLabel: '1000 - 5000 kg Material Load'
+      capacityLabel: '500 - 6000 kg Material Load'
     },
     auto: {
       name: 'Automobile & Showroom Car Lift',
@@ -364,46 +364,293 @@ function initProductFilters() {
    ========================================================================== */
 function initMediaLightbox() {
   const lightboxDialog = document.getElementById('mediaLightbox');
+  if (!lightboxDialog) return;
+
+  const modalCard = lightboxDialog.querySelector('.lightbox-modal-card');
   const lightboxContainer = document.getElementById('lightboxContainer');
   const lightboxTitle = document.getElementById('lightboxTitle');
+  const lightboxCounter = document.getElementById('lightboxCounter');
+  const lightboxZoomVal = document.getElementById('lightboxZoomVal');
+  const btnZoomIn = document.getElementById('btnZoomIn');
+  const btnZoomOut = document.getElementById('btnZoomOut');
+  const btnZoomReset = document.getElementById('btnZoomReset');
+  const btnPrev = document.getElementById('btnLightboxPrev');
+  const btnNext = document.getElementById('btnLightboxNext');
+  const btnClose = document.getElementById('btnLightboxClose');
   const videoCards = document.querySelectorAll('[data-video-src]');
-  const galleryItems = document.querySelectorAll('[data-gallery-img]');
+  const galleryCards = document.querySelectorAll('[data-gallery-img]');
 
-  if (!lightboxDialog || !lightboxContainer) return;
+  if (!lightboxContainer) return;
 
-  // Video Card Click
+  // Build gallery items registry from DOM elements
+  const galleryItems = Array.from(galleryCards).map(card => ({
+    src: card.dataset.galleryImg,
+    title: card.dataset.galleryTitle || 'Installation Showcase'
+  }));
+
+  let currentGalleryIndex = -1;
+  let isVideoMode = false;
+  let zoomScale = 1.0;
+  let panX = 0;
+  let panY = 0;
+  let isDragging = false;
+  let startX = 0;
+  let startY = 0;
+  let currentImgEl = null;
+
+  function updateTransform(withTransition = true) {
+    if (!currentImgEl) return;
+    if (withTransition) {
+      currentImgEl.style.transition = 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)';
+    } else {
+      currentImgEl.style.transition = 'none';
+    }
+    currentImgEl.style.transform = `scale(${zoomScale}) translate(${panX}px, ${panY}px)`;
+    if (lightboxZoomVal) {
+      lightboxZoomVal.textContent = `${Math.round(zoomScale * 100)}%`;
+    }
+    if (zoomScale > 1.0) {
+      currentImgEl.classList.add('is-zoomed');
+    } else {
+      currentImgEl.classList.remove('is-zoomed');
+      panX = 0;
+      panY = 0;
+    }
+  }
+
+  function setZoom(newZoom) {
+    zoomScale = Math.min(Math.max(newZoom, 1.0), 4.0);
+    if (zoomScale === 1.0) {
+      panX = 0;
+      panY = 0;
+    }
+    updateTransform(true);
+  }
+
+  function renderGalleryImage(index) {
+    if (index < 0 || index >= galleryItems.length) return;
+    currentGalleryIndex = index;
+    isVideoMode = false;
+    zoomScale = 1.0;
+    panX = 0;
+    panY = 0;
+
+    if (modalCard) modalCard.classList.remove('is-video');
+    const item = galleryItems[index];
+
+    if (lightboxTitle) lightboxTitle.textContent = item.title;
+    if (lightboxCounter) lightboxCounter.textContent = `${index + 1} / ${galleryItems.length}`;
+    if (lightboxZoomVal) lightboxZoomVal.textContent = '100%';
+
+    lightboxContainer.innerHTML = `
+      <img src="${item.src}" alt="${item.title}" draggable="false">
+    `;
+
+    currentImgEl = lightboxContainer.querySelector('img');
+
+    // Double-click to toggle zoom (1x <-> 2x)
+    currentImgEl.addEventListener('dblclick', (e) => {
+      e.preventDefault();
+      if (zoomScale > 1.0) {
+        setZoom(1.0);
+      } else {
+        setZoom(2.0);
+      }
+    });
+
+    // Mouse drag to pan when zoomed
+    currentImgEl.addEventListener('mousedown', (e) => {
+      if (zoomScale <= 1.0) return;
+      e.preventDefault();
+      isDragging = true;
+      startX = e.clientX - panX * zoomScale;
+      startY = e.clientY - panY * zoomScale;
+      currentImgEl.classList.add('is-dragging');
+    });
+  }
+
+  // Global mousemove & mouseup for panning
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging || !currentImgEl || zoomScale <= 1.0) return;
+    panX = (e.clientX - startX) / zoomScale;
+    panY = (e.clientY - startY) / zoomScale;
+    updateTransform(false);
+  });
+
+  window.addEventListener('mouseup', () => {
+    if (isDragging && currentImgEl) {
+      isDragging = false;
+      currentImgEl.classList.remove('is-dragging');
+    }
+  });
+
+  // Mouse wheel zoom over the image viewport
+  lightboxContainer.addEventListener('wheel', (e) => {
+    if (isVideoMode || !currentImgEl) return;
+    e.preventDefault();
+    const delta = e.deltaY < 0 ? 0.25 : -0.25;
+    setZoom(zoomScale + delta);
+  }, { passive: false });
+
+  // Gallery cards click -> open gallery mode
+  galleryCards.forEach((card, idx) => {
+    card.addEventListener('click', () => {
+      renderGalleryImage(idx);
+      lightboxDialog.showModal();
+    });
+  });
+
+  // Video cards click -> open video mode
   videoCards.forEach(card => {
     card.addEventListener('click', () => {
+      isVideoMode = true;
+      currentGalleryIndex = -1;
+      if (modalCard) modalCard.classList.add('is-video');
+
       const src = card.dataset.videoSrc;
       const title = card.dataset.videoTitle || 'ERIS-NEXA Elevator in Motion';
 
+      if (lightboxTitle) lightboxTitle.textContent = title;
       lightboxContainer.innerHTML = `
         <video src="${src}" controls autoplay playsinline style="width: 100%; height: 100%; object-fit: contain; display: block; background: #000000;">
           Your browser does not support HTML5 video.
         </video>
       `;
-      if (lightboxTitle) lightboxTitle.textContent = title;
       lightboxDialog.showModal();
     });
   });
 
-  // Photo Gallery Click
-  galleryItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const src = item.dataset.galleryImg;
-      const title = item.dataset.galleryTitle || 'Installation Showcase';
-
-      lightboxContainer.innerHTML = `
-        <img src="${src}" alt="${title}" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block;">
-      `;
-      if (lightboxTitle) lightboxTitle.textContent = title;
-      lightboxDialog.showModal();
+  // Prev / Next button clicks
+  if (btnPrev) {
+    btnPrev.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (galleryItems.length === 0) return;
+      const prevIdx = (currentGalleryIndex - 1 + galleryItems.length) % galleryItems.length;
+      renderGalleryImage(prevIdx);
     });
+  }
+
+  if (btnNext) {
+    btnNext.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (galleryItems.length === 0) return;
+      const nextIdx = (currentGalleryIndex + 1) % galleryItems.length;
+      renderGalleryImage(nextIdx);
+    });
+  }
+
+  // Zoom toolbar buttons
+  if (btnZoomIn) {
+    btnZoomIn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setZoom(zoomScale + 0.35);
+    });
+  }
+
+  if (btnZoomOut) {
+    btnZoomOut.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setZoom(zoomScale - 0.35);
+    });
+  }
+
+  if (btnZoomReset) {
+    btnZoomReset.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (zoomScale > 1.0) {
+        setZoom(1.0);
+      } else {
+        // If at 100%, toggle native fullscreen or expand zoom
+        if (!document.fullscreenElement) {
+          if (lightboxDialog.requestFullscreen) {
+            lightboxDialog.requestFullscreen().catch(() => setZoom(1.5));
+          } else {
+            setZoom(1.5);
+          }
+        } else {
+          if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+          }
+        }
+      }
+    });
+  }
+
+  if (btnClose) {
+    btnClose.addEventListener('click', () => {
+      if (document.fullscreenElement) {
+        document.exitFullscreen().catch(() => {});
+      }
+      lightboxDialog.close();
+    });
+  }
+
+  lightboxDialog.addEventListener('close', () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+    setZoom(1.0);
   });
 
-  // Stop video playback when lightbox is closed
+  // Keyboard navigation
+  lightboxDialog.addEventListener('keydown', (e) => {
+    if (!lightboxDialog.open) return;
+    if (isVideoMode) return;
+
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      if (btnPrev) btnPrev.click();
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      if (btnNext) btnNext.click();
+    } else if (e.key === '+' || e.key === '=') {
+      e.preventDefault();
+      setZoom(zoomScale + 0.35);
+    } else if (e.key === '-' || e.key === '_') {
+      e.preventDefault();
+      setZoom(zoomScale - 0.35);
+    } else if (e.key === '0') {
+      e.preventDefault();
+      setZoom(1.0);
+    }
+  });
+
+  // Mobile touch swipe gestures (left/right)
+  let touchStartX = 0;
+  let touchStartY = 0;
+  lightboxContainer.addEventListener('touchstart', (e) => {
+    if (e.touches.length === 1) {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }
+  }, { passive: true });
+
+  lightboxContainer.addEventListener('touchend', (e) => {
+    if (isVideoMode || zoomScale > 1.0) return;
+    if (e.changedTouches.length === 1) {
+      const touchEndX = e.changedTouches[0].clientX;
+      const touchEndY = e.changedTouches[0].clientY;
+      const diffX = touchEndX - touchStartX;
+      const diffY = touchEndY - touchStartY;
+
+      if (Math.abs(diffX) > 45 && Math.abs(diffX) > Math.abs(diffY)) {
+        if (diffX < 0 && btnNext) {
+          btnNext.click();
+        } else if (diffX > 0 && btnPrev) {
+          btnPrev.click();
+        }
+      }
+    }
+  }, { passive: true });
+
+  // Reset and clean up on close
   lightboxDialog.addEventListener('close', () => {
     lightboxContainer.innerHTML = '';
+    currentImgEl = null;
+    zoomScale = 1.0;
+    panX = 0;
+    panY = 0;
+    isDragging = false;
   });
 }
 
