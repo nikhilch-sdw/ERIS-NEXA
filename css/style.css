@@ -7442,22 +7442,9 @@ dialog::backdrop {
   transform: scale(1.03);
 }
 
-/* Subtle corner badge overlay matching Screenshot 1 */
+/* Subtle corner badge overlay matching Screenshot 1 - Removed per user request */
 .home-about-corner-overlay {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 10px;
-  padding: 0.65rem 0.95rem;
-  color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
+  display: none !important;
 }
 
 .corner-overlay-dot {
