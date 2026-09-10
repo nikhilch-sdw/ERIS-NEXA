@@ -895,13 +895,13 @@ nav {
   background-color: var(--gold-primary);
 }
 
-/* --- Hero Video Banner (Cinematic Responsive Widescreen Showcase) --- */
+/* --- Hero Video Banner (Full Viewport Seamless Showcase) --- */
 .hero-section {
   position: relative;
   width: 100%;
-  height: clamp(460px, 54vh, 600px);
-  min-height: 440px;
-  max-height: 620px;
+  height: calc(100vh - 106px);
+  height: calc(100dvh - 106px);
+  min-height: 560px;
   background: #0B1120;
   overflow: hidden;
   display: block;
@@ -5414,9 +5414,10 @@ dialog::backdrop {
   }
 
   .hero-section {
-    height: clamp(520px, 58vh, 680px);
-    min-height: 500px;
-    max-height: 700px;
+    height: calc(100vh - 106px);
+    height: calc(100dvh - 106px);
+    min-height: 640px;
+    max-height: none;
   }
 }
 
@@ -5472,9 +5473,10 @@ dialog::backdrop {
   }
 
   .hero-section {
-    height: clamp(360px, 46vh, 460px);
-    min-height: unset;
-    max-height: unset;
+    height: calc(100vh - 98px);
+    height: calc(100dvh - 98px);
+    min-height: 480px;
+    max-height: none;
   }
 
   .simulator-layout-grid {
@@ -5792,7 +5794,7 @@ dialog::backdrop {
   }
 
   .hero-section {
-    height: clamp(280px, 38vh, 360px);
+    height: clamp(320px, 44vh, 440px);
     min-height: unset;
     max-height: unset;
   }
