@@ -419,11 +419,18 @@ function initProductSlider() {
       enquiryService: 'Home & Villa Elevators',
       waText: 'Hello ERIS-NEXA, I would like a technical quote for Bespoke Villa Home Elevators.',
       slides: [
+        { type: 'image', src: 'assets/lift/home-elevators/photos/Complete Glass Structure.jpg', title: 'Complete Panoramic Glass Structure', caption: 'Custom engineered self-supporting full glass enclosure for luxury residences' },
         { type: 'image', src: 'assets/lift/home-elevators/photos/WhatsApp Image 2026-09-10 at 10.49.11 AM.jpeg', title: 'Panoramic Outdoor Glass Villa Lift', caption: 'Stunning exterior glass elevator integrated seamlessly with estate architecture' },
         { type: 'video', src: 'assets/lift/home-elevators/videos/showcase-4.mp4', poster: 'assets/lift/home-elevators/photos/WhatsApp Image 2026-09-10 at 10.49.11 AM.jpeg', title: 'Villa Glass Elevator in Motion', caption: 'Pneumatic and traction villa elevator smooth vertical travel' },
+        { type: 'image', src: 'assets/lift/home-elevators/photos/Out Door lift with glass.jpg', title: 'Outdoor Glass Villa Elevator', caption: 'Weatherproof panoramic glass lift integrated seamlessly with estate facade' },
+        { type: 'image', src: 'assets/lift/home-elevators/photos/Glass Lift.jpg', title: 'Modern Compact Glass Lift Cabin', caption: 'Sleek single-phase ready glass cabin designed for central stairwell retrofits' },
         { type: 'image', src: 'assets/lift/home-elevators/photos/WhatsApp Image 2026-09-10 at 10.49.11 AM (1).jpeg', title: 'Curved Staircase Integrated Glass Cabin', caption: 'Custom engineered circular glass shaft wrapped by spiral staircase' },
+        { type: 'image', src: 'assets/lift/home-elevators/photos/2L7A2331.jpg', title: 'Bespoke Residential Cabin Integration', caption: 'Architectural residential lift blending with contemporary interior aesthetics' },
         { type: 'image', src: 'assets/lift/home-elevators/photos/WhatsApp Image 2026-09-10 at 10.49.12 AM.jpeg', title: 'Compact Stairwell Steel Hoistway', caption: 'Self-supporting steel structure tailored for central stairwells with low pit requirements' },
         { type: 'video', src: 'assets/lift/home-elevators/videos/WhatsApp Video 2026-09-05 at 5.16.09 PM.mp4', poster: 'assets/lift/home-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.55 AM.jpeg', title: 'Live Villa Elevator Commissioning', caption: 'Site verification and jerk-free landing demonstration' },
+        { type: 'image', src: 'assets/lift/home-elevators/photos/Out door Lift Structure.jpg', title: 'Outdoor Structural Steel Tower', caption: 'Heavy-duty exterior hoistway tower anchored to residential structure' },
+        { type: 'image', src: 'assets/lift/home-elevators/photos/IMG_9279.jpg', title: 'Luxury Villa Landing Portal', caption: 'Custom finished landing station with precision door alignment' },
+        { type: 'image', src: 'assets/lift/home-elevators/photos/Lift Pit Foundation.jpg', title: 'Low-Pit Civil Foundation', caption: 'Precision engineered foundation requiring only 250mm pit depth' },
         { type: 'image', src: 'assets/lift/home-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.55 AM.jpeg', title: 'Bespoke Villa Multi-Landing Station', caption: 'Precision engineered landing station with secure entry gates' }
       ]
     },
@@ -449,8 +456,14 @@ function initProductSlider() {
       enquiryService: 'Goods Freight Elevators',
       waText: 'Hello ERIS-NEXA, I would like a technical quote for Goods & Freight Elevators.',
       slides: [
+        { type: 'video', src: 'assets/lift/goods-elevators/videos/WhatsApp Video 2026-06-24 at 8.21.53 PM.mp4', poster: 'assets/lift/goods-elevators/photos/Auto Doors.jpg', title: 'Heavy Freight Dual Mast Rigging & Travel', caption: 'Dual mast heavy-load industrial vertical freight lift in live test motion' },
+        { type: 'image', src: 'assets/lift/goods-elevators/photos/Auto Doors.jpg', title: 'Motorized Automatic Freight Doors', caption: 'High-speed automated telescopic sliding doors for heavy pallet traffic' },
         { type: 'image', src: 'assets/lift/goods-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.57 AM.jpeg', title: 'Industrial Heavy Duty Enclosure', caption: 'Robust structural steel enclosure and heavy-duty gates for factory transport' },
         { type: 'video', src: 'assets/lift/goods-elevators/videos/WhatsApp Video 2026-09-05 at 5.15.44 PM.mp4', poster: 'assets/lift/goods-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.57 AM.jpeg', title: 'Freight Lift Hoistway & Rigging Operation', caption: 'Heavy-duty hoistway rigging and load-bearing guide rail testing' },
+        { type: 'image', src: 'assets/lift/goods-elevators/photos/Manual Doors.jpg', title: 'Heavy Steel Collapsible Shutter Doors', caption: 'Robust manual collapsible steel shutters with mechanical-electrical safety interlocks' },
+        { type: 'image', src: 'assets/lift/goods-elevators/photos/MS Structure.jpg', title: 'Engineered Mild Steel Hoistway Structure', caption: 'Reinforced industrial MS framework designed to withstand dynamic high-tonnage loads' },
+        { type: 'image', src: 'assets/lift/goods-elevators/photos/Double side opening.jpeg', title: 'Through-Type Double Sided Opening', caption: 'Dual front and rear access doors optimizing warehouse logistics flow' },
+        { type: 'image', src: 'assets/lift/goods-elevators/photos/Car Railling.jpg', title: 'Protective Cabin Bumper Railing', caption: 'Heavy-duty impact protection railings and chequered non-slip steel floor' },
         { type: 'image', src: 'assets/lift/goods-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.57 AM (1).jpeg', title: 'Factory Floor Cargo Platform', caption: 'Direct pallet truck access with chequered plate non-slip base' },
         { type: 'image', src: 'assets/lift/goods-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.58 AM (1).jpeg', title: 'Multi-Level Warehouse Hoistway', caption: 'Engineered structural tower with heavy-capacity guide rails and safety interlocks' }
       ]
