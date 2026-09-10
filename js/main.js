@@ -11,6 +11,8 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initCacheBustingSupport();
+  initHeroVideoAutoplay();
   initElevatorSimulator();
   initConfigurator();
   initProductFilters();
@@ -1440,3 +1442,94 @@ function initFAQAccordion() {
     });
   });
 }
+
+/* ==========================================================================
+   8. HERO VIDEO AUTOPLAY & SEAMLESS INFINITE LOOP (MOBILE, TABLET & DESKTOP)
+   ========================================================================== */
+function initHeroVideoAutoplay() {
+  const video = document.querySelector('.hero-video-bg');
+  if (!video) return;
+
+  // 1. Strictly enforce zero audio, muted, and inline playback
+  video.muted = true;
+  video.defaultMuted = true;
+  video.volume = 0;
+  video.loop = true;
+  video.playsInline = true;
+
+  // 2. Set mobile & WebKit inline attributes
+  video.setAttribute('muted', '');
+  video.setAttribute('playsinline', '');
+  video.setAttribute('webkit-playsinline', '');
+  video.setAttribute('loop', '');
+  video.setAttribute('autoplay', '');
+  video.setAttribute('disablepictureinpicture', '');
+  video.setAttribute('disableremoteplayback', '');
+
+  // 3. Robust play launcher with rejection handling (e.g. iOS Low Power Mode)
+  const attemptPlay = () => {
+    if (!video.paused && video.readyState >= 2) return;
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Fallback for iOS Low Power Mode / Battery Saver:
+        // Begin playback instantly on user's first touch or scroll gesture
+        const unlockPlay = () => {
+          video.muted = true;
+          video.defaultMuted = true;
+          video.volume = 0;
+          video.play().then(() => {
+            window.removeEventListener('touchstart', unlockPlay);
+            window.removeEventListener('scroll', unlockPlay);
+            window.removeEventListener('click', unlockPlay);
+            window.removeEventListener('pointerdown', unlockPlay);
+          }).catch(() => {});
+        };
+
+        window.addEventListener('touchstart', unlockPlay, { passive: true, once: true });
+        window.addEventListener('scroll', unlockPlay, { passive: true, once: true });
+        window.addEventListener('click', unlockPlay, { passive: true, once: true });
+        window.addEventListener('pointerdown', unlockPlay, { passive: true, once: true });
+      });
+    }
+  };
+
+  // Immediate attempt
+  attemptPlay();
+
+  // Retry when video data/buffer is available
+  video.addEventListener('loadeddata', attemptPlay, { once: true });
+  video.addEventListener('canplay', attemptPlay, { once: true });
+
+  // 4. Guarantee seamless infinite looping even if browser's native loop hiccups
+  video.addEventListener('ended', () => {
+    video.currentTime = 0;
+    video.play().catch(() => {});
+  });
+
+  // 5. Auto-resume video when tab regains focus or mobile screen unlocks
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden && video.paused) {
+      attemptPlay();
+    }
+  });
+
+  window.addEventListener('focus', () => {
+    if (video.paused) {
+      attemptPlay();
+    }
+  });
+}
+
+/* ==========================================================================
+   9. CACHE BUSTING & SERVICE WORKER PURGE (ENSURE FRESH ASSETS)
+   ========================================================================== */
+function initCacheBustingSupport() {
+  // Clear any legacy service workers that could be holding stale cached assets on mobile
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      registrations.forEach((reg) => reg.unregister());
+    }).catch(() => {});
+  }
+}
+

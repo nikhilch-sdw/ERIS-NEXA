@@ -23,8 +23,13 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/logo-mark.png">
 
+  <!-- Cache-Control: Force fresh load on every visit across all devices -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=2.2.0">
 
   <!-- JSON-LD Structured Data for Local Business & Engineering Firm -->
   <script type="application/ld+json">
@@ -177,10 +182,22 @@
          ========================================================================== -->
     <section class="hero-section" id="hero">
       <h1 class="visually-hidden">ERIS-NEXA Elevators — Precision Vertical Transportation Gurgaon &amp; NCR</h1>
-      <video class="hero-video-bg" autoplay muted loop playsinline
+      <video class="hero-video-bg" autoplay muted loop playsinline webkit-playsinline preload="auto"
+        disablepictureinpicture disableremoteplayback
         poster="assets/images/service-hoistway-structure.jpg">
         <source src="assets/videos/elevator-product-showcase.mp4" type="video/mp4">
       </video>
+      <script>
+        (function(){
+          var v = document.querySelector('.hero-video-bg');
+          if (v) {
+            v.muted = true;
+            v.defaultMuted = true;
+            v.volume = 0;
+            if (v.play) { v.play().catch(function(){}); }
+          }
+        })();
+      </script>
     </section>
 
     <!-- ==========================================================================
@@ -1799,7 +1816,7 @@
   </dialog>
 
   <!-- JavaScript -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=2.2.0"></script>
 </body>
 
 </html>
