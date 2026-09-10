@@ -1271,12 +1271,27 @@ function initModalsAndDialogs() {
 
   // Buttons that trigger quote modal with pre-selected requirement
   openModalButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
       const service = btn.dataset.service;
       if (quoteModal) {
         if (service) {
           const reqSelect = document.getElementById('modalRequirement');
-          if (reqSelect) reqSelect.value = service;
+          if (reqSelect) {
+            let matched = false;
+            const target = service.toLowerCase().replace(/[^a-z0-9]/g, '');
+            for (let i = 0; i < reqSelect.options.length; i++) {
+              const opt = reqSelect.options[i];
+              const optVal = opt.value.toLowerCase().replace(/[^a-z0-9]/g, '');
+              const optText = opt.text.toLowerCase().replace(/[^a-z0-9]/g, '');
+              if (optVal === target || optText === target || optVal.includes(target) || target.includes(optVal)) {
+                reqSelect.selectedIndex = i;
+                matched = true;
+                break;
+              }
+            }
+            if (!matched) reqSelect.value = service;
+          }
         }
         quoteModal.showModal();
       }
@@ -1288,23 +1303,23 @@ function initModalsAndDialogs() {
     quoteForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const formData = new FormData(quoteForm);
-      const name = formData.get('name') || 'Valued Client';
+      const name = formData.get('name') || formData.get('fullName') || 'Valued Client';
       const phone = formData.get('phone') || '';
       const email = formData.get('email') || '';
-      const city = formData.get('city') || 'Gurgaon';
+      const city = formData.get('city') || formData.get('location') || 'Gurgaon';
       const building = formData.get('building_type') || 'Residential';
       const requirement = formData.get('requirement') || 'Passenger Elevator';
       const message = formData.get('message') || '';
 
-      const waMessage = `*NEW CONSULTATION REQUEST — ERIS-NEXA*%0A%0A` +
-        `• *Client Name:* ${name}%0A` +
-        `• *Phone:* ${phone}%0A` +
-        `• *Email:* ${email}%0A` +
-        `• *City / Location:* ${city}%0A` +
-        `• *Building Type:* ${building}%0A` +
-        `• *Requirement:* ${requirement}%0A` +
-        (message ? `• *Message:* ${message}%0A` : '') +
-        `%0A_Sent via ERIS-NEXA Official Website_`;
+      const waMessage = `*NEW DIRECT ELEVATOR ENQUIRY — ERIS-NEXA*%0A%0A` +
+        `• *Client Name:* ${encodeURIComponent(name)}%0A` +
+        `• *Phone / WhatsApp:* ${encodeURIComponent(phone)}%0A` +
+        (email ? `• *Email:* ${encodeURIComponent(email)}%0A` : '') +
+        `• *City / Location:* ${encodeURIComponent(city)}%0A` +
+        (building ? `• *Building Type:* ${encodeURIComponent(building)}%0A` : '') +
+        `• *Elevator Requirement:* ${encodeURIComponent(requirement)}%0A` +
+        (message ? `• *Project Details:* ${encodeURIComponent(message)}%0A` : '') +
+        `%0A_Sent via ERIS-NEXA Official Website Direct WhatsApp Dispatch_`;
 
       // Open WhatsApp with populated payload
       window.open(`https://wa.me/919557761198?text=${waMessage}`, '_blank', 'noopener,noreferrer');
@@ -1312,7 +1327,6 @@ function initModalsAndDialogs() {
       // Close modal & reset form
       if (quoteModal) quoteModal.close();
       quoteForm.reset();
-      alert('Thank you! Your elevator consultation inquiry has been forwarded directly to our engineering team on WhatsApp.');
     });
   }
 }

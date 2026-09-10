@@ -5249,28 +5249,9 @@ dialog::backdrop {
   display: block;
 }
 
-/* Slide Caption Overlay */
+/* Slide Caption Overlay - Hidden to only show clean images and controls */
 .prod-slider-caption-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem 1.4rem 0.8rem;
-  background: linear-gradient(180deg, transparent 0%, rgba(3, 6, 13, 0.88) 35%, rgba(3, 6, 13, 0.98) 100%);
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
-  z-index: 10;
-  pointer-events: none;
-}
-
-.prod-slider-caption-text {
-  font-size: 0.85rem;
-  color: #E2E8F0;
-  font-weight: 500;
-  margin: 0;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  display: none !important;
 }
 
 /* Nav Chevrons */
@@ -5370,38 +5351,24 @@ dialog::backdrop {
 
 /* Bottom Action Bar */
 .prod-slider-footer {
-  padding: 0.85rem 1.4rem;
+  padding: 0.75rem 1.4rem;
   background: rgba(12, 19, 35, 0.98);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1.2rem;
-  flex-wrap: wrap;
 }
 
 .prod-slider-specs {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.prod-slider-spec-pill {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 600;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #CBD5E1;
-  padding: 0.22rem 0.65rem;
-  border-radius: var(--radius-pill);
+  display: none !important;
 }
 
 .prod-slider-actions {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-left: auto;
+  justify-content: center;
+  gap: 0.85rem;
+  margin: 0 auto;
 }
 
 .prod-slider-btn-quote {
