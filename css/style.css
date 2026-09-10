@@ -4220,7 +4220,7 @@ nav {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  grid-template-columns: 1.3fr 0.9fr 0.95fr 1.4fr;
   gap: 1.75rem;
   margin-bottom: 2rem;
 }
@@ -4334,6 +4334,62 @@ nav {
 .footer-contact-block a:hover {
   color: #7DD3FC !important;
   text-decoration: underline;
+}
+
+/* --- Footer Manufacturing Unit & Branch Styling --- */
+.footer-unit-block,
+.footer-branches-block {
+  margin-top: 0.95rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-unit-title {
+  font-size: 0.88rem !important;
+  margin-bottom: 0.4rem !important;
+  color: #F8FAFC !important;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  letter-spacing: 0.03em;
+}
+
+.footer-branch-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.4rem;
+}
+
+.branch-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #E2E8F0;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.22rem 0.6rem;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+}
+
+.branch-tag:hover {
+  background: rgba(197, 160, 89, 0.15);
+  border-color: var(--gold-primary, #C5A059);
+  color: #FFFFFF;
+}
+
+.branch-tag::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold-primary, #C5A059);
 }
 
 .footer-bottom {
