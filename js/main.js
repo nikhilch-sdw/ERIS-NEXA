@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProductFilters();
   initProductSlider();
   initMediaLightbox();
+  initMediaFilterTabs();
   initModalsAndDialogs();
   initNavigation();
   initFAQAccordion();
@@ -865,11 +866,17 @@ function initMediaLightbox() {
 
   if (!lightboxContainer) return;
 
-  // Build gallery items registry from DOM elements
-  const galleryItems = Array.from(galleryCards).map(card => ({
-    src: card.dataset.galleryImg,
-    title: card.dataset.galleryTitle || 'Installation Showcase'
-  }));
+  function getActiveGalleryItems() {
+    const allCards = Array.from(document.querySelectorAll('[data-gallery-img]'));
+    const visibleCards = allCards.filter(card => {
+      return card.style.display !== 'none' && !card.classList.contains('filtered-out');
+    });
+    const targetCards = visibleCards.length > 0 ? visibleCards : allCards;
+    return targetCards.map(card => ({
+      src: card.dataset.galleryImg,
+      title: card.dataset.galleryTitle || 'Installation Showcase'
+    }));
+  }
 
   let currentGalleryIndex = -1;
   let isVideoMode = false;
@@ -911,7 +918,8 @@ function initMediaLightbox() {
   }
 
   function renderGalleryImage(index) {
-    if (index < 0 || index >= galleryItems.length) return;
+    const activeItems = getActiveGalleryItems();
+    if (index < 0 || index >= activeItems.length) return;
     currentGalleryIndex = index;
     isVideoMode = false;
     zoomScale = 1.0;
@@ -919,10 +927,10 @@ function initMediaLightbox() {
     panY = 0;
 
     if (modalCard) modalCard.classList.remove('is-video');
-    const item = galleryItems[index];
+    const item = activeItems[index];
 
     if (lightboxTitle) lightboxTitle.textContent = item.title;
-    if (lightboxCounter) lightboxCounter.textContent = `${index + 1} / ${galleryItems.length}`;
+    if (lightboxCounter) lightboxCounter.textContent = `${index + 1} / ${activeItems.length}`;
     if (lightboxZoomVal) lightboxZoomVal.textContent = '100%';
 
     lightboxContainer.innerHTML = `
@@ -976,9 +984,11 @@ function initMediaLightbox() {
   }, { passive: false });
 
   // Gallery cards click -> open gallery mode
-  galleryCards.forEach((card, idx) => {
+  galleryCards.forEach(card => {
     card.addEventListener('click', () => {
-      renderGalleryImage(idx);
+      const activeItems = getActiveGalleryItems();
+      const targetIndex = activeItems.findIndex(item => item.src === card.dataset.galleryImg);
+      renderGalleryImage(targetIndex >= 0 ? targetIndex : 0);
       lightboxDialog.showModal();
     });
   });
@@ -1007,8 +1017,9 @@ function initMediaLightbox() {
   if (btnPrev) {
     btnPrev.addEventListener('click', (e) => {
       e.stopPropagation();
-      if (galleryItems.length === 0) return;
-      const prevIdx = (currentGalleryIndex - 1 + galleryItems.length) % galleryItems.length;
+      const activeItems = getActiveGalleryItems();
+      if (activeItems.length === 0) return;
+      const prevIdx = (currentGalleryIndex - 1 + activeItems.length) % activeItems.length;
       renderGalleryImage(prevIdx);
     });
   }
@@ -1016,8 +1027,9 @@ function initMediaLightbox() {
   if (btnNext) {
     btnNext.addEventListener('click', (e) => {
       e.stopPropagation();
-      if (galleryItems.length === 0) return;
-      const nextIdx = (currentGalleryIndex + 1) % galleryItems.length;
+      const activeItems = getActiveGalleryItems();
+      if (activeItems.length === 0) return;
+      const nextIdx = (currentGalleryIndex + 1) % activeItems.length;
       renderGalleryImage(nextIdx);
     });
   }
@@ -1134,6 +1146,84 @@ function initMediaLightbox() {
     panX = 0;
     panY = 0;
     isDragging = false;
+  });
+}
+
+/* ==========================================================================
+   4B. INTERACTIVE MEDIA CATEGORY FILTER TABS (IMAGES & VIDEOS)
+   ========================================================================== */
+function initMediaFilterTabs() {
+  const filterBars = document.querySelectorAll('.media-filter-bar');
+  if (!filterBars.length) return;
+
+  filterBars.forEach(bar => {
+    const tabs = bar.querySelectorAll('.media-filter-tab');
+    const targetSelector = bar.dataset.targetCards || '.showcase-photo-card, .video-showcase-card';
+    const cards = document.querySelectorAll(targetSelector);
+    if (!tabs.length || !cards.length) return;
+
+    // Dynamically calculate and display count on tab badges
+    tabs.forEach(tab => {
+      const filter = tab.dataset.filter;
+      const badge = tab.querySelector('.filter-tab-count');
+      if (badge && filter) {
+        let count = 0;
+        cards.forEach(card => {
+          const cat = (card.dataset.category || '').toLowerCase();
+          const tags = (card.dataset.tags || '').split(',').map(t => t.trim().toLowerCase());
+          const filterLower = filter.toLowerCase();
+          if (filterLower === 'all' || cat === filterLower || tags.includes(filterLower)) {
+            count++;
+          }
+        });
+        badge.textContent = count;
+      }
+    });
+
+    // Attach click listeners to filter tabs
+    tabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        e.preventDefault();
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+
+        const filter = (tab.dataset.filter || 'all').toLowerCase();
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          const cat = (card.dataset.category || '').toLowerCase();
+          const tags = (card.dataset.tags || '').split(',').map(t => t.trim().toLowerCase());
+          const isMatch = filter === 'all' || cat === filter || tags.includes(filter);
+
+          if (isMatch) {
+            card.style.display = '';
+            card.classList.remove('filtered-out');
+            card.classList.remove('media-card-animate-in');
+            // Trigger browser reflow to restart CSS animation
+            void card.offsetWidth;
+            card.classList.add('media-card-animate-in');
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+            card.classList.add('filtered-out');
+            card.classList.remove('media-card-animate-in');
+          }
+        });
+
+        // Handle empty state notice if configured
+        const emptyNoticeId = bar.dataset.emptyTarget;
+        if (emptyNoticeId) {
+          const emptyEl = document.getElementById(emptyNoticeId);
+          if (emptyEl) {
+            emptyEl.style.display = visibleCount === 0 ? 'block' : 'none';
+          }
+        }
+      });
+    });
   });
 }
 

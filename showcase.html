@@ -77,7 +77,35 @@
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="elevators.html" class="nav-link">Elevators</a></li>
           <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="showcase.html" class="nav-link active">Showcase</a></li>
+          <li class="nav-item-dropdown">
+            <a href="showcase.html" class="nav-link active dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              <span>Showcase</span>
+              <svg class="dropdown-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="nav-dropdown-menu">
+              <li>
+                <a href="images.html" class="dropdown-item">
+                  <svg class="dropdown-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                  <span>Images</span>
+                </a>
+              </li>
+              <li>
+                <a href="videos.html" class="dropdown-item">
+                  <svg class="dropdown-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polygon points="23 7 16 12 23 17 23 7"/>
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                  </svg>
+                  <span>Videos</span>
+                </a>
+              </li>
+            </ul>
+          </li>
           <li><a href="about.html" class="nav-link">About Us</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
@@ -126,25 +154,62 @@
     </div>
 
     <!-- Interactive Live Video Reels Section -->
-    <section class="section" style="padding-top: 2rem;">
+    <section class="section" id="showcase-videos" style="padding-top: 1rem; padding-bottom: 2rem;">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">LIVE CINEMATIC MOTION</span>
-          <h2 class="section-title">Operational Installation Reels</h2>
-          <p class="section-subtitle">
-            Watch high-definition motion video clips captured on-site during commissioning and passenger service. Click
-            any video to play in full resolution.
-          </p>
+        <!-- Filter Tabs Bar Above Videos: Compact & Never Cut Off -->
+        <div class="media-filter-wrap" style="margin-bottom: 1.5rem;">
+          <div class="media-filter-bar" role="tablist" aria-label="Video Filters" data-target-cards="#showcase-videos .video-showcase-card">
+            <button type="button" class="media-filter-tab active" data-filter="all" role="tab" aria-selected="true">
+              <span class="filter-tab-label">All Lifts</span>
+              <span class="filter-tab-count">8</span>
+            </button>
+            <button type="button" class="media-filter-tab" data-filter="passenger" role="tab" aria-selected="false">
+              <span class="filter-tab-label">Passenger</span>
+              <span class="filter-tab-count">1</span>
+            </button>
+            <button type="button" class="media-filter-tab" data-filter="home" role="tab" aria-selected="false">
+              <span class="filter-tab-label">Home &amp; Villa</span>
+              <span class="filter-tab-count">2</span>
+            </button>
+            <button type="button" class="media-filter-tab" data-filter="hospital" role="tab" aria-selected="false">
+              <span class="filter-tab-label">Hospital</span>
+              <span class="filter-tab-count">1</span>
+            </button>
+            <button type="button" class="media-filter-tab" data-filter="goods" role="tab" aria-selected="false">
+              <span class="filter-tab-label">Goods &amp; Freight</span>
+              <span class="filter-tab-count">1</span>
+            </button>
+            <button type="button" class="media-filter-tab" data-filter="auto" role="tab" aria-selected="false">
+              <span class="filter-tab-label">Automobile</span>
+              <span class="filter-tab-count">1</span>
+            </button>
+            <button type="button" class="media-filter-tab" data-filter="dumbwaiter" role="tab" aria-selected="false">
+              <span class="filter-tab-label">Dumbwaiters</span>
+              <span class="filter-tab-count">1</span>
+            </button>
+            <button type="button" class="media-filter-tab" data-filter="special" role="tab" aria-selected="false">
+              <span class="filter-tab-label">Panoramic Glass</span>
+              <span class="filter-tab-count">1</span>
+            </button>
+          </div>
         </div>
 
         <div class="showcase-videos-grid">
-          <!-- Video 1: Cinematic Architectural Elevator Showcase -->
+          <!-- Short 1: Passenger Elevators -->
           <div class="video-showcase-card"
-            data-video-src="assets/videos/elevator-product-showcase.mp4"
-            data-video-title="Architectural Elevator Cinematic Showcase">
+            data-video-src="assets/lift/passenger-elevators/videos/elevator-product-showcase.mp4"
+            data-video-title="Passenger Elevator — Commercial High-Speed Ride"
+            data-category="passenger" data-tags="passenger">
             <div class="video-thumb-wrap">
-              <img src="assets/images/service-hoistway-structure.jpg" alt="Architectural Elevator Showcase Poster"
-                loading="lazy">
+              <img src="assets/images/video-thumbs/elevator-product-showcase.jpg"
+                alt="Commercial High-Speed Passenger Elevator" loading="lazy">
+              <div class="shorts-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
+                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                </svg>
+                <span>Shorts</span>
+              </div>
+              <span class="shorts-duration">0:10</span>
               <div class="video-play-trigger">
                 <div class="play-btn-circle">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -152,14 +217,29 @@
                   </svg>
                 </div>
               </div>
+              <div class="shorts-bottom-overlay">
+                <span class="shorts-tag">Passenger</span>
+                <h3 class="shorts-title">High-Speed Commercial Passenger Elevator</h3>
+                <span class="shorts-hint">Watch Reel &rarr;</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video 2: Luxury Residential Glass Elevator -->
-          <div class="video-showcase-card" data-video-src="assets/videos/WhatsApp Video 2026-09-05 at 5.16.09 PM.mp4"
-            data-video-title="Luxury Residential Glass Elevator Commissioning">
+          <!-- Short 2: Home & Villa Elevators (Italian Marble & Gold Foyer) -->
+          <div class="video-showcase-card"
+            data-video-src="assets/lift/home-elevators/videos/showcase-4.mp4"
+            data-video-title="Home &amp; Villa Elevator — Luxury Italian Marble &amp; Gold Foyer"
+            data-category="home" data-tags="home, villa">
             <div class="video-thumb-wrap">
-              <img src="assets/images/gallery-2.jpeg" alt="Residential Glass Elevator Poster" loading="lazy">
+              <img src="assets/images/video-thumbs/showcase-4-marble-gold.jpg"
+                alt="Luxury Italian Marble & Gold Private Villa Lift" loading="lazy">
+              <div class="shorts-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
+                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                </svg>
+                <span>Shorts</span>
+              </div>
+              <span class="shorts-duration">0:18</span>
               <div class="video-play-trigger">
                 <div class="play-btn-circle">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -167,15 +247,29 @@
                   </svg>
                 </div>
               </div>
+              <div class="shorts-bottom-overlay">
+                <span class="shorts-tag">Home &amp; Villa</span>
+                <h3 class="shorts-title">Luxury Gold &amp; Italian Marble Villa Lift</h3>
+                <span class="shorts-hint">Watch Reel &rarr;</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video 3: Heavy-Duty Cargo & Goods Lift Installation -->
-          <div class="video-showcase-card" data-video-src="assets/videos/WhatsApp Video 2026-09-05 at 5.15.44 PM.mp4"
-            data-video-title="Heavy-Duty Cargo &amp; Goods Lift Installation">
+          <!-- Short 3: Hospital Elevators (Deep Stretcher Cabin) -->
+          <div class="video-showcase-card"
+            data-video-src="assets/lift/home-elevators/videos/WhatsApp Video 2026-09-05 at 5.16.09 PM.mp4"
+            data-video-title="Hospital Elevator — Code Blue Stretcher &amp; Bed Elevator"
+            data-category="hospital" data-tags="hospital, healthcare">
             <div class="video-thumb-wrap">
-              <img src="assets/images/WhatsApp Image 2026-09-05 at 5.15.48 PM (2).jpeg"
-                alt="Cargo Lift Installation Poster" loading="lazy">
+              <img src="assets/images/video-thumbs/video-5-16-09-villa.jpg"
+                alt="Code Blue Emergency Stretcher & Bed Elevator" loading="lazy">
+              <div class="shorts-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
+                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                </svg>
+                <span>Shorts</span>
+              </div>
+              <span class="shorts-duration">0:30</span>
               <div class="video-play-trigger">
                 <div class="play-btn-circle">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -183,15 +277,29 @@
                   </svg>
                 </div>
               </div>
+              <div class="shorts-bottom-overlay">
+                <span class="shorts-tag">Hospital</span>
+                <h3 class="shorts-title">Code Blue Emergency Stretcher &amp; Bed Elevator</h3>
+                <span class="shorts-hint">Watch Reel &rarr;</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video 4: PMSM Traction Motor & Hoistway Operation -->
-          <div class="video-showcase-card" data-video-src="assets/videos/WhatsApp Video 2026-09-05 at 5.16.43 PM.mp4"
-            data-video-title="Precision PMSM Traction Motor &amp; Hoistway Operation">
+          <!-- Short 4: Home & Villa Elevators (Contemporary Glass Landing Portal) -->
+          <div class="video-showcase-card"
+            data-video-src="assets/lift/hospital-elevators/videos/WhatsApp Video 2026-09-05 at 5.16.43 PM.mp4"
+            data-video-title="Home &amp; Villa Elevator — Contemporary Glass Landing Portal"
+            data-category="home" data-tags="home, villa">
             <div class="video-thumb-wrap">
-              <img src="assets/images/WhatsApp Image 2026-09-05 at 5.15.49 PM.jpeg" alt="PMSM Gearless Motor Poster"
-                loading="lazy">
+              <img src="assets/images/video-thumbs/video-5-16-43-hospital.jpg"
+                alt="Contemporary Residential Glass Landing Portal" loading="lazy">
+              <div class="shorts-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
+                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                </svg>
+                <span>Shorts</span>
+              </div>
+              <span class="shorts-duration">0:17</span>
               <div class="video-play-trigger">
                 <div class="play-btn-circle">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -199,15 +307,29 @@
                   </svg>
                 </div>
               </div>
+              <div class="shorts-bottom-overlay">
+                <span class="shorts-tag">Home &amp; Villa</span>
+                <h3 class="shorts-title">Contemporary Residential Glass Landing Portal</h3>
+                <span class="shorts-hint">Watch Reel &rarr;</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video 5: Industrial Freight Elevator Interior & Controls -->
-          <div class="video-showcase-card" data-video-src="assets/videos/WhatsApp Video 2026-09-05 at 5.17.10 PM.mp4"
-            data-video-title="Industrial Freight Elevator Interior &amp; Controls">
+          <!-- Short 5: Goods & Freight Elevators (Heavy Hoistway Platform) -->
+          <div class="video-showcase-card"
+            data-video-src="assets/lift/goods-elevators/videos/WhatsApp Video 2026-09-05 at 5.15.44 PM.mp4"
+            data-video-title="Goods &amp; Freight Elevator — Heavy Industrial Platform"
+            data-category="goods" data-tags="goods, freight">
             <div class="video-thumb-wrap">
-              <img src="assets/images/WhatsApp Image 2026-09-05 at 5.15.48 PM (1).jpeg"
-                alt="Industrial Freight Cabin Poster" loading="lazy">
+              <img src="assets/images/video-thumbs/video-5-15-44-goods.jpg"
+                alt="Industrial Heavy Goods Platform & Steel Shutter" loading="lazy">
+              <div class="shorts-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
+                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                </svg>
+                <span>Shorts</span>
+              </div>
+              <span class="shorts-duration">0:22</span>
               <div class="video-play-trigger">
                 <div class="play-btn-circle">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -215,14 +337,29 @@
                   </svg>
                 </div>
               </div>
+              <div class="shorts-bottom-overlay">
+                <span class="shorts-tag">Goods &amp; Freight</span>
+                <h3 class="shorts-title">Industrial Heavy Goods Platform &amp; Shutter</h3>
+                <span class="shorts-hint">Watch Reel &rarr;</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video 6: Private Villa Glass Elevator in Motion -->
-          <div class="video-showcase-card" data-video-src="assets/videos/showcase-4.mp4"
-            data-video-title="Private Villa Glass Capsule Elevator in Motion">
+          <!-- Short 6: Automobile & Commercial Elevators (Multi-Level Showroom) -->
+          <div class="video-showcase-card"
+            data-video-src="assets/lift/automobile-elevators/videos/WhatsApp Video 2026-09-05 at 5.17.44 PM.mp4"
+            data-video-title="Automobile &amp; Commercial Elevator — Multi-Level Showroom"
+            data-category="auto" data-tags="auto, automobile">
             <div class="video-thumb-wrap">
-              <img src="assets/images/video-poster-4.jpg" alt="Villa Glass Lift Poster" loading="lazy">
+              <img src="assets/images/video-thumbs/video-5-17-44-boutique.jpg"
+                alt="Commercial Showroom Multi-Level Glass Lift" loading="lazy">
+              <div class="shorts-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
+                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                </svg>
+                <span>Shorts</span>
+              </div>
+              <span class="shorts-duration">0:30</span>
               <div class="video-play-trigger">
                 <div class="play-btn-circle">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -230,14 +367,29 @@
                   </svg>
                 </div>
               </div>
+              <div class="shorts-bottom-overlay">
+                <span class="shorts-tag">Automobile</span>
+                <h3 class="shorts-title">Commercial Showroom Multi-Level Glass Lift</h3>
+                <span class="shorts-hint">Watch Reel &rarr;</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video 7: Outdoor Facade Glass Elevator -->
-          <div class="video-showcase-card" data-video-src="assets/videos/showcase-6.mp4"
-            data-video-title="Outdoor Facade Panoramic Glass Lift">
+          <!-- Short 7: Service Dumbwaiters & Lift Controls -->
+          <div class="video-showcase-card"
+            data-video-src="assets/lift/dumbwaiters/videos/WhatsApp Video 2026-09-05 at 5.17.10 PM.mp4"
+            data-video-title="Service Dumbwaiter — Food &amp; Pantry Vertical Transit"
+            data-category="dumbwaiter" data-tags="dumbwaiter, service">
             <div class="video-thumb-wrap">
-              <img src="assets/images/video-poster-6.jpg" alt="Outdoor Glass Lift Poster" loading="lazy">
+              <img src="assets/images/video-thumbs/video-5-17-10-service.jpg"
+                alt="Titanium Gold Floor Controller & Service Transit" loading="lazy">
+              <div class="shorts-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
+                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                </svg>
+                <span>Shorts</span>
+              </div>
+              <span class="shorts-duration">0:18</span>
               <div class="video-play-trigger">
                 <div class="play-btn-circle">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -245,20 +397,40 @@
                   </svg>
                 </div>
               </div>
+              <div class="shorts-bottom-overlay">
+                <span class="shorts-tag">Dumbwaiters</span>
+                <h3 class="shorts-title">Titanium Gold Controller &amp; Service Transit</h3>
+                <span class="shorts-hint">Watch Reel &rarr;</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video 8: Stainless Steel Telescopic Landing Doors -->
-          <div class="video-showcase-card" data-video-src="assets/videos/showcase-3.mp4"
-            data-video-title="Stainless Steel Telescopic Landing Doors">
+          <!-- Short 8: Panoramic Glass Elevators (Outdoor Facade Lift) -->
+          <div class="video-showcase-card"
+            data-video-src="assets/lift/special-elevators/videos/showcase-6.mp4"
+            data-video-title="Panoramic Glass Elevator — Outdoor Facade Lift in Motion"
+            data-category="special" data-tags="special, panoramic">
             <div class="video-thumb-wrap">
-              <img src="assets/images/video-poster-3.jpg" alt="Landing Doors Poster" loading="lazy">
+              <img src="assets/images/video-thumbs/showcase-6-panoramic.jpg"
+                alt="Outdoor Facade 360° Panoramic Glass Elevator" loading="lazy">
+              <div class="shorts-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
+                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                </svg>
+                <span>Shorts</span>
+              </div>
+              <span class="shorts-duration">0:46</span>
               <div class="video-play-trigger">
                 <div class="play-btn-circle">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                     <polygon points="6 3 20 12 6 21 6 3" />
                   </svg>
                 </div>
+              </div>
+              <div class="shorts-bottom-overlay">
+                <span class="shorts-tag">Panoramic Glass</span>
+                <h3 class="shorts-title">Outdoor Facade 360° Panoramic Glass Elevator</h3>
+                <span class="shorts-hint">Watch Reel &rarr;</span>
               </div>
             </div>
           </div>
@@ -267,24 +439,52 @@
     </section>
 
     <!-- High-Resolution Photographic Installation Gallery -->
-    <section class="section showcase-photo-section"
-      style="padding: 2.75rem 0; background: #F8FAFC; border-top: 1px solid rgba(15,23,42,0.06); border-bottom: 1px solid rgba(15,23,42,0.06);">
+    <section class="section showcase-photo-section" id="showcase-photos"
+      style="padding: 1.5rem 0 2.75rem 0; background: #F8FAFC; border-top: 1px solid rgba(15,23,42,0.06); border-bottom: 1px solid rgba(15,23,42,0.06);">
       <div class="container">
-        <div class="section-header text-center" style="margin-bottom: 1.5rem;">
-          <span class="section-tag" style="font-size: 0.68rem; padding: 0.2rem 0.65rem;">ARCHITECTURAL
-            PHOTOGRAPHY</span>
-          <h2 class="section-title" style="font-size: 1.75rem; margin-bottom: 0.35rem;">High-Resolution Installation
-            Gallery</h2>
-          <p class="section-subtitle" style="font-size: 0.85rem; max-width: 580px; margin: 0 auto; line-height: 1.45;">
-            Click any image to view in enlarged lightbox preview. All projects engineered and installed by ERIS-NEXA
-            engineers.
-          </p>
+        <!-- Filter Tabs Bar Above Photos: Compact & Never Cut Off -->
+        <div class="media-filter-wrap" style="margin-bottom: 1.75rem;">
+          <div class="media-filter-bar" role="tablist" aria-label="Photo Filters" data-target-cards="#showcase-photos .showcase-photo-card">
+            <button type="button" class="media-filter-tab active" data-filter="all" role="tab" aria-selected="true">
+              <span class="filter-tab-label">All Lifts</span>
+              <span class="filter-tab-count">22</span>
+            </button>
+            <button type="button" class="media-filter-tab" data-filter="passenger" role="tab" aria-selected="false">
+              <span class="filter-tab-label">Passenger</span>
+              <span class="filter-tab-count">5</span>
+            </button>
+            <button type="button" class="media-filter-tab" data-filter="home" role="tab" aria-selected="false">
+              <span class="filter-tab-label">Home &amp; Villa</span>
+              <span class="filter-tab-count">5</span>
+            </button>
+            <button type="button" class="media-filter-tab" data-filter="hospital" role="tab" aria-selected="false">
+              <span class="filter-tab-label">Hospital</span>
+              <span class="filter-tab-count">2</span>
+            </button>
+            <button type="button" class="media-filter-tab" data-filter="goods" role="tab" aria-selected="false">
+              <span class="filter-tab-label">Goods &amp; Freight</span>
+              <span class="filter-tab-count">2</span>
+            </button>
+            <button type="button" class="media-filter-tab" data-filter="auto" role="tab" aria-selected="false">
+              <span class="filter-tab-label">Automobile</span>
+              <span class="filter-tab-count">2</span>
+            </button>
+            <button type="button" class="media-filter-tab" data-filter="dumbwaiter" role="tab" aria-selected="false">
+              <span class="filter-tab-label">Dumbwaiters</span>
+              <span class="filter-tab-count">1</span>
+            </button>
+            <button type="button" class="media-filter-tab" data-filter="special" role="tab" aria-selected="false">
+              <span class="filter-tab-label">Panoramic Glass</span>
+              <span class="filter-tab-count">5</span>
+            </button>
+          </div>
         </div>
 
         <div class="showcase-photo-grid">
-          <!-- Image 1 -->
+          <!-- Image 1: Passenger Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/gallery-1.jpeg"
-            data-gallery-title="Bespoke Titanium Gold Mirror Passenger Cabin">
+            data-gallery-title="Passenger Elevators — Bespoke Titanium Gold Mirror Cabin"
+            data-category="passenger" data-tags="passenger">
             <img src="assets/images/gallery-1.jpeg" alt="Titanium Gold Cabin" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -296,9 +496,10 @@
             </div>
           </div>
 
-          <!-- Image 2 -->
+          <!-- Image 2: Panoramic Glass Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/gallery-2.jpeg"
-            data-gallery-title="Panoramic 360° Glass Elevator Shaft">
+            data-gallery-title="Panoramic Glass Elevators — 360° Glass Elevator Shaft"
+            data-category="special" data-tags="special, panoramic">
             <img src="assets/images/gallery-2.jpeg" alt="Panoramic Glass Shaft" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -310,9 +511,10 @@
             </div>
           </div>
 
-          <!-- Image 3 -->
+          <!-- Image 3: Home & Villa Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/gallery-3.jpeg"
-            data-gallery-title="Minimalist Luxury Home Villa Lift">
+            data-gallery-title="Home &amp; Villa Elevators — Minimalist Luxury Villa Lift"
+            data-category="home" data-tags="home, villa">
             <img src="assets/images/gallery-3.jpeg" alt="Villa Home Lift" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -324,9 +526,10 @@
             </div>
           </div>
 
-          <!-- Image 4 -->
+          <!-- Image 4: Hospital Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/gallery-4.jpeg"
-            data-gallery-title="Hospital Grade Stretcher & Bed Elevator">
+            data-gallery-title="Hospital Elevators — Code Blue Emergency Stretcher &amp; Bed Elevator"
+            data-category="hospital" data-tags="hospital">
             <img src="assets/images/gallery-4.jpeg" alt="Hospital Bed Elevator" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -338,9 +541,10 @@
             </div>
           </div>
 
-          <!-- Image 5 -->
+          <!-- Image 5: Passenger Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/gallery-5.jpeg"
-            data-gallery-title="High-Traffic Commercial Office Lobby Elevators">
+            data-gallery-title="Passenger Elevators — High-Traffic Commercial Office Elevators"
+            data-category="passenger" data-tags="passenger">
             <img src="assets/images/gallery-5.jpeg" alt="Commercial Elevators" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -352,9 +556,10 @@
             </div>
           </div>
 
-          <!-- Image 6 -->
+          <!-- Image 6: Panoramic Glass Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/special-cover.jpeg"
-            data-gallery-title="Custom Circular Panoramic Glass Lift">
+            data-gallery-title="Panoramic Glass Elevators — Custom Circular Panoramic Glass Lift"
+            data-category="special" data-tags="special, panoramic">
             <img src="assets/images/special-cover.jpeg" alt="Circular Panoramic Lift" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -366,9 +571,10 @@
             </div>
           </div>
 
-          <!-- Image 7 -->
+          <!-- Image 7: Panoramic Glass Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/glass-outdoor-1.jpeg"
-            data-gallery-title="External Weatherproof Structural Steel Shaft">
+            data-gallery-title="Panoramic Glass Elevators — External Weatherproof Structural Steel Shaft"
+            data-category="special" data-tags="special, panoramic">
             <img src="assets/images/glass-outdoor-1.jpeg" alt="External Structural Glass Lift" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -380,9 +586,10 @@
             </div>
           </div>
 
-          <!-- Image 8 -->
+          <!-- Image 8: Panoramic Glass Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/glass-staircase.jpeg"
-            data-gallery-title="Curved Staircase Capsule Glass Lift">
+            data-gallery-title="Panoramic Glass Elevators — Curved Staircase Capsule Glass Lift"
+            data-category="special" data-tags="special, panoramic">
             <img src="assets/images/glass-staircase.jpeg" alt="Curved Staircase Capsule Lift" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -394,9 +601,10 @@
             </div>
           </div>
 
-          <!-- Image 9 -->
+          <!-- Image 9: Home & Villa Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/cabin-gold-1.jpeg"
-            data-gallery-title="Champagne Gold Mirror Finish Luxury Cabin">
+            data-gallery-title="Home &amp; Villa Elevators — Champagne Gold Mirror Finish Luxury Cabin"
+            data-category="home" data-tags="home, villa">
             <img src="assets/images/cabin-gold-1.jpeg" alt="Gold Mirror Luxury Cabin" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -408,9 +616,10 @@
             </div>
           </div>
 
-          <!-- Image 10 -->
+          <!-- Image 10: Home & Villa Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/home-1.jpeg"
-            data-gallery-title="Private Villa Scenic Panoramic Elevator">
+            data-gallery-title="Home &amp; Villa Elevators — Private Villa Scenic Panoramic Elevator"
+            data-category="home" data-tags="home, villa">
             <img src="assets/images/home-1.jpeg" alt="Private Villa Elevator" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -422,9 +631,10 @@
             </div>
           </div>
 
-          <!-- Image 11 -->
+          <!-- Image 11: Home & Villa Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/home-2.jpeg"
-            data-gallery-title="Architectural Modern Residence Elevator">
+            data-gallery-title="Home &amp; Villa Elevators — Architectural Modern Residence Elevator"
+            data-category="home" data-tags="home, villa">
             <img src="assets/images/home-2.jpeg" alt="Modern Residence Lift" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -436,9 +646,10 @@
             </div>
           </div>
 
-          <!-- Image 12 -->
+          <!-- Image 12: Passenger Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/passenger-cover.jpeg"
-            data-gallery-title="High-Rise Commercial Passenger Lift">
+            data-gallery-title="Passenger Elevators — High-Rise Commercial Passenger Lift"
+            data-category="passenger" data-tags="passenger">
             <img src="assets/images/passenger-cover.jpeg" alt="Commercial Passenger Lift" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -450,9 +661,10 @@
             </div>
           </div>
 
-          <!-- Image 13 -->
+          <!-- Image 13: Passenger Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/passenger-g1.jpeg"
-            data-gallery-title="Hairline Stainless Steel Telescopic Landing">
+            data-gallery-title="Passenger Elevators — Stainless Steel Telescopic Landing Portal"
+            data-category="passenger" data-tags="passenger">
             <img src="assets/images/passenger-g1.jpeg" alt="SS Telescopic Landing" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -464,9 +676,10 @@
             </div>
           </div>
 
-          <!-- Image 14 -->
+          <!-- Image 14: Hospital Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/hospital-cover.jpeg"
-            data-gallery-title="Medical Facility Bed Elevator Transit">
+            data-gallery-title="Hospital Elevators — Dual Bed Hospital Stretcher Elevator"
+            data-category="hospital" data-tags="hospital">
             <img src="assets/images/hospital-cover.jpeg" alt="Medical Bed Elevator" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -478,9 +691,10 @@
             </div>
           </div>
 
-          <!-- Image 15 -->
+          <!-- Image 15: Panoramic Glass Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/special-g1.jpeg"
-            data-gallery-title="Designer Hydraulic Capsule Glass Lift">
+            data-gallery-title="Panoramic Glass Elevators — Designer Hydraulic Capsule Glass Lift"
+            data-category="special" data-tags="special, panoramic">
             <img src="assets/images/special-g1.jpeg" alt="Hydraulic Capsule Glass Lift" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -492,9 +706,10 @@
             </div>
           </div>
 
-          <!-- Image 16 -->
+          <!-- Image 16: Goods & Freight Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/goods-1.jpeg"
-            data-gallery-title="Heavy Industrial Freight Elevator">
+            data-gallery-title="Goods &amp; Freight Elevators — Heavy Industrial Freight Elevator"
+            data-category="goods" data-tags="goods">
             <img src="assets/images/goods-1.jpeg" alt="Heavy Industrial Freight Elevator" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -506,9 +721,10 @@
             </div>
           </div>
 
-          <!-- Image 17 -->
+          <!-- Image 17: Automobile Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/automobile-1.jpeg"
-            data-gallery-title="Commercial Automotive & Parking Elevator">
+            data-gallery-title="Automobile Elevators — Commercial Vehicular Parking Elevator"
+            data-category="auto" data-tags="auto">
             <img src="assets/images/automobile-1.jpeg" alt="Commercial Automotive Lift" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -520,9 +736,10 @@
             </div>
           </div>
 
-          <!-- Image 18 -->
+          <!-- Image 18: Home & Villa Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/home-g2.jpeg"
-            data-gallery-title="Contemporary Residential Villa Lift">
+            data-gallery-title="Home &amp; Villa Elevators — Contemporary Residential Villa Lift"
+            data-category="home" data-tags="home, villa">
             <img src="assets/images/home-g2.jpeg" alt="Residential Villa Lift" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -534,9 +751,10 @@
             </div>
           </div>
 
-          <!-- Image 19 -->
+          <!-- Image 19: Passenger Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/passenger-g4.jpeg"
-            data-gallery-title="High-Speed Commercial Passenger Lift">
+            data-gallery-title="Passenger Elevators — High-Speed Commercial Passenger Lift"
+            data-category="passenger" data-tags="passenger">
             <img src="assets/images/passenger-g4.jpeg" alt="Commercial Passenger Lift" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -548,10 +766,41 @@
             </div>
           </div>
 
-          <!-- Image 20 -->
+          <!-- Image 20: Goods & Freight Elevators -->
           <div class="showcase-photo-card" data-gallery-img="assets/images/goods-g1.jpeg"
-            data-gallery-title="Warehouse Heavy Material Hoist Lift">
+            data-gallery-title="Goods &amp; Freight Elevators — Warehouse Heavy Material Hoist Lift"
+            data-category="goods" data-tags="goods">
             <img src="assets/images/goods-g1.jpeg" alt="Warehouse Material Lift" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Image 21: Service Dumbwaiters -->
+          <div class="showcase-photo-card" data-gallery-img="assets/lift/dumbwaiters/photos/dumbwaiter-1.jpeg"
+            data-gallery-title="Service Dumbwaiters — Food-Grade Commercial Pantry Lift"
+            data-category="dumbwaiter" data-tags="dumbwaiter">
+            <img src="assets/lift/dumbwaiters/photos/dumbwaiter-1.jpeg" alt="Food-Grade Dumbwaiter" loading="lazy">
+            <div class="showcase-photo-zoom">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Image 22: Automobile Elevators -->
+          <div class="showcase-photo-card" data-gallery-img="assets/lift/automobile-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.58 AM.jpeg"
+            data-gallery-title="Automobile Elevators — Showroom Heavy Vehicle Lift Platform"
+            data-category="auto" data-tags="auto">
+            <img src="assets/lift/automobile-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.58 AM.jpeg" alt="Showroom Vehicle Lift" loading="lazy">
             <div class="showcase-photo-zoom">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <circle cx="11" cy="11" r="8"></circle>

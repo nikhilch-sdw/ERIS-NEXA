@@ -108,7 +108,35 @@
           <li><a href="index.html" class="nav-link active">Home</a></li>
           <li><a href="elevators.html" class="nav-link">Elevators</a></li>
           <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="showcase.html" class="nav-link">Showcase</a></li>
+          <li class="nav-item-dropdown">
+            <a href="showcase.html" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              <span>Showcase</span>
+              <svg class="dropdown-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="nav-dropdown-menu">
+              <li>
+                <a href="images.html" class="dropdown-item">
+                  <svg class="dropdown-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                  <span>Images</span>
+                </a>
+              </li>
+              <li>
+                <a href="videos.html" class="dropdown-item">
+                  <svg class="dropdown-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polygon points="23 7 16 12 23 17 23 7"/>
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                  </svg>
+                  <span>Videos</span>
+                </a>
+              </li>
+            </ul>
+          </li>
           <li><a href="about.html" class="nav-link">About Us</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
@@ -271,9 +299,6 @@
           <h2 class="section-title">
             Engineered for Every <span class="gold-text">Architectural Need</span>
           </h2>
-          <p class="section-desc">
-            Engineered vertical transportation systems for residential, commercial, healthcare, and industrial projects.
-          </p>
         </div>
 
         <!-- Filter Pills -->
@@ -317,7 +342,6 @@
             <div class="product-body">
               <div class="product-header-block">
                 <h3 class="product-title">Luxury Passenger Elevators</h3>
-                <p class="product-excerpt">Commercial towers &amp; residential complexes</p>
               </div>
               <div class="product-meta-strip">
                 <span class="meta-tag">6 to 26 Pax</span>
@@ -358,7 +382,6 @@
             <div class="product-body">
               <div class="product-header-block">
                 <h3 class="product-title">Bespoke Villa Home Elevators</h3>
-                <p class="product-excerpt">Low-pit luxury mobility for penthouses &amp; villas</p>
               </div>
               <div class="product-meta-strip">
                 <span class="meta-tag">3 to 4 Pax</span>
@@ -400,7 +423,6 @@
             <div class="product-body">
               <div class="product-header-block">
                 <h3 class="product-title">Hospital &amp; Stretcher Elevators</h3>
-                <p class="product-excerpt">Jerk-free bed transit with medical SS 304 cabin</p>
               </div>
               <div class="product-meta-strip">
                 <span class="meta-tag">13 to 26 Pax</span>
@@ -441,7 +463,6 @@
             <div class="product-body">
               <div class="product-header-block">
                 <h3 class="product-title">Goods &amp; Freight Elevators</h3>
-                <p class="product-excerpt">Heavy-duty freight for factories &amp; warehouses</p>
               </div>
               <div class="product-meta-strip">
                 <span class="meta-tag">500 to 6,000 kg+</span>
@@ -482,7 +503,6 @@
             <div class="product-body">
               <div class="product-header-block">
                 <h3 class="product-title">Automobile &amp; Showroom Lifts</h3>
-                <p class="product-excerpt">High-load vehicular lifts for showrooms &amp; parking</p>
               </div>
               <div class="product-meta-strip">
                 <span class="meta-tag">3,000 to 4,500 kg</span>
@@ -523,7 +543,6 @@
             <div class="product-body">
               <div class="product-header-block">
                 <h3 class="product-title">Commercial Pantry Dumbwaiters</h3>
-                <p class="product-excerpt">Food-grade service lifts for kitchens &amp; laboratories</p>
               </div>
               <div class="product-meta-strip">
                 <span class="meta-tag">50 to 250 kg</span>
@@ -557,10 +576,6 @@
           <h2 class="section-title">
             The 8 Vital <span class="cyan-text">Safety Mechanisms</span>
           </h2>
-          <p class="section-desc">
-            Multi-tiered redundant mechanical and electronic safety barriers adhering strictly to IS 14665 and EN 81-20
-            standards.
-          </p>
         </div>
 
         <div class="safety-grid">
@@ -736,9 +751,6 @@
           <h2 class="section-title">
             Elevator Drive <span class="gold-text">Technology Matrix</span>
           </h2>
-          <p class="section-desc">
-            Engineering comparison across modern elevator drive systems.
-          </p>
         </div>
 
         <div class="matrix-table-wrap">
@@ -971,20 +983,24 @@
           <h2 class="section-title">
             ERIS-NEXA <span class="gold-text">in Motion</span>
           </h2>
-          <p class="section-desc">
-            Authentic installation footage and completed projects across Gurgaon and Delhi NCR.
-          </p>
         </div>
 
-        <!-- Video Cards Grid: 3x2 Cinema Layout -->
+        <!-- Video Cards Grid: YouTube Shorts Format -->
         <div class="showcase-videos-grid">
-          <!-- Video 1: Cinematic Architectural Elevator Showcase -->
+          <!-- Short 1: Passenger Elevators -->
           <div class="video-showcase-card"
-            data-video-src="assets/videos/elevator-product-showcase.mp4"
-            data-video-title="Architectural Elevator Cinematic Showcase">
+            data-video-src="assets/lift/passenger-elevators/videos/elevator-product-showcase.mp4"
+            data-video-title="Passenger Elevator — Commercial High-Speed Ride">
             <div class="video-thumb-wrap">
-              <img src="assets/images/service-hoistway-structure.jpg" alt="Architectural Elevator Showcase Poster"
-                loading="lazy">
+              <img src="assets/images/video-thumbs/elevator-product-showcase.jpg"
+                alt="Commercial High-Speed Passenger Elevator" loading="lazy">
+              <div class="shorts-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
+                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                </svg>
+                <span>Shorts</span>
+              </div>
+              <span class="shorts-duration">0:10</span>
               <div class="video-play-trigger">
                 <div class="play-btn-circle">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -992,14 +1008,28 @@
                   </svg>
                 </div>
               </div>
+              <div class="shorts-bottom-overlay">
+                <span class="shorts-tag">Passenger</span>
+                <h3 class="shorts-title">High-Speed Commercial Passenger Elevator</h3>
+                <span class="shorts-hint">Watch Reel &rarr;</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video 2: Luxury Residential Glass Elevator -->
-          <div class="video-showcase-card" data-video-src="assets/videos/WhatsApp Video 2026-09-05 at 5.16.09 PM.mp4"
-            data-video-title="Luxury Residential Glass Elevator Commissioning">
+          <!-- Short 2: Home & Villa Elevators (Italian Marble & Gold Foyer) -->
+          <div class="video-showcase-card"
+            data-video-src="assets/lift/home-elevators/videos/showcase-4.mp4"
+            data-video-title="Home &amp; Villa Elevator — Luxury Italian Marble &amp; Gold Foyer">
             <div class="video-thumb-wrap">
-              <img src="assets/images/gallery-2.jpeg" alt="Residential Glass Elevator Poster" loading="lazy">
+              <img src="assets/images/video-thumbs/showcase-4-marble-gold.jpg"
+                alt="Luxury Italian Marble & Gold Private Villa Lift" loading="lazy">
+              <div class="shorts-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
+                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                </svg>
+                <span>Shorts</span>
+              </div>
+              <span class="shorts-duration">0:18</span>
               <div class="video-play-trigger">
                 <div class="play-btn-circle">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -1007,15 +1037,28 @@
                   </svg>
                 </div>
               </div>
+              <div class="shorts-bottom-overlay">
+                <span class="shorts-tag">Home &amp; Villa</span>
+                <h3 class="shorts-title">Luxury Gold &amp; Italian Marble Villa Lift</h3>
+                <span class="shorts-hint">Watch Reel &rarr;</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video 3: Heavy-Duty Cargo & Goods Lift Installation -->
-          <div class="video-showcase-card" data-video-src="assets/videos/WhatsApp Video 2026-09-05 at 5.15.44 PM.mp4"
-            data-video-title="Heavy-Duty Cargo &amp; Goods Lift Installation">
+          <!-- Short 3: Hospital Elevators (Deep Stretcher Cabin) -->
+          <div class="video-showcase-card"
+            data-video-src="assets/lift/home-elevators/videos/WhatsApp Video 2026-09-05 at 5.16.09 PM.mp4"
+            data-video-title="Hospital Elevator — Code Blue Stretcher &amp; Bed Elevator">
             <div class="video-thumb-wrap">
-              <img src="assets/images/WhatsApp Image 2026-09-05 at 5.15.48 PM (2).jpeg"
-                alt="Cargo Lift Installation Poster" loading="lazy">
+              <img src="assets/images/video-thumbs/video-5-16-09-villa.jpg"
+                alt="Code Blue Emergency Stretcher & Bed Elevator" loading="lazy">
+              <div class="shorts-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
+                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                </svg>
+                <span>Shorts</span>
+              </div>
+              <span class="shorts-duration">0:30</span>
               <div class="video-play-trigger">
                 <div class="play-btn-circle">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -1023,15 +1066,28 @@
                   </svg>
                 </div>
               </div>
+              <div class="shorts-bottom-overlay">
+                <span class="shorts-tag">Hospital</span>
+                <h3 class="shorts-title">Code Blue Emergency Stretcher &amp; Bed Elevator</h3>
+                <span class="shorts-hint">Watch Reel &rarr;</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video 4: PMSM Traction Motor & Hoistway Operation -->
-          <div class="video-showcase-card" data-video-src="assets/videos/WhatsApp Video 2026-09-05 at 5.16.43 PM.mp4"
-            data-video-title="Precision PMSM Traction Motor &amp; Hoistway Operation">
+          <!-- Short 4: Home & Villa Elevators (Contemporary Glass Landing Portal) -->
+          <div class="video-showcase-card"
+            data-video-src="assets/lift/hospital-elevators/videos/WhatsApp Video 2026-09-05 at 5.16.43 PM.mp4"
+            data-video-title="Home &amp; Villa Elevator — Contemporary Glass Landing Portal">
             <div class="video-thumb-wrap">
-              <img src="assets/images/WhatsApp Image 2026-09-05 at 5.15.49 PM.jpeg" alt="PMSM Gearless Motor Poster"
-                loading="lazy">
+              <img src="assets/images/video-thumbs/video-5-16-43-hospital.jpg"
+                alt="Contemporary Residential Glass Landing Portal" loading="lazy">
+              <div class="shorts-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
+                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                </svg>
+                <span>Shorts</span>
+              </div>
+              <span class="shorts-duration">0:17</span>
               <div class="video-play-trigger">
                 <div class="play-btn-circle">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -1039,15 +1095,28 @@
                   </svg>
                 </div>
               </div>
+              <div class="shorts-bottom-overlay">
+                <span class="shorts-tag">Home &amp; Villa</span>
+                <h3 class="shorts-title">Contemporary Residential Glass Landing Portal</h3>
+                <span class="shorts-hint">Watch Reel &rarr;</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video 5: Industrial Freight Elevator Interior & Controls -->
-          <div class="video-showcase-card" data-video-src="assets/videos/WhatsApp Video 2026-09-05 at 5.17.10 PM.mp4"
-            data-video-title="Industrial Freight Elevator Interior &amp; Controls">
+          <!-- Short 5: Goods & Freight Elevators (Heavy Hoistway Platform) -->
+          <div class="video-showcase-card"
+            data-video-src="assets/lift/goods-elevators/videos/WhatsApp Video 2026-09-05 at 5.15.44 PM.mp4"
+            data-video-title="Goods &amp; Freight Elevator — Heavy Industrial Platform">
             <div class="video-thumb-wrap">
-              <img src="assets/images/WhatsApp Image 2026-09-05 at 5.15.48 PM (1).jpeg"
-                alt="Industrial Freight Cabin Poster" loading="lazy">
+              <img src="assets/images/video-thumbs/video-5-15-44-goods.jpg"
+                alt="Industrial Heavy Goods Platform & Steel Shutter" loading="lazy">
+              <div class="shorts-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
+                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                </svg>
+                <span>Shorts</span>
+              </div>
+              <span class="shorts-duration">0:22</span>
               <div class="video-play-trigger">
                 <div class="play-btn-circle">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -1055,14 +1124,28 @@
                   </svg>
                 </div>
               </div>
+              <div class="shorts-bottom-overlay">
+                <span class="shorts-tag">Goods &amp; Freight</span>
+                <h3 class="shorts-title">Industrial Heavy Goods Platform &amp; Shutter</h3>
+                <span class="shorts-hint">Watch Reel &rarr;</span>
+              </div>
             </div>
           </div>
 
-          <!-- Video 6: Private Villa Glass Elevator in Motion -->
-          <div class="video-showcase-card" data-video-src="assets/videos/showcase-4.mp4"
-            data-video-title="Private Villa Glass Capsule Elevator in Motion">
+          <!-- Short 6: Panoramic Glass Elevators (Outdoor Facade Lift) -->
+          <div class="video-showcase-card"
+            data-video-src="assets/lift/special-elevators/videos/showcase-6.mp4"
+            data-video-title="Panoramic Glass Elevator — Outdoor Facade Lift in Motion">
             <div class="video-thumb-wrap">
-              <img src="assets/images/video-poster-4.jpg" alt="Villa Glass Lift Poster" loading="lazy">
+              <img src="assets/images/video-thumbs/showcase-6-panoramic.jpg"
+                alt="Outdoor Facade 360° Panoramic Glass Elevator" loading="lazy">
+              <div class="shorts-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
+                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                </svg>
+                <span>Shorts</span>
+              </div>
+              <span class="shorts-duration">0:46</span>
               <div class="video-play-trigger">
                 <div class="play-btn-circle">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -1070,44 +1153,19 @@
                   </svg>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <!-- Video 7: Outdoor Facade Glass Elevator -->
-          <div class="video-showcase-card" data-video-src="assets/videos/showcase-6.mp4"
-            data-video-title="Outdoor Facade Panoramic Glass Lift">
-            <div class="video-thumb-wrap">
-              <img src="assets/images/video-poster-6.jpg" alt="Outdoor Glass Lift Poster" loading="lazy">
-              <div class="video-play-trigger">
-                <div class="play-btn-circle">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <polygon points="6 3 20 12 6 21 6 3" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Video 8: Stainless Steel Telescopic Landing Doors -->
-          <div class="video-showcase-card" data-video-src="assets/videos/showcase-3.mp4"
-            data-video-title="Stainless Steel Telescopic Landing Doors">
-            <div class="video-thumb-wrap">
-              <img src="assets/images/video-poster-3.jpg" alt="Landing Doors Poster" loading="lazy">
-              <div class="video-play-trigger">
-                <div class="play-btn-circle">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <polygon points="6 3 20 12 6 21 6 3" />
-                  </svg>
-                </div>
+              <div class="shorts-bottom-overlay">
+                <span class="shorts-tag">Panoramic Glass</span>
+                <h3 class="shorts-title">Outdoor Facade 360° Panoramic Glass Elevator</h3>
+                <span class="shorts-hint">Watch Reel &rarr;</span>
               </div>
             </div>
           </div>
         </div>
 
         <div class="video-browse-cta-wrap text-center">
-          <a href="showcase.html" class="btn btn-outline"
+          <a href="videos.html" class="btn btn-outline"
             style="border-radius: 999px; padding: 0.55rem 1.8rem; font-size: 0.88rem; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;">
-            <span>View All &rarr;</span>
+            <span>View All Operational Videos &rarr;</span>
           </a>
         </div>
       </div>
@@ -1123,9 +1181,6 @@
           <h2 class="section-title">
             Led by Engineering <span class="gold-text">Founders</span>
           </h2>
-          <p class="section-desc">
-            Direct founder oversight from shaft feasibility and engineering to lifetime AMC support.
-          </p>
         </div>
 
         <div class="directors-grid">
@@ -1290,9 +1345,6 @@
           <h2 class="section-title">
             Technical &amp; <span class="gold-text">Installation Insights</span>
           </h2>
-          <p class="section-desc">
-            Direct technical answers for architects, civil contractors, and property owners.
-          </p>
         </div>
 
         <div class="faq-container">

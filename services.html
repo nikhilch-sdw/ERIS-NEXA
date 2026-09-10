@@ -77,7 +77,35 @@
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="elevators.html" class="nav-link">Elevators</a></li>
           <li><a href="services.html" class="nav-link active">Services</a></li>
-          <li><a href="showcase.html" class="nav-link">Showcase</a></li>
+          <li class="nav-item-dropdown">
+            <a href="showcase.html" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              <span>Showcase</span>
+              <svg class="dropdown-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="nav-dropdown-menu">
+              <li>
+                <a href="images.html" class="dropdown-item">
+                  <svg class="dropdown-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                  <span>Images</span>
+                </a>
+              </li>
+              <li>
+                <a href="videos.html" class="dropdown-item">
+                  <svg class="dropdown-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polygon points="23 7 16 12 23 17 23 7"/>
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                  </svg>
+                  <span>Videos</span>
+                </a>
+              </li>
+            </ul>
+          </li>
           <li><a href="about.html" class="nav-link">About Us</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
@@ -131,12 +159,8 @@
         <div class="section-header text-center" style="margin-bottom: 1.35rem;">
           <span class="section-tag"
             style="padding: 0.2rem 0.65rem; font-size: 0.68rem; margin-bottom: 0.35rem;">ENGINEERING SERVICES</span>
-          <h2 class="section-title" style="font-size: 1.85rem; margin-bottom: 0.25rem;">Specialized <span
+          <h2 class="section-title" style="font-size: 1.85rem; margin-bottom: 0;">Specialized <span
               class="gold-text">Elevator Services</span></h2>
-          <p class="section-desc" style="font-size: 0.96rem; max-width: 680px; margin: 0 auto; line-height: 1.55; color: var(--text-secondary);">
-            From proactive annual maintenance and rapid breakdown response to hoistway modernization and safety
-            compliance.
-          </p>
         </div>
 
         <div class="services-image-grid">
@@ -144,15 +168,11 @@
           <!-- Row 1 - Card 1: AMC Maintenance -->
           <div class="service-img-card">
             <div class="service-card-media">
-              <span class="service-card-badge">Annual Contracts</span>
               <img src="assets/images/service-amc-maintenance.jpg"
                 alt="Elevator AMC Maintenance Engineer inspecting PMSM Motor" loading="lazy">
             </div>
             <div class="service-card-body">
               <h3 class="service-card-title">Preventive AMC Maintenance</h3>
-              <p class="service-card-desc">
-                Scheduled 12-visit comprehensive care, sensor leveling, and multi-point preventive safety audits.
-              </p>
               <button class="btn btn-primary btn-sm" style="width: 100%; padding: 0.5rem 0.95rem; font-size: 0.84rem; font-weight: 600;"
                 data-open-modal="quote" data-service="Annual Maintenance Contract (AMC)">
                 Request AMC Proposal &nearr;
@@ -163,17 +183,11 @@
           <!-- Row 1 - Card 2: 24/7 Emergency Dispatch -->
           <div class="service-img-card">
             <div class="service-card-media">
-              <span class="service-card-badge"
-                style="background: linear-gradient(135deg, #FD6803 0%, #E05500 100%); color: #FFFFFF; border: none; box-shadow: 0 2px 8px rgba(253,104,3,0.45); font-weight: 800;">&lt;30
-                Min Arrival</span>
               <img src="assets/images/service-emergency-dispatch.jpg"
                 alt="24/7 Rapid Emergency Response Van and Technicians" loading="lazy">
             </div>
             <div class="service-card-body">
               <h3 class="service-card-title">24/7 Emergency Breakdown</h3>
-              <p class="service-card-desc">
-                Dedicated GPS patrol vans across Gurgaon &amp; NCR for swift passenger rescue and fault clearance.
-              </p>
               <a href="tel:+919557761198" class="btn btn-accent btn-sm"
                 style="width: 100%; padding: 0.5rem 0.95rem; font-size: 0.84rem; font-weight: 600; text-decoration: none; display: flex; align-items: center; justify-content: center;">
                 Call Helpline &nearr;
@@ -184,15 +198,11 @@
           <!-- Row 1 - Card 3: Modernization & Upgrades -->
           <div class="service-img-card">
             <div class="service-card-media">
-              <span class="service-card-badge">Hoistway Upgrade</span>
               <img src="assets/images/service-modernization.jpg" alt="Luxury Modernized Elevator Cabin Interior"
                 loading="lazy">
             </div>
             <div class="service-card-body">
               <h3 class="service-card-title">Modernization &amp; Retrofit</h3>
-              <p class="service-card-desc">
-                Energy-efficient PMSM gearless motors, 32-bit VVVF controllers, and aesthetic upgrades.
-              </p>
               <button class="btn btn-primary btn-sm" style="width: 100%; padding: 0.5rem 0.95rem; font-size: 0.84rem; font-weight: 600;"
                 data-open-modal="quote" data-service="Modernization & Upgrades">
                 Book Hoistway Audit &nearr;
@@ -203,15 +213,11 @@
           <!-- Row 1 - Card 4: Safety Audit & Inspection -->
           <div class="service-img-card">
             <div class="service-card-media">
-              <span class="service-card-badge">IS 14665 Code</span>
               <img src="assets/images/service-safety-audit.jpg" alt="Elevator Inspector performing Safety Audit"
                 loading="lazy">
             </div>
             <div class="service-card-body">
               <h3 class="service-card-title">Safety Audit &amp; Certification</h3>
-              <p class="service-card-desc">
-                Multi-point IS 14665 testing, governor overspeed checks, and official state safety renewals.
-              </p>
               <button class="btn btn-primary btn-sm" style="width: 100%; padding: 0.5rem 0.95rem; font-size: 0.84rem; font-weight: 600;"
                 data-open-modal="quote" data-service="Safety Audit & Certification">
                 Schedule Safety Audit &nearr;
@@ -222,15 +228,11 @@
           <!-- Row 2 - Card 5: Genuine OEM Spare Parts -->
           <div class="service-img-card">
             <div class="service-card-media">
-              <span class="service-card-badge">OEM Guaranteed</span>
               <img src="assets/images/service-spare-parts.jpg" alt="Organized Warehouse of Genuine Elevator Spare Parts"
                 loading="lazy">
             </div>
             <div class="service-card-body">
               <h3 class="service-card-title">Genuine OEM Spare Parts</h3>
-              <p class="service-card-desc">
-                Factory-certified mechanical and electronic components in stock for all major elevator makes.
-              </p>
               <button class="btn btn-primary btn-sm" style="width: 100%; padding: 0.5rem 0.95rem; font-size: 0.84rem; font-weight: 600;"
                 data-open-modal="quote" data-service="Genuine OEM Spare Parts">
                 Order OEM Spares &nearr;
@@ -241,15 +243,11 @@
           <!-- Row 2 - Card 6: IoT Telemetry & Monitoring -->
           <div class="service-img-card">
             <div class="service-card-media">
-              <span class="service-card-badge">Smart Telemetry</span>
               <img src="assets/images/service-iot-monitoring.jpg" alt="Elevator IoT Monitoring Control Center Dashboard"
                 loading="lazy">
             </div>
             <div class="service-card-body">
               <h3 class="service-card-title">IoT Predictive Monitoring</h3>
-              <p class="service-card-desc">
-                24/7 cloud telemetry tracking motor vibration, run-cycles, and early fault warning alerts.
-              </p>
               <button class="btn btn-primary btn-sm" style="width: 100%; padding: 0.5rem 0.95rem; font-size: 0.84rem; font-weight: 600;"
                 data-open-modal="quote" data-service="IoT Predictive Monitoring">
                 Connect IoT System &nearr;
@@ -260,15 +258,11 @@
           <!-- Row 2 - Card 7: Luxury Cabin Styling -->
           <div class="service-img-card">
             <div class="service-card-media">
-              <span class="service-card-badge">Bespoke Finishes</span>
               <img src="assets/images/service-cabin-styling.jpg" alt="Ultra Luxury Elevator Cabin Interior Architecture"
                 loading="lazy">
             </div>
             <div class="service-card-body">
               <h3 class="service-card-title">Luxury Cabin Refurbishment</h3>
-              <p class="service-card-desc">
-                Designer car interiors with titanium bronze panels, cove lighting, and Italian marble floors.
-              </p>
               <button class="btn btn-primary btn-sm" style="width: 100%; padding: 0.5rem 0.95rem; font-size: 0.84rem; font-weight: 600;"
                 data-open-modal="quote" data-service="Luxury Cabin Refurbishment">
                 Explore Cabin Styles &nearr;
@@ -279,15 +273,11 @@
           <!-- Row 2 - Card 8: Structural Civil & Hoistway Works -->
           <div class="service-img-card">
             <div class="service-card-media">
-              <span class="service-card-badge">Civil &amp; Shaft</span>
               <img src="assets/images/service-hoistway-structure.jpg" alt="Outdoor Glass Elevator Steel Shaft Structure"
                 loading="lazy">
             </div>
             <div class="service-card-body">
               <h3 class="service-card-title">Shaft &amp; Steel Fabrication</h3>
-              <p class="service-card-desc">
-                Precision self-supporting glass shaft framework, pit waterproofing, and machine room civil work.
-              </p>
               <button class="btn btn-primary btn-sm" style="width: 100%; padding: 0.5rem 0.95rem; font-size: 0.84rem; font-weight: 600;"
                 data-open-modal="quote" data-service="Shaft & Steel Fabrication">
                 Request Shaft Survey &nearr;
@@ -306,11 +296,8 @@
         <div class="section-header text-center" style="margin-bottom: 1.25rem;">
           <span class="section-tag" style="padding: 0.2rem 0.65rem; font-size: 0.68rem; margin-bottom: 0.35rem;">24/7
             RAPID DISPATCH</span>
-          <h2 class="section-title" style="font-size: 1.85rem; margin-bottom: 0.25rem;">How Our Emergency Protocol
+          <h2 class="section-title" style="font-size: 1.85rem; margin-bottom: 0;">How Our Emergency Protocol
             Operates</h2>
-          <p class="section-desc" style="font-size: 0.96rem; max-width: 660px; margin: 0 auto; line-height: 1.55; color: var(--text-secondary);">
-            Rapid passenger rescue and mechanical restoration across Gurgaon &amp; NCR.
-          </p>
         </div>
 
         <div class="services-dispatch-grid">
@@ -319,13 +306,9 @@
           <div class="dispatch-step-card">
             <div class="dispatch-step-media">
               <img src="assets/images/dispatch-step-1.jpg" alt="24/7 Hotline Trigger Elevator Dispatch Center" loading="lazy">
-              <span class="dispatch-step-badge">01</span>
             </div>
             <div class="dispatch-step-body">
               <h3 class="dispatch-step-title">Hotline Trigger</h3>
-              <p class="dispatch-step-desc">
-                24/7 call connects to Gurgaon control room and maps to nearest GPS patrol van.
-              </p>
             </div>
           </div>
 
@@ -333,13 +316,9 @@
           <div class="dispatch-step-card">
             <div class="dispatch-step-media">
               <img src="assets/images/dispatch-step-2.jpg" alt="Rapid Response Service Van Arriving on Site" loading="lazy">
-              <span class="dispatch-step-badge">02</span>
             </div>
             <div class="dispatch-step-body">
-              <h3 class="dispatch-step-title">&lt;30 Min Arrival</h3>
-              <p class="dispatch-step-desc">
-                Mobile vans in DLF, Cyber City, Golf Course Rd reach your site with diagnostic tools.
-              </p>
+              <h3 class="dispatch-step-title">Rapid Dispatch</h3>
             </div>
           </div>
 
@@ -347,13 +326,9 @@
           <div class="dispatch-step-card">
             <div class="dispatch-step-media">
               <img src="assets/images/dispatch-step-3.jpg" alt="Certified Elevator Engineers Safe Passenger Evacuation" loading="lazy">
-              <span class="dispatch-step-badge">03</span>
             </div>
             <div class="dispatch-step-body">
               <h3 class="dispatch-step-title">Safe Evacuation</h3>
-              <p class="dispatch-step-desc">
-                Passenger safety priority with automated ARD or manual brake release per IS 14665.
-              </p>
             </div>
           </div>
 
@@ -361,13 +336,9 @@
           <div class="dispatch-step-card">
             <div class="dispatch-step-media">
               <img src="assets/images/dispatch-step-4.jpg" alt="OEM Microprocessor Controller Restoration" loading="lazy">
-              <span class="dispatch-step-badge">04</span>
             </div>
             <div class="dispatch-step-body">
               <h3 class="dispatch-step-title">OEM Restoration</h3>
-              <p class="dispatch-step-desc">
-                Microprocessor fault decoded, genuine spare installed, and test-run verified.
-              </p>
             </div>
           </div>
 
@@ -385,9 +356,6 @@
               <span class="section-tag"
                 style="padding: 0.2rem 0.65rem; font-size: 0.68rem; margin-bottom: 0.35rem;">ELEVATOR MODERNIZATION</span>
               <h2 class="modernization-title">Transforming Aging Lifts Without Demolition</h2>
-              <p class="modernization-lead">
-                Upgrade existing hoistways with PMSM gearless motors, 32-bit VVVF controllers, and modern cabins — zero structural teardown required.
-              </p>
             </div>
 
             <div class="modernization-pills">
@@ -415,7 +383,6 @@
                 </div>
                 <div class="modernization-feature-content">
                   <h4 class="modernization-feature-title">PMSM Gearless Motor Conversion</h4>
-                  <p class="modernization-feature-desc">Saves up to 40% electricity with whisper-quiet permanent magnet drive and frictionless traction.</p>
                 </div>
               </div>
 
@@ -437,7 +404,6 @@
                 </div>
                 <div class="modernization-feature-content">
                   <h4 class="modernization-feature-title">32-Bit Microprocessor Controller</h4>
-                  <p class="modernization-feature-desc">Replaces obsolete mechanical relay logic with ultra-smooth VVVF leveling and IoT self-diagnostics.</p>
                 </div>
               </div>
 
@@ -452,7 +418,6 @@
                 </div>
                 <div class="modernization-feature-content">
                   <h4 class="modernization-feature-title">Luxury Aesthetic Refurbishment</h4>
-                  <p class="modernization-feature-desc">Brushed rose gold/titanium stainless steel cabin styling, LED ambient ceiling &amp; smart LCD displays.</p>
                 </div>
               </div>
             </div>
@@ -480,14 +445,6 @@
             <img src="assets/images/modernization-retrofit-showcase.jpg"
               alt="ERIS-NEXA Elevator Modernization with PMSM Gearless Motor and Luxury Cabin Retrofit"
               loading="lazy">
-            <div class="modernization-media-badge">
-              <span class="pulse-dot"></span>
-              <span>PMSM Gearless Retrofit</span>
-            </div>
-            <div class="modernization-media-caption">
-              <span class="modernization-caption-tag">Turnkey Retrofit &bull; DLF Cyber City, NCR</span>
-              <span class="modernization-caption-title">Atrium Hoistway Modernization Without Demolition</span>
-            </div>
           </div>
         </div>
       </div>
