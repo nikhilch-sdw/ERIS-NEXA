@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initElevatorSimulator();
   initConfigurator();
   initProductFilters();
+  initProductSlider();
   initMediaLightbox();
   initModalsAndDialogs();
   initNavigation();
@@ -357,6 +358,488 @@ function initProductFilters() {
       });
     });
   });
+}
+
+/* ==========================================================================
+   3B. PRODUCT MEDIA SLIDER (PHOTOS & VIDEOS)
+   ========================================================================== */
+function initProductSlider() {
+  const sliderModal = document.getElementById('productSliderModal');
+  if (!sliderModal) return;
+
+  const titleEl = document.getElementById('prodSliderTitle');
+  const badgeEl = document.getElementById('prodSliderBadge');
+  const tabPhotos = document.getElementById('tabProdPhotos');
+  const tabVideos = document.getElementById('tabProdVideos');
+  const photosCountEl = document.getElementById('prodPhotosCount');
+  const videosCountEl = document.getElementById('prodVideosCount');
+  const counterEl = document.getElementById('prodSliderCounter');
+  const captionEl = document.getElementById('prodSliderCaption');
+  const trackEl = document.getElementById('prodSliderTrack');
+  const thumbBarEl = document.getElementById('prodSliderThumbBar');
+  const specsEl = document.getElementById('prodSliderSpecs');
+  const btnPrev = document.getElementById('btnProdSliderPrev');
+  const btnNext = document.getElementById('btnProdSliderNext');
+  const btnClose = document.getElementById('btnProdSliderClose');
+  const btnQuote = document.getElementById('btnProdSliderQuote');
+  const btnWhatsapp = document.getElementById('btnProdSliderWhatsapp');
+  const stageWrap = sliderModal.querySelector('.prod-slider-stage-wrap');
+  const productCards = document.querySelectorAll('.product-card');
+
+  const productMediaData = {
+    passenger: {
+      title: 'Luxury Passenger Elevators',
+      category: '01 / PASSENGER',
+      tagline: 'Commercial towers & residential complexes',
+      specs: ['6 to 26 Pax', 'Up to 2.50 m/s', 'PMSM Gearless', 'IS 14665 & 17900'],
+      enquiryService: 'Passenger Elevators',
+      waText: 'Hello ERIS-NEXA, I would like a technical quote for Luxury Passenger Elevators.',
+      slides: [
+        { type: 'image', src: 'assets/lift/passenger-elevators/photos/WhatsApp Image 2026-09-10 at 10.51.41 AM.jpeg', title: 'Mirror Stainless Steel Luxury Cabin', caption: 'High-end SS 304 mirror finish with integrated LED spotlight canopy' },
+        { type: 'video', src: 'assets/lift/passenger-elevators/videos/elevator-product-showcase.mp4', poster: 'assets/lift/passenger-elevators/photos/WhatsApp Image 2026-09-10 at 10.51.41 AM.jpeg', title: 'High-Speed Gearless Ride in Action', caption: 'Whisper-quiet PMSM gearless drive operating smoothly' },
+        { type: 'image', src: 'assets/lift/passenger-elevators/photos/WhatsApp Image 2026-09-10 at 10.51.40 AM (2).jpeg', title: 'Gold Framed Automated Glass Entrance', caption: 'Premium Italian marble entrance lobby with gold finished glass doors' },
+        { type: 'image', src: 'assets/lift/passenger-elevators/photos/WhatsApp Image 2026-09-10 at 10.51.41 AM (1).jpeg', title: 'Rose Gold Titanium Cabin Interior', caption: 'Designer titanium mirror etched panels with full-height illumination' },
+        { type: 'image', src: 'assets/lift/passenger-elevators/photos/WhatsApp Image 2026-09-10 at 10.51.40 AM.jpeg', title: 'Commercial Lobby Landing Station', caption: 'High-traffic lobby installation with sleek architectural landing fixtures' },
+        { type: 'image', src: 'assets/lift/passenger-elevators/photos/WhatsApp Image 2026-09-10 at 10.53.50 AM.jpeg', title: 'Outdoor Multi-Story Glass Tower', caption: 'Exterior panoramic passenger elevator tower with steel structure' },
+        { type: 'image', src: 'assets/lift/passenger-elevators/photos/WhatsApp Image 2026-09-10 at 10.53.49 AM.jpeg', title: 'Panoramic External Hoistway', caption: 'Architectural outdoor glass elevator providing 360-degree views' },
+        { type: 'image', src: 'assets/lift/passenger-elevators/photos/WhatsApp Image 2026-09-10 at 10.51.39 AM.jpeg', title: 'Hairline Stainless Steel Telescopic Doors', caption: 'Durable satin-finish automatic center-opening doors for high traffic' },
+        { type: 'image', src: 'assets/lift/passenger-elevators/photos/WhatsApp Image 2026-09-10 at 10.51.38 AM.jpeg', title: 'Full Glass Door Granite Portal', caption: 'Luxury architectural portal with granite jambs and transparent doors' },
+        { type: 'image', src: 'assets/lift/passenger-elevators/photos/WhatsApp Image 2026-09-10 at 10.51.39 AM (1).jpeg', title: 'Modern Residential Tower Landing', caption: 'Clean contemporary landing station designed for apartment complexes' },
+        { type: 'image', src: 'assets/lift/passenger-elevators/photos/WhatsApp Image 2026-09-10 at 10.51.40 AM (1).jpeg', title: 'Bespoke Passenger Cabin Enclosure', caption: 'Custom engineered interior cabin with ambient lighting and safety rails' }
+      ]
+    },
+    home: {
+      title: 'Bespoke Villa Home Elevators',
+      category: '02 / HOME & VILLA',
+      tagline: 'Low-pit luxury mobility for penthouses & villas',
+      specs: ['3 to 4 Pax', '250mm Low Pit', 'Single Phase Ready', 'Panoramic Glass'],
+      enquiryService: 'Home & Villa Elevators',
+      waText: 'Hello ERIS-NEXA, I would like a technical quote for Bespoke Villa Home Elevators.',
+      slides: [
+        { type: 'image', src: 'assets/lift/home-elevators/photos/WhatsApp Image 2026-09-10 at 10.49.11 AM.jpeg', title: 'Panoramic Outdoor Glass Villa Lift', caption: 'Stunning exterior glass elevator integrated seamlessly with estate architecture' },
+        { type: 'video', src: 'assets/lift/home-elevators/videos/showcase-4.mp4', poster: 'assets/lift/home-elevators/photos/WhatsApp Image 2026-09-10 at 10.49.11 AM.jpeg', title: 'Villa Glass Elevator in Motion', caption: 'Pneumatic and traction villa elevator smooth vertical travel' },
+        { type: 'image', src: 'assets/lift/home-elevators/photos/WhatsApp Image 2026-09-10 at 10.49.11 AM (1).jpeg', title: 'Curved Staircase Integrated Glass Cabin', caption: 'Custom engineered circular glass shaft wrapped by spiral staircase' },
+        { type: 'image', src: 'assets/lift/home-elevators/photos/WhatsApp Image 2026-09-10 at 10.49.12 AM.jpeg', title: 'Compact Stairwell Steel Hoistway', caption: 'Self-supporting steel structure tailored for central stairwells with low pit requirements' },
+        { type: 'video', src: 'assets/lift/home-elevators/videos/WhatsApp Video 2026-09-05 at 5.16.09 PM.mp4', poster: 'assets/lift/home-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.55 AM.jpeg', title: 'Live Villa Elevator Commissioning', caption: 'Site verification and jerk-free landing demonstration' },
+        { type: 'image', src: 'assets/lift/home-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.55 AM.jpeg', title: 'Bespoke Villa Multi-Landing Station', caption: 'Precision engineered landing station with secure entry gates' }
+      ]
+    },
+    hospital: {
+      title: 'Hospital & Stretcher Elevators',
+      category: '03 / HEALTHCARE',
+      tagline: 'Jerk-free bed transit with medical SS 304 cabin',
+      specs: ['13 to 26 Pax', 'Code Blue Priority', 'Stretcher Leveling (±2mm)', 'Antibacterial SS 304'],
+      enquiryService: 'Hospital Elevators',
+      waText: 'Hello ERIS-NEXA, I would like a technical quote for Hospital & Stretcher Elevators.',
+      slides: [
+        { type: 'image', src: 'assets/lift/hospital-elevators/photos/hospital-cover.jpeg', title: 'Dual Bed Hospital Elevator', caption: 'Telescopic wide-opening doors designed for hospital stretchers' },
+        { type: 'video', src: 'assets/lift/hospital-elevators/videos/WhatsApp Video 2026-09-05 at 5.16.43 PM.mp4', poster: 'assets/lift/hospital-elevators/photos/WhatsApp Image 2026-09-05 at 5.15.49 PM.jpeg', title: 'Jerk-Free VFD Hospital Elevator Drive', caption: 'Ultra-smooth VFD acceleration with ±2mm millimeter leveling' },
+        { type: 'image', src: 'assets/lift/hospital-elevators/photos/hospital-g1.jpeg', title: 'Medical Cleanroom SS Interior', caption: 'Antibacterial SS 304 wall panels and heavy-duty bumper rails' },
+        { type: 'image', src: 'assets/lift/hospital-elevators/photos/gallery-4.jpeg', title: 'Code Blue Emergency Recall Landing', caption: 'Priority override integration for critical intensive care transit' }
+      ]
+    },
+    goods: {
+      title: 'Goods & Freight Elevators',
+      category: '04 / INDUSTRIAL',
+      tagline: 'Heavy-duty freight for factories & warehouses',
+      specs: ['500 to 6,000 kg+', 'Forklift-Rated', 'Checker Plate Floor', 'Reinforced Mast'],
+      enquiryService: 'Goods Freight Elevators',
+      waText: 'Hello ERIS-NEXA, I would like a technical quote for Goods & Freight Elevators.',
+      slides: [
+        { type: 'image', src: 'assets/lift/goods-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.57 AM.jpeg', title: 'Industrial Heavy Duty Enclosure', caption: 'Robust structural steel enclosure and heavy-duty gates for factory transport' },
+        { type: 'video', src: 'assets/lift/goods-elevators/videos/WhatsApp Video 2026-09-05 at 5.15.44 PM.mp4', poster: 'assets/lift/goods-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.57 AM.jpeg', title: 'Freight Lift Hoistway & Rigging Operation', caption: 'Heavy-duty hoistway rigging and load-bearing guide rail testing' },
+        { type: 'image', src: 'assets/lift/goods-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.57 AM (1).jpeg', title: 'Factory Floor Cargo Platform', caption: 'Direct pallet truck access with chequered plate non-slip base' },
+        { type: 'image', src: 'assets/lift/goods-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.58 AM (1).jpeg', title: 'Multi-Level Warehouse Hoistway', caption: 'Engineered structural tower with heavy-capacity guide rails and safety interlocks' }
+      ]
+    },
+    auto: {
+      title: 'Automobile & Showroom Lifts',
+      category: '05 / AUTOMOBILE',
+      tagline: 'High-load vehicular lifts for showrooms & multi-level parking',
+      specs: ['3,000 to 4,500 kg', '2.8 × 5.8m Platform', 'SUV & Sedan Rated', 'Dual Operation Stations'],
+      enquiryService: 'Automobile Car Lifts',
+      waText: 'Hello ERIS-NEXA, I would like a technical quote for Automobile Car Lifts.',
+      slides: [
+        { type: 'image', src: 'assets/lift/automobile-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.58 AM.jpeg', title: 'Showroom Automobile Lift Platform', caption: 'Heavy-duty vehicle platform with anti-slip flooring and recessed ceiling lights' },
+        { type: 'video', src: 'assets/lift/automobile-elevators/videos/WhatsApp Video 2026-09-05 at 5.17.44 PM.mp4', poster: 'assets/lift/automobile-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.58 AM.jpeg', title: 'Automotive Lift Ascent & Leveling', caption: 'Smooth hydraulic and traction lift transport for premium vehicles' },
+        { type: 'video', src: 'assets/lift/automobile-elevators/videos/showcase-1.mp4', poster: 'assets/lift/automobile-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.58 AM.jpeg', title: 'Automobile Elevator Engineering Showcase', caption: 'Precision vehicle vertical transit for multi-level showrooms & parking' }
+      ]
+    },
+    service: {
+      title: 'Commercial Pantry Dumbwaiters',
+      category: '06 / SERVICE',
+      tagline: 'Food-grade service lifts for kitchens & laboratories',
+      specs: ['50 to 250 kg', 'Food-Grade SS 304', 'Bi-Parting Shutters', 'Cleanroom Certified'],
+      enquiryService: 'Pantry Dumbwaiters',
+      waText: 'Hello ERIS-NEXA, I would like a technical quote for Commercial Pantry Dumbwaiters.',
+      slides: [
+        { type: 'image', src: 'assets/lift/dumbwaiters/photos/dumbwaiter-1.jpeg', title: 'Restaurant Pantry Dumbwaiter', caption: 'Counter-height ergonomic loading for hospitality and food service' },
+        { type: 'video', src: 'assets/lift/dumbwaiters/videos/WhatsApp Video 2026-09-05 at 5.17.10 PM.mp4', poster: 'assets/lift/dumbwaiters/photos/WhatsApp Image 2026-09-05 at 5.15.48 PM (1).jpeg', title: 'Service Lift Rapid Transit', caption: 'Smooth, spill-free food, document, and glassware vertical transit' },
+        { type: 'image', src: 'assets/lift/dumbwaiters/photos/dumbwaiter-g1.jpeg', title: 'Stainless Steel Bi-Parting Doors', caption: 'Food-grade interlocked bi-parting shutters for hygiene compliance' },
+        { type: 'image', src: 'assets/lift/dumbwaiters/photos/dumbwaiter-g2.jpeg', title: 'Laboratory Clinical Transport', caption: 'Sterile environment transit for hospitals and medical labs' }
+      ]
+    },
+    special: {
+      title: 'Special Purpose & Glass Facades',
+      category: '07 / ARCHITECTURAL',
+      tagline: 'Panoramic capsule elevators with steel glass mast',
+      specs: ['Panoramic Views', 'IP65 Weatherproof', 'Laminated Glass', 'Custom Mast Sizing'],
+      enquiryService: 'Special Purpose Elevators',
+      waText: 'Hello ERIS-NEXA, I would like a technical quote for Panoramic Glass Elevators.',
+      slides: [
+        { type: 'image', src: 'assets/lift/special-elevators/photos/special-cover.jpeg', title: 'Panoramic Glass Capsule Elevator', caption: 'Iconic curved exterior glass capsule for modern architecture' },
+        { type: 'video', src: 'assets/lift/special-elevators/videos/showcase-6.mp4', poster: 'assets/lift/special-elevators/photos/video-poster-6.jpg', title: 'Outdoor Glass Facade Lift in Motion', caption: 'Weatherproof high-travel exterior glass lift for commercial facades' },
+        { type: 'image', src: 'assets/lift/special-elevators/photos/glass-outdoor-1.jpeg', title: 'External Steel Framework Shaft', caption: 'Self-supporting steel and glass framework engineered by ERIS-NEXA' },
+        { type: 'image', src: 'assets/lift/special-elevators/photos/special-g1.jpeg', title: 'Bespoke Capsule Cabins', caption: 'Custom engineered geometry to complement building exterior' }
+      ]
+    }
+  };
+
+  let activeProduct = null;
+  let activeTab = 'photos'; // 'photos' or 'videos'
+  let activeSlideIdx = 0;
+
+  function getMediaList(product, tab) {
+    if (!product || !product.slides) return [];
+    if (tab === 'videos') {
+      return product.slides.filter(s => s.type === 'video');
+    }
+    return product.slides.filter(s => s.type === 'image');
+  }
+
+  function pauseAllVideos() {
+    if (!trackEl) return;
+    const videos = trackEl.querySelectorAll('video');
+    videos.forEach(v => {
+      try {
+        v.pause();
+      } catch (err) {}
+    });
+  }
+
+  function renderSlide(idx) {
+    const currentItems = getMediaList(activeProduct, activeTab);
+    if (!currentItems || !currentItems.length) return;
+
+    activeSlideIdx = (idx + currentItems.length) % currentItems.length;
+    const slide = currentItems[activeSlideIdx];
+
+    // Pause any previously playing videos
+    pauseAllVideos();
+
+    // Toggle active slide in track
+    const slideEls = trackEl.querySelectorAll('.prod-slider-slide');
+    slideEls.forEach((el, i) => {
+      if (i === activeSlideIdx) {
+        el.classList.add('active');
+        if (slide.type === 'video') {
+          const video = el.querySelector('video');
+          if (video) {
+            video.currentTime = 0;
+            video.play().catch(() => {});
+          }
+        }
+      } else {
+        el.classList.remove('active');
+      }
+    });
+
+    // Update thumbnails active state
+    if (thumbBarEl) {
+      const thumbEls = thumbBarEl.querySelectorAll('.prod-slider-thumb-item');
+      thumbEls.forEach((el, i) => {
+        if (i === activeSlideIdx) {
+          el.classList.add('active');
+          el.scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'nearest' });
+        } else {
+          el.classList.remove('active');
+        }
+      });
+    }
+
+    // Update Counter
+    if (counterEl) {
+      counterEl.textContent = `${activeSlideIdx + 1} / ${currentItems.length}`;
+    }
+
+    // Update Caption
+    if (captionEl) {
+      captionEl.textContent = `${slide.title} — ${slide.caption}`;
+    }
+  }
+
+  function switchTab(tab, slideIdx = 0) {
+    pauseAllVideos();
+    activeTab = tab;
+
+    // Update Tab UI state in modal header
+    if (tabPhotos && tabVideos) {
+      if (activeTab === 'photos') {
+        tabPhotos.classList.add('active');
+        tabPhotos.setAttribute('aria-selected', 'true');
+        tabVideos.classList.remove('active');
+        tabVideos.setAttribute('aria-selected', 'false');
+      } else {
+        tabVideos.classList.add('active');
+        tabVideos.setAttribute('aria-selected', 'true');
+        tabPhotos.classList.remove('active');
+        tabPhotos.setAttribute('aria-selected', 'false');
+      }
+    }
+
+    const currentItems = getMediaList(activeProduct, activeTab);
+
+    // Populate Slides in Track
+    if (trackEl) {
+      if (!currentItems.length) {
+        trackEl.innerHTML = `<div class="prod-slider-empty" style="color: #94A3B8; font-size: 0.9rem; padding: 2rem;">No ${activeTab} available.</div>`;
+      } else {
+        trackEl.innerHTML = currentItems.map((s, idx) => {
+          if (s.type === 'video') {
+            return `
+              <div class="prod-slider-slide ${idx === slideIdx ? 'active' : ''}" data-type="video">
+                <video src="${s.src}" ${s.poster ? `poster="${s.poster}"` : ''} controls playsinline preload="metadata">
+                  Your browser does not support HTML5 video.
+                </video>
+              </div>
+            `;
+          } else {
+            return `
+              <div class="prod-slider-slide ${idx === slideIdx ? 'active' : ''}" data-type="image">
+                <img src="${s.src}" alt="${s.title}" draggable="false" loading="eager">
+              </div>
+            `;
+          }
+        }).join('');
+      }
+    }
+
+    // Populate Thumbnails
+    if (thumbBarEl) {
+      thumbBarEl.innerHTML = currentItems.map((s, idx) => {
+        const thumbSrc = s.type === 'video' && s.poster ? s.poster : s.src;
+        return `
+          <button type="button" class="prod-slider-thumb-item ${idx === slideIdx ? 'active' : ''}"
+            data-slide-index="${idx}" aria-label="${activeTab === 'videos' ? 'Video' : 'Photo'} ${idx + 1}: ${s.title}">
+            <img src="${thumbSrc}" alt="${s.title}" loading="lazy">
+            ${s.type === 'video' ? '<span class="prod-slider-thumb-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3" /></svg></span>' : ''}
+          </button>
+        `;
+      }).join('');
+
+      // Wire thumbnail clicks
+      const thumbs = thumbBarEl.querySelectorAll('.prod-slider-thumb-item');
+      thumbs.forEach(t => {
+        t.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const targetIdx = parseInt(t.dataset.slideIndex, 10);
+          renderSlide(targetIdx);
+        });
+      });
+    }
+
+    // Render target slide
+    renderSlide(slideIdx);
+  }
+
+  function openProductSlider(productId, requestedTab = 'photos') {
+    const data = productMediaData[productId];
+    if (!data) return;
+
+    activeProduct = data;
+
+    // Set Header
+    if (titleEl) titleEl.textContent = data.title;
+    if (badgeEl) badgeEl.textContent = data.category;
+
+    // Set Specs
+    if (specsEl) {
+      specsEl.innerHTML = data.specs
+        .map(spec => `<span class="prod-slider-spec-pill">${spec}</span>`)
+        .join('');
+    }
+
+    // Set Action Buttons
+    if (btnQuote) {
+      btnQuote.dataset.service = data.enquiryService;
+    }
+    if (btnWhatsapp) {
+      btnWhatsapp.href = `https://wa.me/919557761198?text=${encodeURIComponent(data.waText)}`;
+    }
+
+    // Update Counts on the two tabs
+    const photosList = data.slides.filter(s => s.type === 'image');
+    const videosList = data.slides.filter(s => s.type === 'video');
+    if (photosCountEl) photosCountEl.textContent = photosList.length;
+    if (videosCountEl) videosCountEl.textContent = videosList.length;
+
+    // Decide initial tab: default to requestedTab, fallback if empty
+    let initialTab = requestedTab;
+    if (initialTab === 'videos' && videosList.length === 0) {
+      initialTab = 'photos';
+    } else if (initialTab === 'photos' && photosList.length === 0 && videosList.length > 0) {
+      initialTab = 'videos';
+    }
+
+    // Switch to initial tab and slide 0
+    switchTab(initialTab, 0);
+
+    // Open Modal
+    sliderModal.showModal();
+  }
+
+  function closeSlider() {
+    pauseAllVideos();
+    sliderModal.close();
+  }
+
+  // Modal Tab Header Listeners
+  if (tabPhotos) {
+    tabPhotos.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (activeTab !== 'photos') {
+        switchTab('photos', 0);
+      }
+    });
+  }
+
+  if (tabVideos) {
+    tabVideos.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (activeTab !== 'videos') {
+        switchTab('videos', 0);
+      }
+    });
+  }
+
+  // Hook product cards
+  productCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Ignore if user clicked inside the card footer (Get Enquiry, WhatsApp Quote)
+      if (e.target.closest('.product-card-footer')) {
+        return;
+      }
+
+      const prodId = card.dataset.productId || card.dataset.category;
+      if (!prodId || !productMediaData[prodId]) return;
+
+      const photoBtn = e.target.closest('[data-action="open-photos"]');
+      const videoBtn = e.target.closest('[data-action="open-videos"]');
+
+      if (videoBtn) {
+        e.stopPropagation();
+        openProductSlider(prodId, 'videos');
+      } else if (photoBtn) {
+        e.stopPropagation();
+        openProductSlider(prodId, 'photos');
+      } else {
+        openProductSlider(prodId, 'photos');
+      }
+    });
+
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        if (e.target.closest('.product-card-footer')) return;
+        const prodId = card.dataset.productId || card.dataset.category;
+        if (!prodId || !productMediaData[prodId]) return;
+
+        const photoBtn = e.target.closest('[data-action="open-photos"]');
+        const videoBtn = e.target.closest('[data-action="open-videos"]');
+
+        e.preventDefault();
+        if (videoBtn) {
+          openProductSlider(prodId, 'videos');
+        } else {
+          openProductSlider(prodId, 'photos');
+        }
+      }
+    });
+  });
+
+  // Nav Arrows
+  if (btnPrev) {
+    btnPrev.addEventListener('click', (e) => {
+      e.stopPropagation();
+      renderSlide(activeSlideIdx - 1);
+    });
+  }
+
+  if (btnNext) {
+    btnNext.addEventListener('click', (e) => {
+      e.stopPropagation();
+      renderSlide(activeSlideIdx + 1);
+    });
+  }
+
+  // Close Button
+  if (btnClose) {
+    btnClose.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeSlider();
+    });
+  }
+
+  // Quote Button in Slider Modal
+  if (btnQuote) {
+    btnQuote.addEventListener('click', () => {
+      const service = btnQuote.dataset.service;
+      closeSlider();
+      const quoteModal = document.getElementById('quoteModal');
+      if (quoteModal) {
+        if (service) {
+          const reqSelect = document.getElementById('modalRequirement');
+          if (reqSelect) reqSelect.value = service;
+        }
+        quoteModal.showModal();
+      }
+    });
+  }
+
+  // Pause on dialog close event
+  sliderModal.addEventListener('close', () => {
+    pauseAllVideos();
+  });
+
+  // Keyboard navigation
+  sliderModal.addEventListener('keydown', (e) => {
+    if (!sliderModal.open) return;
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      renderSlide(activeSlideIdx - 1);
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      renderSlide(activeSlideIdx + 1);
+    } else if (e.key === 'Escape') {
+      closeSlider();
+    }
+  });
+
+  // Touch Swipe for Mobile
+  if (stageWrap) {
+    let touchX = 0;
+    let touchY = 0;
+
+    stageWrap.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 1) {
+        touchX = e.touches[0].clientX;
+        touchY = e.touches[0].clientY;
+      }
+    }, { passive: true });
+
+    stageWrap.addEventListener('touchend', (e) => {
+      if (e.changedTouches.length === 1) {
+        const deltaX = e.changedTouches[0].clientX - touchX;
+        const deltaY = e.changedTouches[0].clientY - touchY;
+        if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY)) {
+          if (deltaX < 0) {
+            renderSlide(activeSlideIdx + 1);
+          } else {
+            renderSlide(activeSlideIdx - 1);
+          }
+        }
+      }
+    }, { passive: true });
+  }
 }
 
 /* ==========================================================================
