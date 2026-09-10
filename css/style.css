@@ -7960,3 +7960,187 @@ dialog::backdrop {
     font-size: 0.78rem;
   }
 }
+
+/* ==========================================================================
+   1,380+ LIFTS INSTALLED BADGE (FLOATING ON ABOUT US IMAGE)
+   ========================================================================== */
+.about-installed-badge {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  background: rgba(11, 19, 43, 0.90);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 175, 55, 0.18);
+  border-radius: 14px;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  z-index: 4;
+  pointer-events: auto;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  max-width: calc(100% - 2.5rem);
+}
+
+.about-installed-badge:hover {
+  transform: translateY(-3px);
+  border-color: rgba(212, 175, 55, 0.75);
+  box-shadow: 0 20px 42px -6px rgba(0, 0, 0, 0.6), 0 0 26px rgba(212, 175, 55, 0.28);
+}
+
+.about-installed-badge-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #D4AF37 0%, #AA7C11 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0B132B;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.4);
+}
+
+.about-installed-badge-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-installed-badge-num {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.about-installed-badge-num span {
+  color: #D4AF37;
+}
+
+.about-installed-badge-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #F1F5F9;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+  line-height: 1.2;
+}
+
+.about-installed-badge-sub {
+  font-size: 0.68rem;
+  color: #94A3B8;
+  margin-top: 1px;
+}
+
+@media (max-width: 640px) {
+  .about-installed-badge {
+    bottom: 0.85rem;
+    left: 0.85rem;
+    padding: 0.65rem 0.95rem;
+    gap: 0.75rem;
+    max-width: calc(100% - 1.7rem);
+  }
+
+  .about-installed-badge-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .about-installed-badge-num {
+    font-size: 1.25rem;
+  }
+
+  .about-installed-badge-label {
+    font-size: 0.72rem;
+  }
+
+  .about-installed-badge-sub {
+    font-size: 0.64rem;
+  }
+}
+
+/* ==========================================================================
+   ABOUT US PROVEN MILESTONES STATS STRIP
+   ========================================================================== */
+.about-milestones-section {
+  background: #0B132B;
+  color: #FFFFFF;
+  padding: 2.25rem 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.about-milestones-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.about-milestone-item {
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.about-milestone-item:hover {
+  transform: translateY(-2px);
+}
+
+.about-milestone-item .milestone-num {
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.about-milestone-item .milestone-label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #F8FAFC;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 0.35rem;
+}
+
+.about-milestone-item .milestone-sub {
+  font-size: 0.76rem;
+  color: #94A3B8;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 900px) {
+  .about-milestones-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem 1rem;
+  }
+  .about-milestone-item .milestone-num {
+    font-size: 1.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-milestones-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem 0.75rem;
+  }
+  .about-milestone-item .milestone-num {
+    font-size: 1.55rem;
+  }
+  .about-milestone-item .milestone-label {
+    font-size: 0.78rem;
+  }
+  .about-milestone-item .milestone-sub {
+    font-size: 0.68rem;
+  }
+}
