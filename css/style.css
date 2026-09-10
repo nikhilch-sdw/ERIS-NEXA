@@ -895,13 +895,13 @@ nav {
   background-color: var(--gold-primary);
 }
 
-/* --- Hero Video Banner (Full Section Height Edge-to-Edge Showcase) --- */
+/* --- Hero Video Banner (Cinematic Responsive Widescreen Showcase) --- */
 .hero-section {
   position: relative;
   width: 100%;
-  height: calc(100vh - 106px);
-  min-height: 640px;
-  max-height: 860px;
+  height: clamp(460px, 54vh, 600px);
+  min-height: 440px;
+  max-height: 620px;
   background: #0B1120;
   overflow: hidden;
   display: block;
@@ -5414,9 +5414,9 @@ dialog::backdrop {
   }
 
   .hero-section {
-    height: calc(100vh - 106px);
-    min-height: 680px;
-    max-height: 900px;
+    height: clamp(520px, 58vh, 680px);
+    min-height: 500px;
+    max-height: 700px;
   }
 }
 
@@ -5471,9 +5471,10 @@ dialog::backdrop {
     display: none !important;
   }
 
-  .hero-content {
-    max-width: 100%;
-    text-align: left;
+  .hero-section {
+    height: clamp(360px, 46vh, 460px);
+    min-height: unset;
+    max-height: unset;
   }
 
   .simulator-layout-grid {
@@ -5791,7 +5792,9 @@ dialog::backdrop {
   }
 
   .hero-section {
-    height: clamp(480px, 68vh, 620px);
+    height: clamp(280px, 38vh, 360px);
+    min-height: unset;
+    max-height: unset;
   }
 
   .brand-hero-title {
@@ -6002,7 +6005,9 @@ dialog::backdrop {
   }
 
   .hero-section {
-    height: clamp(400px, 62vh, 520px);
+    height: clamp(220px, 32vh, 290px);
+    min-height: unset;
+    max-height: unset;
   }
 
   .brand-hero-title {
@@ -6021,15 +6026,17 @@ dialog::backdrop {
   }
 
   .product-card {
-    height: 350px;
+    height: auto;
+    min-height: 360px;
   }
 
   .product-media-wrap {
-    height: 64%;
+    height: 200px;
   }
 
   .product-body {
-    height: 36%;
+    height: auto;
+    padding: 0.85rem 1rem 1rem;
   }
 
   .safety-grid {
@@ -6182,6 +6189,12 @@ dialog::backdrop {
 
 /* 7. Ultra-Compact Phones & Foldables (max-width: 380px) */
 @media (max-width: 380px) {
+  .hero-section {
+    height: clamp(180px, 28vh, 230px);
+    min-height: unset;
+    max-height: unset;
+  }
+
   .container {
     padding-left: 0.85rem;
     padding-right: 0.85rem;
