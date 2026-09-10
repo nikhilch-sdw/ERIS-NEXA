@@ -7104,20 +7104,13 @@ dialog::backdrop {
   font-weight: 600;
   padding: 0.25rem 0.65rem;
   border-radius: 6px;
-  text-decoration: none;
-  transition: all 0.2s ease;
   white-space: nowrap;
+  cursor: default;
+  user-select: none;
 }
 
 .branch-pill svg {
   color: #38BDF8;
-}
-
-.branch-pill:hover {
-  background: rgba(2, 132, 199, 0.22);
-  border-color: rgba(56, 189, 248, 0.45);
-  color: #FFFFFF;
-  transform: translateY(-1px);
 }
 
 .branch-pill.branch-pill-hq {
@@ -7127,11 +7120,6 @@ dialog::backdrop {
 
 .branch-pill.branch-pill-hq svg {
   color: #FD6803;
-}
-
-.branch-pill.branch-pill-hq:hover {
-  background: rgba(253, 104, 3, 0.22);
-  border-color: #FD6803;
 }
 
 .branch-compact-sub {
