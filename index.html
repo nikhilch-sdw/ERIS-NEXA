@@ -39,7 +39,7 @@
     "name": "ERIS-NEXA Elevators Pvt. Ltd.",
     "image": "assets/images/passenger-cover-2.jpeg",
     "telephone": "+91-9557761198",
-    "email": "Sahil.eris1@gmail.com",
+    "email": ["prashant@erisnexa.com", "sahil@erisnexa.com"],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "UGF 124, Sushant Vyapar Kendra, Sushant Lok-01",
@@ -49,8 +49,8 @@
       "addressCountry": "IN"
     },
     "founder": [
-      { "@type": "Person", "name": "Prashant Bhardwaj", "jobTitle": "Founder & Managing Director" },
-      { "@type": "Person", "name": "Sahil Bhati", "jobTitle": "Founder & Managing Director" }
+      { "@type": "Person", "name": "Prashant Bhardwaj", "jobTitle": "Founder & Managing Director", "email": "prashant@erisnexa.com" },
+      { "@type": "Person", "name": "Sahil Bhati", "jobTitle": "Founder & Managing Director", "email": "sahil@erisnexa.com" }
     ],
     "foundingDate": "2015",
     "priceRange": "₹₹₹"
@@ -65,8 +65,7 @@
     <div class="container top-bar-content">
       <div class="status-indicator">
         <span class="status-dot" aria-hidden="true"></span>
-        <span class="status-text"><strong>24/7 RAPID DISPATCH:</strong><span class="status-sub-text"> Emergency
-            breakdown hotline active across Gurgaon &amp; NCR</span></span>
+        <span class="status-text"><strong>24/7 RAPID DISPATCH:</strong> Active</span>
       </div>
       <div class="top-contacts">
         <a href="tel:+919557761198" title="Call Primary 24/7 Helpline">
@@ -78,25 +77,17 @@
           </svg>
           <span>+91 95577 61198</span>
         </a>
-        <a href="tel:+919318323530" class="top-hide-mobile" title="Call Technical Director">
-          <span>+91-9318323530</span>
-        </a>
-        <a href="mailto:Sahil.eris1@gmail.com" class="top-hide-tablet" title="Official Inquiry Email">
+        <a href="mailto:prashant@erisnexa.com" class="top-hide-tablet" title="Official Inquiry Email">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
             <polyline points="22,6 12,13 2,6"></polyline>
           </svg>
-          <span>Sahil.eris1@gmail.com</span>
+          <span>prashant@erisnexa.com</span>
         </a>
-        <span class="top-hide-tablet top-location">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-            <circle cx="12" cy="10" r="3"></circle>
-          </svg>
-          <span>Sushant Lok-01, Gurgaon</span>
-        </span>
+        <a href="mailto:sahil@erisnexa.com" class="top-hide-tablet" title="Official Inquiry Email">
+          <span>sahil@erisnexa.com</span>
+        </a>
       </div>
     </div>
   </aside>
@@ -116,26 +107,31 @@
           <li class="nav-item-dropdown">
             <a href="showcase.html" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
               <span>Showcase</span>
-              <svg class="dropdown-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg class="dropdown-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </a>
             <ul class="nav-dropdown-menu">
               <li>
                 <a href="images.html" class="dropdown-item">
-                  <svg class="dropdown-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                    <polyline points="21 15 16 10 5 21"/>
+                  <svg class="dropdown-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <polyline points="21 15 16 10 5 21" />
                   </svg>
                   <span>Images</span>
                 </a>
               </li>
               <li>
                 <a href="videos.html" class="dropdown-item">
-                  <svg class="dropdown-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <polygon points="23 7 16 12 23 17 23 7"/>
-                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                  <svg class="dropdown-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <polygon points="23 7 16 12 23 17 23 7" />
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
                   </svg>
                   <span>Videos</span>
                 </a>
@@ -183,18 +179,17 @@
     <section class="hero-section" id="hero">
       <h1 class="visually-hidden">ERIS-NEXA Elevators — Precision Vertical Transportation Gurgaon &amp; NCR</h1>
       <video class="hero-video-bg" autoplay muted loop playsinline webkit-playsinline preload="auto"
-        disablepictureinpicture disableremoteplayback
-        poster="assets/images/service-hoistway-structure.jpg">
+        disablepictureinpicture disableremoteplayback poster="assets/images/service-hoistway-structure.jpg">
         <source src="assets/videos/elevator-product-showcase.mp4" type="video/mp4">
       </video>
       <script>
-        (function(){
+        (function () {
           var v = document.querySelector('.hero-video-bg');
           if (v) {
             v.muted = true;
             v.defaultMuted = true;
             v.volume = 0;
-            if (v.play) { v.play().catch(function(){}); }
+            if (v.play) { v.play().catch(function () { }); }
           }
         })();
       </script>
@@ -342,23 +337,25 @@
         <!-- Product Cards Grid -->
         <div class="products-grid">
           <!-- 01: Passenger Elevators -->
-          <article class="product-card" data-category="passenger" data-product-id="passenger" tabindex="0"
-            role="button" aria-label="View Luxury Passenger Elevators media">
+          <article class="product-card" data-category="passenger" data-product-id="passenger" tabindex="0" role="button"
+            aria-label="View Luxury Passenger Elevators media">
             <div class="product-media-wrap">
-              <img src="assets/lift/passenger-elevators/photos/WhatsApp Image 2026-09-10 at 10.51.41 AM.jpeg" alt="Luxury Passenger Elevator by ERIS-NEXA"
-                loading="lazy">
+              <img src="assets/lift/passenger-elevators/photos/WhatsApp Image 2026-09-10 at 10.51.41 AM.jpeg"
+                alt="Luxury Passenger Elevator by ERIS-NEXA" loading="lazy">
               <span class="product-cat-badge">01 / PASSENGER</span>
               <span class="product-speed-tag">Up to 2.50 m/s</span>
               <div class="product-card-media-tabs" role="group" aria-label="View Media">
-                <button type="button" class="prod-card-tab-btn prod-card-tab-photo" data-action="open-photos" title="View Photos">
+                <button type="button" class="prod-card-tab-btn prod-card-tab-photo" data-action="open-photos"
+                  title="View Photos">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                    <polyline points="21 15 16 10 5 21"/>
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <polyline points="21 15 16 10 5 21" />
                   </svg>
                   <span>Photos</span>
                 </button>
-                <button type="button" class="prod-card-tab-btn prod-card-tab-video" data-action="open-videos" title="View Video">
+                <button type="button" class="prod-card-tab-btn prod-card-tab-video" data-action="open-videos"
+                  title="View Video">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
                     <polygon points="6 3 20 12 6 21 6 3" />
                   </svg>
@@ -375,10 +372,14 @@
                 <span class="meta-tag">PMSM Gearless</span>
               </div>
               <div class="product-card-footer">
-                <button type="button" class="btn btn-outline-gold btn-sm" data-open-modal="quote" data-service="Passenger Elevator">Get Enquiry</button>
-                <button type="button" class="btn btn-whatsapp btn-sm" data-open-modal="quote" data-service="Passenger Elevator">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 4px; vertical-align: -2px;">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                <button type="button" class="btn btn-outline-gold btn-sm" data-open-modal="quote"
+                  data-service="Passenger Elevator">Get Enquiry</button>
+                <button type="button" class="btn btn-whatsapp btn-sm" data-open-modal="quote"
+                  data-service="Passenger Elevator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"
+                    style="margin-right: 4px; vertical-align: -2px;">
+                    <path
+                      d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
                   </svg>
                   <span>WhatsApp Quote &rarr;</span>
                 </button>
@@ -387,22 +388,25 @@
           </article>
 
           <!-- 02: Home Elevators -->
-          <article class="product-card" data-category="home" data-product-id="home" tabindex="0"
-            role="button" aria-label="View Bespoke Villa Home Elevators media">
+          <article class="product-card" data-category="home" data-product-id="home" tabindex="0" role="button"
+            aria-label="View Bespoke Villa Home Elevators media">
             <div class="product-media-wrap">
-              <img src="assets/lift/home-elevators/photos/WhatsApp Image 2026-09-10 at 10.49.11 AM.jpeg" alt="Bespoke Villa Home Elevator by ERIS-NEXA" loading="lazy">
+              <img src="assets/lift/home-elevators/photos/WhatsApp Image 2026-09-10 at 10.49.11 AM.jpeg"
+                alt="Bespoke Villa Home Elevator by ERIS-NEXA" loading="lazy">
               <span class="product-cat-badge">02 / HOME &amp; VILLA</span>
               <span class="product-speed-tag">Low Pit / 0.4 m/s</span>
               <div class="product-card-media-tabs" role="group" aria-label="View Media">
-                <button type="button" class="prod-card-tab-btn prod-card-tab-photo" data-action="open-photos" title="View Photos">
+                <button type="button" class="prod-card-tab-btn prod-card-tab-photo" data-action="open-photos"
+                  title="View Photos">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                    <polyline points="21 15 16 10 5 21"/>
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <polyline points="21 15 16 10 5 21" />
                   </svg>
                   <span>Photos</span>
                 </button>
-                <button type="button" class="prod-card-tab-btn prod-card-tab-video" data-action="open-videos" title="View Video">
+                <button type="button" class="prod-card-tab-btn prod-card-tab-video" data-action="open-videos"
+                  title="View Video">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
                     <polygon points="6 3 20 12 6 21 6 3" />
                   </svg>
@@ -419,10 +423,14 @@
                 <span class="meta-tag">250mm Low Pit</span>
               </div>
               <div class="product-card-footer">
-                <button type="button" class="btn btn-outline-gold btn-sm" data-open-modal="quote" data-service="Home & Villa Elevator">Get Enquiry</button>
-                <button type="button" class="btn btn-whatsapp btn-sm" data-open-modal="quote" data-service="Home & Villa Elevator">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 4px; vertical-align: -2px;">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                <button type="button" class="btn btn-outline-gold btn-sm" data-open-modal="quote"
+                  data-service="Home & Villa Elevator">Get Enquiry</button>
+                <button type="button" class="btn btn-whatsapp btn-sm" data-open-modal="quote"
+                  data-service="Home & Villa Elevator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"
+                    style="margin-right: 4px; vertical-align: -2px;">
+                    <path
+                      d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
                   </svg>
                   <span>WhatsApp Quote &rarr;</span>
                 </button>
@@ -431,23 +439,25 @@
           </article>
 
           <!-- 03: Hospital Elevators -->
-          <article class="product-card" data-category="hospital" data-product-id="hospital" tabindex="0"
-            role="button" aria-label="View Hospital & Stretcher Elevators media">
+          <article class="product-card" data-category="hospital" data-product-id="hospital" tabindex="0" role="button"
+            aria-label="View Hospital & Stretcher Elevators media">
             <div class="product-media-wrap">
-              <img src="assets/lift/hospital-elevators/photos/hospital-cover.jpeg" alt="Hospital Stretcher Elevator by ERIS-NEXA"
-                loading="lazy">
+              <img src="assets/lift/hospital-elevators/photos/hospital-cover.jpeg"
+                alt="Hospital Stretcher Elevator by ERIS-NEXA" loading="lazy">
               <span class="product-cat-badge">03 / HEALTHCARE</span>
               <span class="product-speed-tag">Code Blue Priority</span>
               <div class="product-card-media-tabs" role="group" aria-label="View Media">
-                <button type="button" class="prod-card-tab-btn prod-card-tab-photo" data-action="open-photos" title="View Photos">
+                <button type="button" class="prod-card-tab-btn prod-card-tab-photo" data-action="open-photos"
+                  title="View Photos">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                    <polyline points="21 15 16 10 5 21"/>
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <polyline points="21 15 16 10 5 21" />
                   </svg>
                   <span>Photos</span>
                 </button>
-                <button type="button" class="prod-card-tab-btn prod-card-tab-video" data-action="open-videos" title="View Video">
+                <button type="button" class="prod-card-tab-btn prod-card-tab-video" data-action="open-videos"
+                  title="View Video">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
                     <polygon points="6 3 20 12 6 21 6 3" />
                   </svg>
@@ -464,10 +474,14 @@
                 <span class="meta-tag">Stretcher Leveling</span>
               </div>
               <div class="product-card-footer">
-                <button type="button" class="btn btn-outline-gold btn-sm" data-open-modal="quote" data-service="Hospital Stretcher Elevator">Get Enquiry</button>
-                <button type="button" class="btn btn-whatsapp btn-sm" data-open-modal="quote" data-service="Hospital Stretcher Elevator">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 4px; vertical-align: -2px;">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                <button type="button" class="btn btn-outline-gold btn-sm" data-open-modal="quote"
+                  data-service="Hospital Stretcher Elevator">Get Enquiry</button>
+                <button type="button" class="btn btn-whatsapp btn-sm" data-open-modal="quote"
+                  data-service="Hospital Stretcher Elevator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"
+                    style="margin-right: 4px; vertical-align: -2px;">
+                    <path
+                      d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
                   </svg>
                   <span>WhatsApp Quote &rarr;</span>
                 </button>
@@ -476,22 +490,25 @@
           </article>
 
           <!-- 04: Goods & Freight Elevators -->
-          <article class="product-card" data-category="goods" data-product-id="goods" tabindex="0"
-            role="button" aria-label="View Goods & Freight Elevators media">
+          <article class="product-card" data-category="goods" data-product-id="goods" tabindex="0" role="button"
+            aria-label="View Goods & Freight Elevators media">
             <div class="product-media-wrap">
-              <img src="assets/lift/goods-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.57 AM.jpeg" alt="Industrial Goods Freight Elevator" loading="lazy">
+              <img src="assets/lift/goods-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.57 AM.jpeg"
+                alt="Industrial Goods Freight Elevator" loading="lazy">
               <span class="product-cat-badge">04 / INDUSTRIAL</span>
               <span class="product-speed-tag">Forklift-Rated</span>
               <div class="product-card-media-tabs" role="group" aria-label="View Media">
-                <button type="button" class="prod-card-tab-btn prod-card-tab-photo" data-action="open-photos" title="View Photos">
+                <button type="button" class="prod-card-tab-btn prod-card-tab-photo" data-action="open-photos"
+                  title="View Photos">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                    <polyline points="21 15 16 10 5 21"/>
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <polyline points="21 15 16 10 5 21" />
                   </svg>
                   <span>Photos</span>
                 </button>
-                <button type="button" class="prod-card-tab-btn prod-card-tab-video" data-action="open-videos" title="View Video">
+                <button type="button" class="prod-card-tab-btn prod-card-tab-video" data-action="open-videos"
+                  title="View Video">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
                     <polygon points="6 3 20 12 6 21 6 3" />
                   </svg>
@@ -508,10 +525,14 @@
                 <span class="meta-tag">Checker Plate</span>
               </div>
               <div class="product-card-footer">
-                <button type="button" class="btn btn-outline-gold btn-sm" data-open-modal="quote" data-service="Goods / Freight Elevator">Get Enquiry</button>
-                <button type="button" class="btn btn-whatsapp btn-sm" data-open-modal="quote" data-service="Goods / Freight Elevator">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 4px; vertical-align: -2px;">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                <button type="button" class="btn btn-outline-gold btn-sm" data-open-modal="quote"
+                  data-service="Goods / Freight Elevator">Get Enquiry</button>
+                <button type="button" class="btn btn-whatsapp btn-sm" data-open-modal="quote"
+                  data-service="Goods / Freight Elevator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"
+                    style="margin-right: 4px; vertical-align: -2px;">
+                    <path
+                      d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
                   </svg>
                   <span>WhatsApp Quote &rarr;</span>
                 </button>
@@ -520,22 +541,25 @@
           </article>
 
           <!-- 05: Automobile Elevators -->
-          <article class="product-card" data-category="auto" data-product-id="auto" tabindex="0"
-            role="button" aria-label="View Automobile & Showroom Lifts media">
+          <article class="product-card" data-category="auto" data-product-id="auto" tabindex="0" role="button"
+            aria-label="View Automobile & Showroom Lifts media">
             <div class="product-media-wrap">
-              <img src="assets/lift/automobile-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.58 AM.jpeg" alt="Automobile Car Elevator Showroom Lift" loading="lazy">
+              <img src="assets/lift/automobile-elevators/photos/WhatsApp Image 2026-09-10 at 10.45.58 AM.jpeg"
+                alt="Automobile Car Elevator Showroom Lift" loading="lazy">
               <span class="product-cat-badge">05 / AUTOMOBILE</span>
               <span class="product-speed-tag">SUV &amp; Sedan Rated</span>
               <div class="product-card-media-tabs" role="group" aria-label="View Media">
-                <button type="button" class="prod-card-tab-btn prod-card-tab-photo" data-action="open-photos" title="View Photos">
+                <button type="button" class="prod-card-tab-btn prod-card-tab-photo" data-action="open-photos"
+                  title="View Photos">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                    <polyline points="21 15 16 10 5 21"/>
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <polyline points="21 15 16 10 5 21" />
                   </svg>
                   <span>Photos</span>
                 </button>
-                <button type="button" class="prod-card-tab-btn prod-card-tab-video" data-action="open-videos" title="View Video">
+                <button type="button" class="prod-card-tab-btn prod-card-tab-video" data-action="open-videos"
+                  title="View Video">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
                     <polygon points="6 3 20 12 6 21 6 3" />
                   </svg>
@@ -552,10 +576,14 @@
                 <span class="meta-tag">2.8 × 5.8m Platform</span>
               </div>
               <div class="product-card-footer">
-                <button type="button" class="btn btn-outline-gold btn-sm" data-open-modal="quote" data-service="Automobile Elevator">Get Enquiry</button>
-                <button type="button" class="btn btn-whatsapp btn-sm" data-open-modal="quote" data-service="Automobile Elevator">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 4px; vertical-align: -2px;">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                <button type="button" class="btn btn-outline-gold btn-sm" data-open-modal="quote"
+                  data-service="Automobile Elevator">Get Enquiry</button>
+                <button type="button" class="btn btn-whatsapp btn-sm" data-open-modal="quote"
+                  data-service="Automobile Elevator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"
+                    style="margin-right: 4px; vertical-align: -2px;">
+                    <path
+                      d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
                   </svg>
                   <span>WhatsApp Quote &rarr;</span>
                 </button>
@@ -564,22 +592,25 @@
           </article>
 
           <!-- 06: Dumbwaiters -->
-          <article class="product-card" data-category="service" data-product-id="service" tabindex="0"
-            role="button" aria-label="View Commercial Pantry Dumbwaiters media">
+          <article class="product-card" data-category="service" data-product-id="service" tabindex="0" role="button"
+            aria-label="View Commercial Pantry Dumbwaiters media">
             <div class="product-media-wrap">
-              <img src="assets/lift/dumbwaiters/photos/dumbwaiter-1.jpeg" alt="Commercial Pantry Dumbwaiter" loading="lazy">
+              <img src="assets/lift/dumbwaiters/photos/dumbwaiter-1.jpeg" alt="Commercial Pantry Dumbwaiter"
+                loading="lazy">
               <span class="product-cat-badge">06 / SERVICE</span>
               <span class="product-speed-tag">SS 304 Cleanroom</span>
               <div class="product-card-media-tabs" role="group" aria-label="View Media">
-                <button type="button" class="prod-card-tab-btn prod-card-tab-photo" data-action="open-photos" title="View Photos">
+                <button type="button" class="prod-card-tab-btn prod-card-tab-photo" data-action="open-photos"
+                  title="View Photos">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                    <polyline points="21 15 16 10 5 21"/>
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <polyline points="21 15 16 10 5 21" />
                   </svg>
                   <span>Photos</span>
                 </button>
-                <button type="button" class="prod-card-tab-btn prod-card-tab-video" data-action="open-videos" title="View Video">
+                <button type="button" class="prod-card-tab-btn prod-card-tab-video" data-action="open-videos"
+                  title="View Video">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
                     <polygon points="6 3 20 12 6 21 6 3" />
                   </svg>
@@ -596,10 +627,14 @@
                 <span class="meta-tag">Bi-Parting Shutters</span>
               </div>
               <div class="product-card-footer">
-                <button type="button" class="btn btn-outline-gold btn-sm" data-open-modal="quote" data-service="Commercial Dumbwaiter">Get Enquiry</button>
-                <button type="button" class="btn btn-whatsapp btn-sm" data-open-modal="quote" data-service="Commercial Dumbwaiter">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 4px; vertical-align: -2px;">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                <button type="button" class="btn btn-outline-gold btn-sm" data-open-modal="quote"
+                  data-service="Commercial Dumbwaiter">Get Enquiry</button>
+                <button type="button" class="btn btn-whatsapp btn-sm" data-open-modal="quote"
+                  data-service="Commercial Dumbwaiter">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"
+                    style="margin-right: 4px; vertical-align: -2px;">
+                    <path
+                      d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z" />
                   </svg>
                   <span>WhatsApp Quote &rarr;</span>
                 </button>
@@ -1047,7 +1082,8 @@
                 alt="Commercial High-Speed Passenger Elevator" loading="lazy">
               <div class="shorts-badge">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
-                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                  <path
+                    d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z" />
                 </svg>
                 <span>Shorts</span>
               </div>
@@ -1064,15 +1100,15 @@
           </div>
 
           <!-- Short 2: Home & Villa Elevators (Italian Marble & Gold Foyer) -->
-          <div class="video-showcase-card"
-            data-video-src="assets/lift/home-elevators/videos/showcase-4.mp4"
+          <div class="video-showcase-card" data-video-src="assets/lift/home-elevators/videos/showcase-4.mp4"
             data-video-title="Home &amp; Villa Elevator — Luxury Italian Marble &amp; Gold Foyer">
             <div class="video-thumb-wrap">
               <img src="assets/images/video-thumbs/showcase-4-marble-gold.jpg"
                 alt="Luxury Italian Marble & Gold Private Villa Lift" loading="lazy">
               <div class="shorts-badge">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
-                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                  <path
+                    d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z" />
                 </svg>
                 <span>Shorts</span>
               </div>
@@ -1097,7 +1133,8 @@
                 alt="Code Blue Emergency Stretcher & Bed Elevator" loading="lazy">
               <div class="shorts-badge">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
-                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                  <path
+                    d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z" />
                 </svg>
                 <span>Shorts</span>
               </div>
@@ -1122,7 +1159,8 @@
                 alt="Contemporary Residential Glass Landing Portal" loading="lazy">
               <div class="shorts-badge">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
-                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                  <path
+                    d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z" />
                 </svg>
                 <span>Shorts</span>
               </div>
@@ -1147,7 +1185,8 @@
                 alt="Industrial Heavy Goods Platform & Steel Shutter" loading="lazy">
               <div class="shorts-badge">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
-                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                  <path
+                    d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z" />
                 </svg>
                 <span>Shorts</span>
               </div>
@@ -1172,7 +1211,8 @@
                 alt="Heavy Industrial Goods Lift Dual Mast Travel" loading="lazy">
               <div class="shorts-badge">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
-                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                  <path
+                    d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z" />
                 </svg>
                 <span>Shorts</span>
               </div>
@@ -1189,15 +1229,15 @@
           </div>
 
           <!-- Passenger Elevator: Rose Gold Luxury Cabin -->
-          <div class="video-showcase-card"
-            data-video-src="assets/lift/passenger-elevators/videos/Rose Gold.mp4"
+          <div class="video-showcase-card" data-video-src="assets/lift/passenger-elevators/videos/Rose Gold.mp4"
             data-video-title="Passenger Elevator — Rose Gold Designer Luxury Cabin">
             <div class="video-thumb-wrap">
               <img src="assets/lift/passenger-elevators/photos/WhatsApp Image 2026-09-10 at 4.50.30 PM.jpeg"
                 alt="Rose Gold Designer Luxury Cabin" loading="lazy">
               <div class="shorts-badge">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
-                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                  <path
+                    d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z" />
                 </svg>
                 <span>Shorts</span>
               </div>
@@ -1213,15 +1253,15 @@
           </div>
 
           <!-- Automobile Elevator: Multi-Level Showroom Hoist -->
-          <div class="video-showcase-card"
-            data-video-src="assets/lift/automobile-elevators/videos/VIDEO.mp4"
+          <div class="video-showcase-card" data-video-src="assets/lift/automobile-elevators/videos/VIDEO.mp4"
             data-video-title="Automobile Elevator — Multi-Level Showroom Parking Hoist">
             <div class="video-thumb-wrap">
               <img src="assets/lift/automobile-elevators/photos/8 Panels Auto Doors.jpg"
                 alt="Automobile Multi-Level Showroom Hoist" loading="lazy">
               <div class="shorts-badge">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
-                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                  <path
+                    d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z" />
                 </svg>
                 <span>Shorts</span>
               </div>
@@ -1241,11 +1281,12 @@
             data-video-src="assets/lift/dumbwaiters/videos/WhatsApp Video 2026-06-09 at 6.02.04 PM.mp4"
             data-video-title="Service Dumbwaiter — Commercial Food &amp; Pantry Transit">
             <div class="video-thumb-wrap">
-              <img src="assets/lift/dumbwaiters/photos/2L7A2474.jpg"
-                alt="Commercial Food & Pantry Transit" loading="lazy">
+              <img src="assets/lift/dumbwaiters/photos/2L7A2474.jpg" alt="Commercial Food & Pantry Transit"
+                loading="lazy">
               <div class="shorts-badge">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
-                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                  <path
+                    d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z" />
                 </svg>
                 <span>Shorts</span>
               </div>
@@ -1261,15 +1302,15 @@
           </div>
 
           <!-- Short 6: Panoramic Glass Elevators (Outdoor Facade Lift) -->
-          <div class="video-showcase-card"
-            data-video-src="assets/lift/special-elevators/videos/showcase-6.mp4"
+          <div class="video-showcase-card" data-video-src="assets/lift/special-elevators/videos/showcase-6.mp4"
             data-video-title="Panoramic Glass Elevator — Outdoor Facade Lift in Motion">
             <div class="video-thumb-wrap">
               <img src="assets/images/video-thumbs/showcase-6-panoramic.jpg"
                 alt="Outdoor Facade 360° Panoramic Glass Elevator" loading="lazy">
               <div class="shorts-badge">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
-                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                  <path
+                    d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z" />
                 </svg>
                 <span>Shorts</span>
               </div>
@@ -1293,7 +1334,8 @@
                 alt="Self-Supporting Structural Hoistway" loading="lazy">
               <div class="shorts-badge">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
-                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                  <path
+                    d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z" />
                 </svg>
                 <span>Shorts</span>
               </div>
@@ -1317,7 +1359,8 @@
                 alt="Heavy Hydraulic Vehicle Platform" loading="lazy">
               <div class="shorts-badge">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="#FF0000">
-                  <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z"/>
+                  <path
+                    d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 00-3.5-5.36c-.76 0-1.48.24-2.08.68L6.4 8.04A3.75 3.75 0 005.12 13l1.2.5L5 14.24a3.74 3.74 0 003.5 5.36c.76 0 1.48-.24 2.08-.68l6.02-3.66a3.75 3.75 0 001.17-4.94z" />
                 </svg>
                 <span>Shorts</span>
               </div>
@@ -1381,7 +1424,7 @@
                   </svg>
                   <span>Direct Line</span>
                 </a>
-                <a href="mailto:Sahil.eris1@gmail.com" class="director-btn-mail" title="Email Executive Desk">
+                <a href="mailto:prashant@erisnexa.com" class="director-btn-mail" title="Email Executive Desk">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                     <polyline points="22,6 12,13 2,6" />
@@ -1417,7 +1460,7 @@
                   </svg>
                   <span>Direct Line</span>
                 </a>
-                <a href="mailto:Sahil.eris1@gmail.com" class="director-btn-mail" title="Email Executive Desk">
+                <a href="mailto:sahil@erisnexa.com" class="director-btn-mail" title="Email Executive Desk">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                     <polyline points="22,6 12,13 2,6" />
@@ -1548,7 +1591,7 @@
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
           </a>
-          <p class="showcase-cta-sub">Over 500+ customized installations across residential, commercial &amp; hospital
+          <p class="showcase-cta-sub">Over 1380+ customized installations across residential, commercial &amp; hospital
             sectors in Delhi NCR</p>
         </div>
       </div>
@@ -1698,7 +1741,7 @@
             <p>UGF 124, Sushant Vyapar Kendra, Sushant Lok Phase I, Sector 28, Gurugram, Haryana 122009</p>
             <p><strong>Helpline:</strong> <a href="tel:+919557761198">+91 95577 61198</a> / <a
                 href="tel:+919318323530">+91-9318323530</a></p>
-            <p><strong>Email:</strong> <a href="mailto:Sahil.eris1@gmail.com">Sahil.eris1@gmail.com</a></p>
+            <p><strong>Email:</strong> <a href="mailto:prashant@erisnexa.com">prashant@erisnexa.com</a> / <a href="mailto:sahil@erisnexa.com">sahil@erisnexa.com</a></p>
             <p><strong>Emergency:</strong> 24/7 Rapid Intervention Unit Active</p>
           </div>
 
@@ -1872,8 +1915,8 @@
           </div>
 
           <!-- Close Button (Distinct, non-collapsing) -->
-          <button type="button" id="btnLightboxClose" class="lightbox-close-btn"
-            aria-label="Close media preview" title="Close (Esc)">✕</button>
+          <button type="button" id="btnLightboxClose" class="lightbox-close-btn" aria-label="Close media preview"
+            title="Close (Esc)">✕</button>
         </div>
       </div>
 
@@ -1918,18 +1961,20 @@
         <div class="prod-slider-header-right">
           <!-- Two Tabs: Photos & Videos -->
           <div class="prod-slider-tabs" role="tablist" aria-label="Media Type Selection">
-            <button type="button" id="tabProdPhotos" class="prod-slider-tab active" role="tab" aria-selected="true" data-tab="photos">
+            <button type="button" id="tabProdPhotos" class="prod-slider-tab active" role="tab" aria-selected="true"
+              data-tab="photos">
               <span>📷 Photos</span>
               <span class="prod-tab-count" id="prodPhotosCount">4</span>
             </button>
-            <button type="button" id="tabProdVideos" class="prod-slider-tab" role="tab" aria-selected="false" data-tab="videos">
+            <button type="button" id="tabProdVideos" class="prod-slider-tab" role="tab" aria-selected="false"
+              data-tab="videos">
               <span>🎬 Videos</span>
               <span class="prod-tab-count" id="prodVideosCount">1</span>
             </button>
           </div>
           <span id="prodSliderCounter" class="prod-slider-counter" aria-live="polite">1 / 4</span>
-          <button type="button" id="btnProdSliderClose" class="prod-slider-close-btn"
-            aria-label="Close product gallery" title="Close (Esc)">✕</button>
+          <button type="button" id="btnProdSliderClose" class="prod-slider-close-btn" aria-label="Close product gallery"
+            title="Close (Esc)">✕</button>
         </div>
       </div>
 
